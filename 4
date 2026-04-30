@@ -1,0 +1,619 @@
+
+# 832 AGI PROJECTION CORE v34.00 — Cell 4/4: Field, Evolution, Visualization, Main
+import matplotlib.pyplot as plt
+
+# =========================
+# GLOBALS
+# =========================
+next_pattern_id = 1
+witness = Witness()
+echo_system = EchoSystem()
+layer_zero_manager = LayerZeroManager()
+cultural_memory = CulturalMemory()
+logos_observer = LogosObserver()
+proto_language = ProtoLanguage()
+pattern_dict = {}
+
+# =========================
+# FIELD & PATTERN MATCHING
+# =========================
+def init_field():
+    F = np.zeros((Config.WORLD_SIZE, Config.WORLD_SIZE, Config.CHANNELS))
+    for x in range(Config.WORLD_SIZE):
+        for y in range(Config.WORLD_SIZE):
+            F[x, y, CH['energy']] = phi_hash(x, y, 1) * 0.2 - 0.1
+            F[x, y, CH['flux']] = phi_hash(x, y, 2) * 0.1
+            F[x, y, CH['scar']] = 0.0
+            F[x, y, CH['noise']] = 0.0
+            F[x, y, CH['vorticity']] = phi_hash(x, y, 3) * 0.1 - 0.05
+            F[x, y, CH['owner']] = 0.0
+            F[x, y, CH['surprise']] = 0.0
+            F[x, y, CH['unknown']] = Config.UNKNOWN_BACKGROUND
+            F[x, y, CH['event']] = 0.0
+            F[x, y, CH['btype']] = 0.0
+            F[x, y, CH['crisis']] = 0.0
+            F[x, y, CH['binding']] = 0.05
+            for ch in range(12, 23):
+                F[x, y, ch] = 0.0
+            F[x, y, CH['energy']] += deterministic_noise(0, x, y, 0.3)
+    return F
+
+def init_scar():
+    return np.zeros((Config.WORLD_SIZE, Config.WORLD_SIZE))
+
+def match_patterns(new_components, old_patterns, field, t=None):
+    global next_pattern_id
+    updated = []
+    alive_old = [p for p in old_patterns if p.alive]
+    normal_cnt = len([p for p in alive_old if p.role_type == "normal"])
+    matched_ids = set()
+
+    for cells in new_components:
+        best_p, best_ov = None, 0
+        for p in alive_old:
+            if p.id in matched_ids: continue
+            ov = len(cells & p.cells)
+            if ov > best_ov:
+                best_ov, best_p = ov, p
+        if best_p and best_ov > len(cells) * 0.3:
+            best_p.cells = cells
+            best_p.update_properties(field)
+            best_p.update_model(field, t=t)
+            best_p.age += 1
+            updated.append(best_p)
+            matched_ids.add(best_p.id)
+        else:
+            if normal_cnt < Config.OVERPOPULATION_CAP:
+                pid = next_pattern_id
+                next_pattern_id += 1
+                p = Pattern(pid, cells)
+                p.update_properties(field)
+                p.update_model(field, t=t)
+                updated.append(p)
+                normal_cnt += 1
+
+    for p in alive_old:
+        if p.id not in matched_ids:
+            updated.append(p)
+    return updated
+
+def detect_new_components(field, min_cells=None):
+    if min_cells is None: min_cells = Config.MIN_COMPONENT_CELLS
+    energy = np.nan_to_num(field[:,:,CH['energy']], nan=0.0)
+    mask = energy > Config.PATTERN_ENERGY_THRESHOLD
+    labeled, num = label(mask)
+    slices = find_objects(labeled)
+    components = []
+    for i, slc in enumerate(slices, 1):
+        if slc is None: continue
+        region = labeled[slc] == i
+        coords = np.argwhere(region)
+        if len(coords) < min_cells: continue
+        cells = {(slc[0].start + c[0], slc[1].start + c[1]) for c in coords}
+        components.append(cells)
+    return components
+
+def ecosystem_pressure(field):
+    energy = np.nan_to_num(field[:,:,CH['energy']], nan=0.0)
+    avg = np.mean(energy)
+    field[:,:,CH['energy']] += 0.002 * (avg - energy)
+    field[:,:,CH['flux']] += 0.001 * (np.roll(energy, 1, axis=0) - energy) + 0.001 * (np.roll(energy, -1, axis=1) - energy)
+    return field
+
+def calculate_boredom(patterns, field):
+    if not patterns: return 0.0
+    err_history = []
+    for p in patterns:
+        if p.alive and hasattr(p, 'pred_error_history') and p.pred_error_history:
+            err_history.extend(p.pred_error_history[-Config.BOREDOM_WINDOW:])
+    if not err_history: return 0.0
+    avg_recent_err = np.mean(err_history)
+    avg_unknown = safe_mean(field[:,:,CH['unknown']], 0.1)
+    avg_tension = safe_mean([p.cognitive_tension for p in patterns if p.alive], 0.01)
+    score = 0.0
+    if avg_recent_err < Config.BOREDOM_ERR_THRESHOLD: score += 0.4
+    if avg_unknown < Config.BOREDOM_UNKNOWN_THRESHOLD: score += 0.4
+    if avg_tension < Config.BOREDOM_TENSION_THRESHOLD: score += 0.2
+    return score
+
+def collect_metrics(patterns, field, t):
+    alive = [p for p in patterns if p.alive]
+    if not alive:
+        return {
+            't': t, 'patterns': 0, 'lineages': 0, 'err': 0, 'soul': 0, 'binding': 0,
+            'echo': len(echo_system.prison),
+            'signals': layer_zero_manager.proto_signals.copy(),
+            'states': {}, 'intents': {}, 'epi_scar': 0, 'unique_concepts': 0,
+            'stagnation_ratio': 0.0, 'divisions_possible': 0, 'arc_completions': 0, 'folds': 0,
+            'avg_trust': 0.5, 'high_trust_pairs': 0,
+            'trust_distribution': {'low': 0, 'mid': 0, 'high': 0},
+            'disorganizer_count': 0, 'redeemed_count': 0, 'quarantined_count': 0,
+            'deterministic_redemptions': 0, 'phenomenal_binding_avg': 0.0,
+            'state_emotion_mismatch': 0.0, 'forced_collapses': 0,
+            'myth_pool_size': 0
+        }
+
+    err = safe_mean([p.pred_error for p in alive], 0)
+    soul = safe_mean([p.soul_weight for p in alive], 0)
+    binding = safe_mean(field[:,:,CH['binding']], 0)
+    lineages = len(set(p.lineage_id for p in alive))
+
+    states = {}
+    intents = {}
+    for p in alive:
+        s = p.semantic_state
+        states[s] = states.get(s, 0) + 1
+        if p.intent:
+            it = p.intent["type"]
+            intents[it] = intents.get(it, 0) + 1
+
+    epi_scar = safe_mean([p.epistemic_scar for p in alive], 0)
+    all_concepts = set()
+    for p in alive:
+        all_concepts.update(p.concept_graph.nodes.keys())
+
+    stagnated = sum(1 for p in alive if hasattr(p, 'semantic_state_age') and p.semantic_state_age > Config.STAGNATION_GRIEF_THRESHOLD)
+    stagnation_ratio = stagnated / max(len(alive), 1)
+    divisions_possible = sum(1 for p in alive if p.can_divide())
+    total_arcs = sum(sum(p.arc_tracker.completed_arcs.values()) for p in alive)
+    total_folds = sum(p.event_counts.get('fold', 0) for p in alive)
+    mismatch_count = sum(1 for p in alive if (p.semantic_state == "contentment" and p.emotional_memory['grief'] > 0.5) or (p.semantic_state == "seeking_comfort" and p.emotional_memory['gratitude'] > 0.8))
+    mismatch_ratio = mismatch_count / max(len(alive), 1)
+
+    all_trusts = []
+    high_pairs = 0
+    trust_dist = {'low': 0, 'mid': 0, 'high': 0}
+    disorg = 0
+    redm = 0
+    quar = 0
+    det_red = 0
+    collapsed = 0
+    phenomenal_bindings = []
+
+    for p in alive:
+        if p.role_type == "disorganizer":
+            disorg += 1
+        if p.event_counts.get('redeemed', 0) > 0:
+            redm += 1
+        if p.quarantine_timer > 0:
+            quar += 1
+        if p.event_counts.get('deterministic_redemption_trigger', 0) > 0:
+            det_red += 1
+        if p.event_counts.get('forced_soul_collapse', 0) > 0:
+            collapsed += 1
+        phenomenal_bindings.append(p.last_phenomenal_binding)
+        entries = list(p.trust_ledger.entries.values())
+        all_trusts.extend(entries)
+        high_pairs += sum(1 for t_val in entries if t_val > 0.8)
+        for t_val in entries:
+            if t_val < 0.4:
+                trust_dist['low'] += 1
+            elif t_val < 0.7:
+                trust_dist['mid'] += 1
+            else:
+                trust_dist['high'] += 1
+
+    avg_trust = safe_mean(all_trusts, Config.TRUST_BASE) if all_trusts else Config.TRUST_BASE
+    phenomenal_binding_avg = safe_mean(phenomenal_bindings, 0.5)
+
+    return {
+        't': t, 'patterns': len(alive), 'lineages': lineages, 'err': err, 'soul': soul,
+        'binding': binding, 'echo': len(echo_system.prison),
+        'signals': layer_zero_manager.proto_signals.copy(),
+        'states': states, 'intents': intents, 'epi_scar': epi_scar,
+        'unique_concepts': len(all_concepts),
+        'stagnation_ratio': stagnation_ratio,
+        'divisions_possible': divisions_possible,
+        'arc_completions': total_arcs, 'folds': total_folds,
+        'avg_trust': avg_trust, 'high_trust_pairs': high_pairs,
+        'trust_distribution': trust_dist,
+        'disorganizer_count': disorg, 'redeemed_count': redm,
+        'quarantined_count': quar, 'deterministic_redemptions': det_red,
+        'phenomenal_binding_avg': phenomenal_binding_avg,
+        'state_emotion_mismatch': mismatch_ratio,
+        'forced_collapses': collapsed,
+        'myth_pool_size': len(cultural_memory.myth_pool) if Config.ENABLE_CULTURAL_MEMORY else 0
+    }
+
+def field_dynamics(field, scar, patterns, t):
+    field[:,:,CH['vorticity']] *= Config.VORTICITY_DECAY
+    field[:,:,CH['vorticity']] += np.gradient(field[:,:,CH['energy']])[0] * Config.GRADIENT_SENSITIVITY + np.gradient(field[:,:,CH['energy']])[1] * Config.GRADIENT_SENSITIVITY
+    for x in range(Config.WORLD_SIZE):
+        for y in range(Config.WORLD_SIZE):
+            field[x, y, CH['vorticity']] += deterministic_noise(t, x, y, 0.01)
+    for p in patterns:
+        if not p.alive: continue
+        for (x, y) in p.cells:
+            scar[x, y] += Config.AGENT_SCAR_SENSE * p.epistemic_load
+            field[x, y, CH['binding']] = min(1.0, field[x, y, CH['binding']] + Config.AGENT_BINDING_SENSE * p.unresolved_contradiction)
+    scar *= Config.FIELD_DECAY
+    field[:,:,CH['scar']] = np.clip(scar, 0, Config.SCAR_SATURATION)
+    field[:,:,CH['energy']] += Config.HEARTBEAT_AMPLITUDE * np.sin(t * Config.HEARTBEAT_FREQ + field[:,:,CH['vorticity']]) + Config.SCAR_ENERGY_COUPLING * field[:,:,CH['scar']] + Config.VORTICITY_COUPLING * field[:,:,CH['vorticity']]
+    field[:,:,CH['flux']] *= Config.GLOBAL_VISCOSITY
+    for x in range(Config.WORLD_SIZE):
+        for y in range(Config.WORLD_SIZE):
+            field[x, y, CH['flux']] += Config.LOCAL_FATIGUE * deterministic_noise(t+1000, x, y, 0.01)
+    return field, scar
+
+def emergency_rescue(patterns, field, t):
+    global next_pattern_id, layer_zero_manager
+    alive = [p for p in patterns if p.alive]
+    if len(alive) >= Config.MIN_POPULATION_FOR_SPAWN or t - layer_zero_manager.last_rescue_t < 30:
+        return patterns
+    normal_count = len([p for p in alive if p.role_type == "normal"])
+    if normal_count >= Config.OVERPOPULATION_CAP:
+        return patterns
+    layer_zero_manager.last_rescue_t = t
+    num_rescue = max(5, Config.MIN_PATTERNS_GUARANTEED - len(alive))
+    donor_index = int(phi_hash(t, 0, 7777) * len(alive)) if alive else -1
+    donor = alive[donor_index] if donor_index >= 0 else None
+    new_patterns = []
+    for i in range(num_rescue):
+        if normal_count + i >= Config.OVERPOPULATION_CAP:
+            break
+        seed = int(phi_hash(t, i, 999) * Config.WORLD_SIZE * Config.WORLD_SIZE)
+        x, y = seed % Config.WORLD_SIZE, (seed // Config.WORLD_SIZE) % Config.WORLD_SIZE
+        field[x, y, CH['energy']] += 0.2
+        field[x, y, CH['unknown']] += 0.1
+        field[x, y, CH['owner']] = 0
+        pid = next_pattern_id
+        next_pattern_id += 1
+        cells = {(x, y)}
+        p = Pattern(pid, cells, parent=donor)
+        if donor:
+            p.belief = donor.belief + np.array([phi_hash(pid, i, 99)-0.5 for i in range(5)]) * 0.1
+            p.model = donor.model.copy()
+        p.update_properties(field)
+        p.update_model(field)
+        new_patterns.append(p)
+    print(f"[t={t}] EMERGENCY RESCUE: spawned {num_rescue} patterns (donor={donor.id if donor else 'none'})")
+    return patterns + new_patterns
+
+def spawn_unknown_patterns(field, patterns, t, max_new=None):
+    global next_pattern_id
+    if max_new is None:
+        max_new = Config.MAX_UNKNOWN_SPAWN_PER_STEP
+    avg_unknown = safe_mean(field[:,:,CH['unknown']], 0)
+    alive = [p for p in patterns if p.alive]
+    normal_count = len([p for p in alive if p.role_type == "normal"])
+    if avg_unknown < Config.UNKNOWN_SPAWN_THRESHOLD or normal_count >= Config.OVERPOPULATION_CAP:
+        return patterns
+    prob = Config.UNKNOWN_SPAWN_PROB * (avg_unknown / Config.UNKNOWN_SPAWN_THRESHOLD) * min(1.0, normal_count / Config.OVERPOPULATION_THRESHOLD)
+    new_patterns = []
+    new_count = 0
+    done = False
+    for x in range(Config.WORLD_SIZE):
+        if done: break
+        for y in range(Config.WORLD_SIZE):
+            if new_count >= max_new or normal_count + new_count >= Config.OVERPOPULATION_CAP:
+                done = True; break
+            if field[x, y, CH['owner']] != 0: continue
+            if field[x, y, CH['unknown']] > 0.5 and phi_hash(x, y, t) < prob:
+                pid = next_pattern_id
+                next_pattern_id += 1
+                cells = {(x, y)}
+                p = Pattern(pid, cells)
+                p.update_properties(field)
+                p.update_model(field)
+                new_patterns.append(p)
+                new_count += 1
+                field[x, y, CH['unknown']] *= 0.8
+    return patterns + new_patterns
+
+def resolve_competitions_spatial(patterns, field, max_dist=None):
+    if max_dist is None: max_dist = Config.COMPETITION_MAX_DISTANCE
+    alive = [p for p in patterns if p.alive and p.cells]
+    if len(alive) < 2: return
+    cell_size = max(1, max_dist)
+    spatial_map = {}
+    for p in alive:
+        cx = sum(c[0] for c in p.cells) // len(p.cells)
+        cy = sum(c[1] for c in p.cells) // len(p.cells)
+        key = (cx // cell_size, cy // cell_size)
+        spatial_map.setdefault(key, []).append(p)
+    checked_pairs = set()
+    for (gx, gy), group in spatial_map.items():
+        for dx in [-1, 0, 1]:
+            for dy in [-1, 0, 1]:
+                neighbor_key = (gx + dx, gy + dy)
+                if neighbor_key not in spatial_map: continue
+                others = spatial_map[neighbor_key]
+                for p1 in group:
+                    for p2 in others:
+                        if p1.id >= p2.id: continue
+                        pair = (p1.id, p2.id)
+                        if pair in checked_pairs: continue
+                        if not p1.cells & p2.cells: continue
+                        checked_pairs.add(pair)
+                        p1.compete(p2, field)
+
+def process_spores(patterns, field):
+    global next_pattern_id
+    new_patterns = []
+    alive = [p for p in patterns if p.alive]
+    normal_count = len([p for p in alive if p.role_type == "normal"])
+    for p in patterns:
+        if not p.alive or p.pending_spore is None: continue
+        spore = p.pending_spore
+        if not (0 <= spore['x'] < Config.WORLD_SIZE and 0 <= spore['y'] < Config.WORLD_SIZE):
+            p.pending_spore = None; continue
+        if field[spore['x'], spore['y'], CH['owner']] != 0:
+            continue
+        if normal_count >= Config.OVERPOPULATION_CAP:
+            continue
+        pid = next_pattern_id
+        next_pattern_id += 1
+        cells = {(spore['x'], spore['y'])}
+        child = Pattern(pid, cells, parent=p)
+        child.scar_dream = spore['scar_dream']
+        child.update_properties(field)
+        child.update_model(field)
+        new_patterns.append(child)
+        field[spore['x'], spore['y'], CH['owner']] = child.id
+        p.pending_spore = None
+        normal_count += 1
+    return patterns + new_patterns
+
+# =========================
+# MAIN EVOLUTION STEP
+# =========================
+def evolution_step(patterns, field, scar, t):
+    global next_pattern_id, pattern_dict
+    field, scar = field_dynamics(field, scar, patterns, t)
+    layer_zero_manager.crisis_injection(field, t)
+    layer_zero_manager.apply_operator_influence(field, patterns)
+    ecosystem_pressure(field)
+    layer_zero_manager.anti_conformist_injection(patterns, t)
+    layer_zero_manager.force_diversification(patterns, field, t)
+    layer_zero_manager.apply_global_given_queue(patterns, field, t)
+
+    # Строим словарь паттернов для ProtoLanguage
+    pattern_dict = {p.id: p for p in patterns if p.alive}
+
+    given_counter = {'count': 0}
+    for p in patterns:
+        if not p.alive: continue
+        p.update_model(field, lineage_counts=None, given_counter=given_counter, t=t, witness=witness)
+        p.grow(field)
+
+    resolve_competitions_spatial(patterns, field)
+
+    alive_count = len([p for p in patterns if p.alive])
+    current_hunger = Config.HUNGER_BASE + Config.HUNGER_PER_PATTERN * max(0, alive_count - Config.POPULATION_HUNGER_THRESHOLD)
+    for p in patterns:
+        if not p.alive: continue
+        p.metabolic_tax(field, current_hunger)
+
+    for p in patterns:
+        if p.alive and p.should_die():
+            p.alive = False
+            echo_system.store(p)
+
+    # ---------- НОВЫЙ БЛОК ПРЕВРАЩЕНИЯ В ДЕЗОРГАНИЗАТОРА (вероятностное притяжение к 20%) ----------
+    for p in patterns:
+        if not p.alive or p.role_type != "normal": continue
+        fold_count = p.event_counts.get('fold', 0)
+        if fold_count >= Config.FOLDS_TO_BECOME_DISORGANIZER:
+            disorganizer_count = len([pp for pp in patterns if pp.alive and pp.role_type == "disorganizer"])
+            alive_total = len([pp for pp in patterns if pp.alive])
+            current_fraction = disorganizer_count / max(1, alive_total)
+            target = Config.TARGET_DISORGANIZER_FRACTION
+            attraction = Config.DISORGANIZER_ATTRACTION_STRENGTH
+
+            if current_fraction < target:
+                deficit = target - current_fraction
+                prob = deficit * attraction * 0.1
+                should_transform = phi_hash(p.id, t, 777) < prob
+            else:
+                should_transform = False
+
+            if should_transform and disorganizer_count < Config.MAX_DISORGANIZER_COUNT:
+                p.role_type = "disorganizer"
+                p.emotional_memory['gratitude'] = 0.1
+                p.emotional_memory['grief'] = 0.8
+                p.semantic_state = "exploring_danger"
+                p.intent = {"type": "explore", "priority": 2.0, "age": 0, "persistence": 9999}
+                p.intent_commitment = 2.0
+                p.disorganizer_age_at_birth = p.age
+                p.redemption_timer = Config.REDEMPTION_TIMER
+                p._deterministic_redemption_triggered = False
+                p._forced_soul_collapse_done = False
+                p._redemption_arc_step = 0
+                p._steps_since_trigger = 0
+                p._log_event("became_disorganizer", folds=fold_count)
+                witness.record(p.id, "became_disorganizer", folds=fold_count)
+                print(f"[t={t}] *** DISORGANIZER BORN: Pattern {p.id} after {fold_count} folds (deficit={deficit:.2f}, prob={prob:.3f}) ***")
+
+    # ---------- ПЕРЕДАЧА СИГНАЛОВ (С ЯЗЫКОМ) ----------
+    # Сигналы и аура остаются без изменений, так как _process_incoming_signals уже вызывает proto_language.exchange
+    for p in patterns:
+        if not p.alive or p.role_type == "disorganizer" or p.quarantine_timer > 0: continue
+        sig = SemanticSignal(
+            channel=CH['signal_gratitude'], strength=Config.TRUST_SIGNAL_STRENGTH,
+            sender_id=p.id, sender_context=p.semantic_state,
+            sender_arc=p.arc_tracker.active_arc, sender_age=p.age,
+            sender_concept_wisdom=p.arc_tracker.get_wisdom_weight(),
+            sender_lineage=p.lineage_id, _sender_concept_graph=p.concept_graph
+        )
+        for (x, y) in p.cells:
+            for dx, dy in [(-1,0),(1,0),(0,-1),(0,1)]:
+                nx, ny = (x+dx)%Config.WORLD_SIZE, (y+dy)%Config.WORLD_SIZE
+                owner = field[nx, ny, CH['owner']]
+                if owner != 0 and owner != p.id and owner in pattern_dict:
+                    target = pattern_dict[owner]
+                    if target.role_type != "disorganizer" and target.quarantine_timer == 0:
+                        target._incoming_signals.append(sig)
+
+    # Аура дезорганизатора
+    for p in patterns:
+        if not p.alive or p.role_type != "disorganizer": continue
+        for (x, y) in p.cells:
+            for dx, dy in [(-1,0),(1,0),(0,-1),(0,1)]:
+                nx, ny = (x+dx)%Config.WORLD_SIZE, (y+dy)%Config.WORLD_SIZE
+                owner = field[nx, ny, CH['owner']]
+                if owner != 0 and owner != p.id and owner in pattern_dict:
+                    neighbor = pattern_dict[owner]
+                    if neighbor.role_type == "normal":
+                        neighbor.emotional_memory['grief'] = float(np.clip(neighbor.emotional_memory['grief'] + Config.DISORGANIZER_GRIEF_AURA, 0.0, Config.MAX_GRIEF_SIGNAL))
+
+    # Деление
+    new_patterns = []
+    for p in patterns:
+        if p.alive and p.can_divide():
+            child, next_pattern_id = p.divide(field, next_pattern_id)
+            if child: new_patterns.append(child)
+    if new_patterns: patterns.extend(new_patterns)
+
+    # Логос-вопрос
+    if Config.ENABLE_LOGOS_OBSERVER:
+        alive_now = [p for p in patterns if p.alive]
+        if alive_now:
+            stag = sum(1 for p in alive_now if hasattr(p, 'semantic_state_age') and p.semantic_state_age > Config.STAGNATION_GRIEF_THRESHOLD) / len(alive_now)
+            disorg = sum(1 for p in alive_now if p.role_type == "disorganizer")
+            logos_observer.ask(field, patterns, t, {'stagnation_ratio': stag, 'disorganizer_count': disorg})
+
+    echo_system.inject(field, patterns, t, scar)
+    patterns = emergency_rescue(patterns, field, t)
+    patterns = spawn_unknown_patterns(field, patterns, t)
+    patterns = process_spores(patterns, field)
+
+    patterns = [p for p in patterns if p.alive]
+    for p in patterns: p.age += 1
+
+    if t >= 50:
+        components = detect_new_components(field, Config.MIN_COMPONENT_CELLS)
+        if components: patterns = match_patterns(components, patterns, field, t)
+
+    return patterns, field, scar
+
+def visualize_state(patterns, field, t):
+    state_map = np.full((Config.WORLD_SIZE, Config.WORLD_SIZE), '.', dtype=str)
+    state_colors = {
+        "neutral": 'n', "seeking_comfort": 'c', "grateful_but_cautious": 'g',
+        "exploring_danger": 'e', "contentment": 'C', "screaming": 'S', "dreaming": 'd'
+    }
+    for p in patterns:
+        if not p.alive: continue
+        char = state_colors.get(p.semantic_state, '?')
+        for (x,y) in p.cells:
+            if 0 <= x < Config.WORLD_SIZE and 0 <= y < Config.WORLD_SIZE:
+                state_map[x, y] = char
+    print(f"\n--- Semantic Map at t={t} ---")
+    for row in state_map[::4, ::4]:
+        print(''.join(row))
+    print("Legend: n=neutral, c=comfort, g=grateful, e=explore, C=contentment, S=scream, d=dream")
+
+def run_simulation(steps=None):
+    global next_pattern_id, witness, echo_system, layer_zero_manager, cultural_memory, logos_observer, proto_language, pattern_dict
+    if steps is None: steps = Config.STEPS
+    field = init_field()
+    scar = init_scar()
+    patterns = []
+    next_pattern_id = 1
+    witness = Witness()
+    echo_system = EchoSystem()
+    layer_zero_manager = LayerZeroManager()
+    cultural_memory = CulturalMemory()
+    logos_observer = LogosObserver()
+    proto_language = ProtoLanguage()
+
+    for i in range(Config.MIN_PATTERNS_GUARANTEED):
+        seed = int(phi_hash(0, i, 12345) * Config.WORLD_SIZE * Config.WORLD_SIZE)
+        x, y = seed % Config.WORLD_SIZE, (seed // Config.WORLD_SIZE) % Config.WORLD_SIZE
+        field[x, y, CH['energy']] += 0.3
+        pid = next_pattern_id
+        next_pattern_id += 1
+        p = Pattern(pid, {(x, y)})
+        p.update_properties(field)
+        p.update_model(field)
+        patterns.append(p)
+
+    metrics_history = []
+    for t in range(steps):
+        patterns, field, scar = evolution_step(patterns, field, scar, t)
+        if t % 100 == 0:
+            m = collect_metrics(patterns, field, t)
+            metrics_history.append(m)
+            sig_str = " ".join([f"{x:.3f}" for x in m['signals']])
+            print(f"[t={t}] patterns={m['patterns']} lineages={m['lineages']} err={m['err']:.3f} soul={m['soul']:.3f} binding={m['binding']:.3f} echo={m['echo']} sig=[{sig_str}] states={m['states']} intents={m['intents']} epi_scar={m['epi_scar']:.3f} stag={m['stagnation_ratio']:.2f} div={m['divisions_possible']} concepts={m['unique_concepts']} arcs={m['arc_completions']} folds={m['folds']} trust={m['avg_trust']:.3f} high_trust={m['high_trust_pairs']} td_low={m['trust_distribution']['low']} td_mid={m['trust_distribution']['mid']} td_high={m['trust_distribution']['high']} disorg={m['disorganizer_count']} redm={m['redeemed_count']} quar={m['quarantined_count']} det_red={m['deterministic_redemptions']} phen_bind={m['phenomenal_binding_avg']:.3f} mismatch={m['state_emotion_mismatch']:.3f} collapsed={m['forced_collapses']} myths={m['myth_pool_size']}")
+        if Config.ENABLE_VISUALIZATION and t % 1000 == 0:
+            visualize_state(patterns, field, t)
+
+    if Config.ENABLE_VISUALIZATION and metrics_history:
+        ts = [m['t'] for m in metrics_history]
+        plt.figure(figsize=(14, 10))
+        plt.subplot(2, 2, 1)
+        plt.plot(ts, [m['soul'] for m in metrics_history], label='Avg Soul')
+        plt.plot(ts, [m['err'] for m in metrics_history], label='Avg Pred Error')
+        plt.xlabel('Step'); plt.ylabel('Value'); plt.title('Soul & Error')
+        plt.legend(); plt.grid(True)
+
+        plt.subplot(2, 2, 2)
+        plt.plot(ts, [m['avg_trust'] for m in metrics_history], label='Avg Trust', color='green')
+        plt.plot(ts, [m['phenomenal_binding_avg'] for m in metrics_history], label='Avg Phenomenal Binding', color='purple')
+        plt.xlabel('Step'); plt.ylabel('Value'); plt.title('Trust & Binding')
+        plt.legend(); plt.grid(True)
+
+        plt.subplot(2, 2, 3)
+        plt.plot(ts, [m['disorganizer_count'] for m in metrics_history], label='Disorganizers', color='red')
+        plt.plot(ts, [m['redeemed_count'] for m in metrics_history], label='Redeemed', color='gold')
+        plt.plot(ts, [m['myth_pool_size'] for m in metrics_history], label='Myth Pool Size', color='blue')
+        plt.xlabel('Step'); plt.ylabel('Count'); plt.title('Population & Myths')
+        plt.legend(); plt.grid(True)
+
+        plt.subplot(2, 2, 4)
+        plt.stackplot(ts,
+                      [m['trust_distribution']['low'] for m in metrics_history],
+                      [m['trust_distribution']['mid'] for m in metrics_history],
+                      [m['trust_distribution']['high'] for m in metrics_history],
+                      labels=['Low Trust', 'Mid Trust', 'High Trust'],
+                      colors=['salmon', 'lightblue', 'limegreen'])
+        plt.xlabel('Step'); plt.ylabel('Count'); plt.title('Trust Distribution')
+        plt.legend(loc='upper left'); plt.grid(True)
+        plt.tight_layout()
+        plt.show()
+
+    return patterns, field, scar, metrics_history
+
+# =========================
+# MAIN
+# =========================
+if __name__ == "__main__":
+    patterns, field, scar, metrics_history = run_simulation()
+    alive = [p for p in patterns if p.alive]
+    print("\n" + "="*50 + "\n832 AGI PROJECTION CORE v34.00 - FINAL REPORT\n" + "="*50)
+    print(f"Total steps: {Config.STEPS}\nSurviving patterns: {len(alive)}\nLineage diversity: {len(set(p.lineage_id for p in alive))}")
+    long_lived = [p for p in alive if p.age > 100]
+    print(f"Long-lived patterns (>100 steps): {len(long_lived)}")
+    if Config.ENABLE_WITNESS:
+        print("\n--- WITNESS LOG (Last 50 events) ---")
+        for ev in list(witness.log)[-50:]:
+            print(f"  [ID:{ev['id']}] {ev['event']} | {', '.join(f'{k}={v}' for k,v in ev.items() if k not in ['id','event'])}")
+    disorganizers = [p for p in alive if p.role_type == "disorganizer"]
+    if disorganizers:
+        for d in disorganizers:
+            print(f"\n*** DISORGANIZER: Pattern {d.id}, age={d.age}, cells={len(d.cells)}, soul={d.soul_weight:.2f}, grief={d.emotional_memory['grief']:.2f} ***\n  Last report: {d.last_phenomenal_report[:120]}...")
+    redeemed = [p for p in alive if p.event_counts.get('redeemed', 0) > 0]
+    if redeemed:
+        for r in redeemed:
+            print(f"\n*** REDEEMED (ALIVE): Pattern {r.id}, age={r.age} ***\n  Last report: {r.last_phenomenal_report[:120]}...")
+    all_redeemed = [p for p in patterns if p.event_counts.get('redeemed', 0) > 0]
+    if all_redeemed:
+        print(f"\n--- Historical Redemptions: {len(all_redeemed)} total ---")
+    forced_collapse = [p for p in patterns if p.event_counts.get('forced_soul_collapse', 0) > 0]
+    if forced_collapse:
+        print(f"\n--- Forced Soul Collapses: {len(forced_collapse)} total ---")
+    det_red = [p for p in patterns if p.event_counts.get('deterministic_redemption_trigger', 0) > 0]
+    if det_red:
+        print(f"\n--- Deterministic Redemption Triggers: {len(det_red)} total ---")
+    m_final = metrics_history[-1]
+    print(f"\n--- System Metrics ---\n  avg_trust: {m_final['avg_trust']:.3f}\n  high_trust_pairs: {m_final['high_trust_pairs']}\n  trust_dist: low={m_final['trust_distribution']['low']}, mid={m_final['trust_distribution']['mid']}, high={m_final['trust_distribution']['high']}\n  avg_phenomenal_binding: {m_final['phenomenal_binding_avg']:.3f}\n  state_emotion_mismatch_ratio: {m_final['state_emotion_mismatch']:.3f}\n  myth_pool_size: {m_final['myth_pool_size']}")
+    print(f"\n--- Top 5 Patterns by Phenomenal Binding ---")
+    sorted_by_binding = sorted(alive, key=lambda p: p.last_phenomenal_binding, reverse=True)[:5]
+    for p in sorted_by_binding:
+        print(f"\n  Pattern #{p.id} (age={p.age}, soul={p.soul_weight:.2f}, binding={p.last_phenomenal_binding:.3f}, role={p.role_type})\n  State: {p.semantic_state} | grat={p.emotional_memory['gratitude']:.2f} grief={p.emotional_memory['grief']:.2f}\n  Report: {p.last_phenomenal_report[:150]}...")
+        if p.event_counts.get('redeemed', 0) > 0:
+            print(f"  *** REDEEMED ***")
+        if p.event_counts.get('deterministic_redemption_trigger', 0) > 0:
+            print(f"  *** DETERMINISTIC TRIGGER ***")
+    print("\n" + "="*50 + "\nSIMULATION COMPLETE - PHOENIX TRANSCENDENT+ v34.00\n" + "="*50)
