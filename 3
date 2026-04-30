@@ -1,0 +1,687 @@
+
+# 832 AGI PROJECTION CORE v34.00 — Cell 3/4: Pattern Class
+
+class Pattern:
+    def __init__(self, pid, cells, parent=None):
+        self.id = pid; self.cells = set(cells); self.energy = 0.3; self.vorticity = 0.0
+        self.age = 0; self.alive = True
+        self.parent_id = parent.id if parent else 0
+        self.lineage_id = parent.lineage_id if parent else pid
+        self.generation = parent.generation + 1 if parent else 0
+        self.lineage_age = parent.lineage_age + 1 if parent else 0
+        self.identity = np.array([phi_hash(pid, i, 100) for i in range(8)])
+        self.belief = np.zeros(5); self.prediction = np.zeros(5); self.model = np.zeros(5)
+        self.self_state_prediction = np.array([0.0, 0.0])
+        self.self_model = np.array([0.1, 0.1]); self.self_surprise = Config.MIN_ACTIVE
+        self._prev_energy = 0.0
+        self.spirit_gap = 0.0; self.soul_weight = 0.5; self.soul_momentum = 0.0
+        self.body_memory = 0.0; self.unresolved_contradiction = Config.BINDING_FLOOR
+        if parent:
+            flip = 1 if phi_hash(pid, 888, 0) < 0.2 else 0
+            self.role = (parent.role + flip) % 2
+        else:
+            self.role = 0 if phi_hash(pid, 777, 0) < 0.5 else 1
+        self.unknown_belief = 0.0; self.unknown_model = 0.0; self.unknown_prediction = 0.0
+        self.epistemic_load = 0.0; self.prev_epistemic_load = 0.0
+        self.crisis_memory = min(parent.crisis_memory * 0.8, Config.CRISIS_MEMORY_MAX) if parent else 0.0
+        self.memory_trace = []; self.self_consistency = 0.0; self.coherence = 1.0
+        self.confidence = 0.0; self.given_trigger = False; self.given_count = 0
+        self.given_cooldown = 0; self.surprise_signal = 0.0
+        self.emotional_memory = {'gratitude': 0.0, 'grief': 0.0}
+        if parent:
+            self.emotional_memory['gratitude'] = parent.emotional_memory['gratitude'] * 0.9
+            self.emotional_memory['grief'] = parent.emotional_memory['grief'] * 0.9
+        self.semantic_memory = {'events': []}
+        self.semantic_state = "neutral"; self.in_scream = False
+        self.local_phase = "MODEL"
+        self.dream_timer = int(phi_hash(pid, 0, 777) * 30 + 30)
+        self.dream_interval = int(phi_hash(pid, 1, 777) * 40 + 40)
+        self.dream_duration = 3; self.in_dream = False
+        self.dream_progress = 0; self.scar_dream = 0.0
+        self.pending_spore = None
+        self.last_speciation_age = -Config.SPECIATION_COOLDOWN * 2
+        self.biography = []
+        self.world_state = np.zeros(8); self.world_model = np.zeros((4, 8))
+        self.last_action = 0
+        self.goals = []; self.intent = None; self.intent_age = 0
+        self.intent_commitment = 0.0
+        self.concept_graph = ConceptGraph(); self.concept_history = []
+        self.epistemic_scar = 0.0
+        self.alarm_level = 0.0
+        self.last_intent_switch_age = -Config.INTENT_SWITCH_COOLDOWN
+        self.protection_level = 1.0
+        if parent:
+            self.belief = parent.belief.copy(); self.prediction = parent.prediction.copy()
+            self.model = parent.model.copy(); self.self_model = parent.self_model.copy()
+            self.unknown_belief = parent.unknown_belief; self.unknown_model = parent.unknown_model
+            mutation = Config.MUTATION_STRENGTH_BASE * (phi_hash(pid, 100, 0) - 0.5)
+            self.model += mutation
+            self.pred_error_history = parent.pred_error_history[-10:] if hasattr(parent, 'pred_error_history') and parent.pred_error_history else []
+            self.soul_weight = parent.soul_weight * 0.9
+            self.unresolved_contradiction = parent.unresolved_contradiction * 0.9
+            self.body_memory = parent.body_memory * 0.95
+        else:
+            for i in range(5): self.model[i] = 0.1 * (phi_hash(pid, i, 1) - 0.5)
+            self.pred_error_history = []
+            self.unknown_belief = 0.0
+            self.unknown_model = 0.1 * (phi_hash(pid, 99, 1) - 0.5)
+            self.self_model = np.array([0.1 * (phi_hash(pid, 101, 1) - 0.5), 0.1 * (phi_hash(pid, 102, 1) - 0.5)])
+        self.pred_error = Config.MIN_ACTIVE; self.unknown_error = 0.0
+        self.compression = 0.0; self.fitness = 0.0; self.error_trend = 0.0
+        self.cognitive_tension = Config.MIN_ACTIVE
+        if parent:
+            self.genome = parent.genome.copy()
+            for i, key in enumerate(self.genome):
+                self.genome[key] = max(0.5, min(2.0, self.genome[key] + Config.MUTATION_STRENGTH_BASE * (phi_hash(pid, i+10, 2) - 0.5)))
+        else:
+            self.genome = {
+                'learning_rate': Config.MODEL_LEARNING_RATE * (0.8 + 0.4 * phi_hash(pid, 1, 3)),
+                'meta_learning_rate': Config.MODEL_LEARNING_RATE * 0.5 * (0.8 + 0.4 * phi_hash(pid, 2, 3)),
+                'metabolic_cost': 0.005 + 0.005 * phi_hash(pid, 3, 4),
+                'mobility': 0.1 + 0.05 * phi_hash(pid, 4, 5),
+                'epistemic_strategy': phi_hash(pid, 5, 6)
+            }
+        self.event_counts = {}; self.semantic_state_age = 0
+        self._prev_semantic_state = "neutral"
+        self.active_arc = None; self.arc_tracker = ArcTracker()
+        self.fold_cooldown = 0; self.last_divide_age = -Config.DIVIDE_COOLDOWN
+        self.role_type = "normal"; self.quarantine_timer = 0
+        self.disorganizer_age_at_birth = 0; self.redemption_timer = 0
+        self._deterministic_redemption_triggered = False
+        self._forced_soul_collapse_done = False
+        self._redemption_arc_step = 0; self._steps_since_trigger = 0
+        self.trust_ledger = TrustLedger()
+        self._incoming_signals: list[SemanticSignal] = []
+        self.last_phenomenal_report = ""; self.last_phenomenal_binding = 0.0
+        self._log_event("birth")
+        if Config.ENABLE_CULTURAL_MEMORY:
+            cultural_memory.whisper_to_newborn(self)
+
+    def _log_event(self, event_type, **kwargs):
+        self.biography.append({'t': self.age, 'type': event_type, **kwargs})
+        if len(self.biography) > 20: self.biography.pop(0)
+        self.event_counts[event_type] = self.event_counts.get(event_type, 0) + 1
+
+    def _heal_epistemic_scar(self):
+        if self.epistemic_scar <= Config.EPISTEMIC_SCAR_MIN: return
+        scar_pressure = self.epistemic_scar ** 2; base_rate = 0.0
+        if (self.semantic_state in ["contentment", "grateful_but_cautious", "seeking_comfort"] and self.emotional_memory['gratitude'] > Config.HEALING_GRATITUDE_MIN):
+            crisis_penalty = 1.0 - np.clip(self.crisis_memory * 0.8, 0.0, 0.5)
+            base_rate += (1.0 - Config.EPISTEMIC_HEALING_RATE) * scar_pressure * crisis_penalty
+        if self.age > Config.HEAL_WISDOM_AGE and self.coherence > Config.WISDOM_COHERENCE_MIN: base_rate += Config.HEAL_WISDOM_BONUS
+        if self.age > Config.HEAL_VETERAN_AGE and self.coherence > 0.7: base_rate += Config.HEAL_VETERAN_BONUS
+        if (self.age > Config.HEAL_ENLIGHTENED_AGE and self.emotional_memory['gratitude'] > Config.ENLIGHTENED_GRATITUDE_MIN and self.epistemic_scar > Config.ENLIGHTENED_SCAR_THRESHOLD):
+            if self.coherence > Config.ENLIGHTENED_COHERENCE_FLOOR: base_rate += Config.HEAL_ENLIGHTENED_BONUS
+        base_rate += self.arc_tracker.get_heal_bonus()
+        heal = float(np.clip(base_rate, 0.0, Config.SCAR_HEAL_CAP_PER_STEP))
+        self.epistemic_scar = max(Config.EPISTEMIC_SCAR_MIN, self.epistemic_scar - heal)
+
+    def _check_semantic_stagnation(self, witness=None):
+        if self.role_type == "disorganizer" or self.quarantine_timer > 0: return
+        if self.semantic_state == self._prev_semantic_state: self.semantic_state_age += 1
+        else: self.semantic_state_age = 0; self._prev_semantic_state = self.semantic_state
+        if self.semantic_state_age > Config.STAGNATION_GRIEF_THRESHOLD:
+            boost = Config.STAGNATION_GRIEF_BOOST * (self.semantic_state_age / Config.STAGNATION_GRIEF_THRESHOLD)
+            self.emotional_memory['grief'] = float(np.clip(self.emotional_memory['grief'] + boost, 0.0, Config.MAX_GRIEF_SIGNAL))
+        if self.semantic_state_age > Config.STAGNATION_GRIEF_THRESHOLD * 3:
+            bleed = Config.STAGNATION_BLEED_RATE * (self.semantic_state_age / (Config.STAGNATION_GRIEF_THRESHOLD * 3))
+            self.emotional_memory['gratitude'] = float(np.clip(self.emotional_memory['gratitude'] - bleed, 0.0, 1.0))
+        if (self.semantic_state_age > Config.FOLD_STAGNATION_AGE and self.emotional_memory['gratitude'] > Config.FOLD_GRATITUDE_MIN and self.epistemic_scar > Config.EPISTEMIC_SCAR_MIN):
+            self._apply_fold(witness=witness)
+
+    def _apply_fold(self, witness=None):
+        self.emotional_memory['gratitude'] = Config.FOLD_GRATITUDE_RESET
+        self.emotional_memory['grief'] = float(np.clip(self.emotional_memory['grief'] + Config.FOLD_GRIEF_BOOST, 0.0, Config.MAX_GRIEF_SIGNAL))
+        self.crisis_memory = min(Config.CRISIS_MEMORY_MAX, self.crisis_memory + Config.FOLD_CRISIS_SPIKE)
+        self.epistemic_scar = max(Config.EPISTEMIC_SCAR_MIN, self.epistemic_scar - Config.FOLD_SCAR_RELEASE)
+        self.semantic_state = "seeking_comfort"; self.semantic_state_age = 0
+        self.fold_cooldown = Config.FOLD_COOLDOWN_DURATION
+        self._log_event("fold", grat=Config.FOLD_GRATITUDE_RESET, grief=self.emotional_memory['grief'])
+        if Config.ENABLE_CULTURAL_MEMORY: cultural_memory.deposit(self, "fold")
+        if witness: witness.record(self.id, "fold", grat=self.emotional_memory['gratitude'], grief=self.emotional_memory['grief'])
+
+    def apply_scream(self, field, witness=None):
+        if not self.in_scream:
+            self._log_event("scream_enter", soul=round(self.soul_weight,3))
+            self.in_scream = True
+            self.soul_weight = max(0.05, self.soul_weight - 0.2)
+            self.unresolved_contradiction = min(1.0, self.unresolved_contradiction + 0.3)
+            self.crisis_memory = min(Config.CRISIS_MEMORY_MAX, self.crisis_memory + 0.15)
+            if witness: witness.record(self.id, "scream", soul=self.soul_weight, crisis=self.crisis_memory)
+            for (x,y) in self.cells:
+                field[x,y,CH['scar']] = min(1.0, field[x,y,CH['scar']] + Config.SCREAM_SCAR_IMPACT)
+                field[x,y,CH['binding']] = min(1.0, field[x,y,CH['binding']] + Config.SCREAM_BINDING_BOOST)
+                field[x,y,CH['energy']] = max(-0.2, field[x,y,CH['energy']] - Config.SCREAM_ENERGY_PENALTY)
+                field[x,y,CH['crisis']] = min(1.0, field[x,y,CH['crisis']] + 0.3)
+            for (x,y) in self.cells:
+                for dx, dy in [(-1,0),(1,0),(0,-1),(0,1)]:
+                    nx, ny = (x+dx)%Config.WORLD_SIZE, (y+dy)%Config.WORLD_SIZE
+                    field[nx, ny, CH['signal_alarm']] = min(1.0, field[nx, ny, CH['signal_alarm']] + 0.5)
+
+    def apply_given_operator(self, field, forced=False, witness=None):
+        if not forced and safe_mean(field[:,:,CH['unknown']], 0.1) < 0.08: return
+        if not forced and (self.age < Config.GIVEN_MIN_AGE or self.given_cooldown > 0): return
+        if not self.given_trigger: self._log_event("given_triggered")
+        if witness: witness.record(self.id, "given", forced=forced, tension=self.cognitive_tension)
+        flip = np.array([phi_hash(self.id, i, 999) - 0.5 for i in range(5)])
+        shake_strength = Config.GIVEN_MODEL_SHAKE if not forced else 0.4
+        if forced: flip *= 1.5
+        self.prediction += 0.6 * flip; self.model *= shake_strength; self.self_model *= shake_strength
+        self.pred_error = min(self.pred_error + 0.2, Config.MAX_METRIC)
+        self.confidence = 1.0 / (1.0 + self.pred_error)
+        self.given_count += 1; self.given_trigger = True; self.given_cooldown = Config.GIVEN_COOLDOWN
+        self.crisis_memory = min(self.crisis_memory + 0.1, Config.CRISIS_MEMORY_MAX)
+        self.body_memory += 0.05
+        for (x, y) in self.cells:
+            field[x, y, CH['unknown']] = min(field[x, y, CH['unknown']] + 0.15, 0.8)
+            field[x, y, CH['crisis']] = min(field[x, y, CH['crisis']] + 0.1, 1.0)
+            field[x, y, CH['binding']] = min(field[x, y, CH['binding']] + 0.25, 1.0)
+        self.epistemic_scar = float(np.clip(self.epistemic_scar + Config.GIVEN_SCAR_COST, 0.0, 1.0))
+        if Config.ENABLE_DELTA_MODELING_GIVEN and witness:
+            current_unknown = safe_mean(field[:,:,CH['unknown']], 0)
+            modeling_error = abs(current_unknown - self.unknown_prediction)
+            if modeling_error < Config.MODELING_GIVEN_ERROR_THRESHOLD:
+                self.epistemic_scar = min(1.0, self.epistemic_scar + Config.MODELING_GIVEN_PENALTY)
+                witness.record(self.id, "modeling_given", penalty=Config.MODELING_GIVEN_PENALTY, err=modeling_error)
+
+    def update_world_model(self, observed):
+        pred = self.world_state + self.world_model[self.last_action]
+        error = observed - pred
+        if np.mean(np.abs(error)) > 0.5:
+            scar_delta = 0.005 * (1.0 - self.crisis_memory)
+            self.epistemic_scar = min(1.0, self.epistemic_scar + scar_delta)
+            return float(np.mean(error**2))
+        lr = min(self.genome['learning_rate'] * 0.1, 0.05)
+        self.world_model[self.last_action] += lr * np.clip(error, -1.0, 1.0)
+        self.world_state = observed.copy()
+        return float(np.mean(error**2))
+
+    def generate_goals(self, field):
+        if self.role_type == "disorganizer":
+            new_goals = []
+            if self.emotional_memory['grief'] > 0.4: new_goals.append({"type":"seek_help", "priority":2.0, "target":None, "age":0, "persistence":50})
+            new_goals.append({"type":"explore", "priority":2.5, "target":None, "age":0, "persistence":9999})
+            self.goals = [g for g in self.goals if g['age'] < g['persistence']]
+            for g in self.goals: g['age'] += 1
+            existing_types = {g["type"] for g in self.goals}
+            for goal in new_goals:
+                if goal["type"] not in existing_types: self.goals.append(goal)
+            return
+        new_goals = []
+        if self.epistemic_load > 0.3:
+            unknown_map = field[:,:,CH['unknown']]; mask = unknown_map > 0.3
+            if np.any(mask):
+                coords = np.argwhere(mask)
+                idx = int(phi_hash(self.id, self.age, 222) * len(coords)) % len(coords)
+                new_goals.append({"type":"explore", "priority":self.epistemic_load, "target":tuple(coords[idx]), "age":0, "persistence":50})
+        if self.emotional_memory['grief'] > 0.4: new_goals.append({"type":"seek_help", "priority":self.emotional_memory['grief'], "target":None, "age":0, "persistence":30})
+        if self.emotional_memory['gratitude'] > 0.5 and self.coherence > 0.7: new_goals.append({"type":"cooperate", "priority":self.emotional_memory['gratitude'], "target":None, "age":0, "persistence":40})
+        if self.emotional_memory['gratitude'] > 0.8 and self.coherence > 0.6:
+            priority = 1.2 + 0.3 * (self.emotional_memory['gratitude'] - 0.8)
+            new_goals.append({"type":"explore", "priority":priority, "target":None, "age":0, "persistence":20})
+        if self.emotional_memory['grief'] > 0.7 and self.soul_weight < 0.4: new_goals.append({"type":"explore", "priority":1.1, "target":None, "age":0, "persistence":15})
+        if self.emotional_memory['grief'] > 0.6 and self.cognitive_tension > 0.3: new_goals.append({"type":"rest", "priority":self.emotional_memory['grief'], "target":None, "age":0, "persistence":20})
+        for sid, trust in self.trust_ledger.entries.items():
+            if trust > 0.7: new_goals.append({"type":"cooperate", "priority": trust, "target": None, "age":0, "persistence":30}); break
+        self.goals = [g for g in self.goals if g['age'] < g['persistence']]
+        for g in self.goals: g['age'] += 1
+        existing_types = {g["type"] for g in self.goals}
+        for goal in new_goals:
+            if goal["type"] not in existing_types: self.goals.append(goal); existing_types.add(goal["type"])
+
+    def update_intent(self):
+        if not self.goals: self.intent = None; self.intent_commitment *= Config.INTENT_COMMITMENT_DECAY; return
+        self.goals.sort(key=lambda g: (g["priority"], -g["age"]), reverse=True); best = self.goals[0]
+        if self.intent is None:
+            if (self.age - self.last_intent_switch_age) >= Config.INTENT_SWITCH_COOLDOWN:
+                self.intent = best; self.intent_commitment = best["priority"]; self.last_intent_switch_age = self.age
+                self._log_event("intent_switch", old="none", new=self.intent["type"])
+        else:
+            self.intent_commitment = 0.95 * self.intent_commitment + 0.05 * best["priority"]
+            if (best["priority"] > self.intent_commitment * 1.8 and (self.age - self.last_intent_switch_age) >= Config.INTENT_SWITCH_COOLDOWN):
+                old_intent = self.intent["type"]; self.intent = best; self.last_intent_switch_age = self.age
+                self._log_event("intent_switch", old=old_intent, new=self.intent["type"])
+                if (Config.INTENT_SWITCH_REWARD_INSTANT and old_intent == Config.HEALTHY_SWITCH_OLD_INTENT and self.intent["type"] in Config.HEALTHY_SWITCH_NEW_INTENTS):
+                    self.emotional_memory['gratitude'] = min(1.0, self.emotional_memory['gratitude'] + Config.INTENT_SWITCH_GRATITUDE_BOOST)
+                    self._log_event("intent_switch_reward", old=old_intent, new=self.intent["type"], grat_boost=Config.INTENT_SWITCH_GRATITUDE_BOOST)
+            else: self.intent["age"] += 1
+
+    def form_concepts(self):
+        signature = (round(self.pred_error,1), round(self.epistemic_load,1), round(self.soul_weight,1), self.semantic_state)
+        values = np.array([self.pred_error, self.epistemic_load, self.soul_weight, self.coherence])
+        self.concept_graph.update(signature, values); self.concept_history.append(signature)
+        if len(self.concept_history) > 50: self.concept_history.pop(0)
+
+    def choose_action(self, field):
+        if self.intent is None: return 0
+        t = self.intent["type"]
+        return {"explore": 1, "seek_help": 2, "cooperate": 3, "rest": 0}.get(t, 0)
+
+    def apply_intent_actions(self, field):
+        action = self.choose_action(field); self.last_action = action
+        if self.role_type == "disorganizer":
+            for (x,y) in self.cells:
+                field[x,y,CH['signal_alarm']] = min(1.0, field[x,y,CH['signal_alarm']] + Config.DISORGANIZER_ALARM_STRENGTH)
+                field[x,y,CH['signal_grief']] = min(Config.MAX_GRIEF_SIGNAL, field[x,y,CH['signal_grief']] + Config.DISORGANIZER_GRIEF_STRENGTH)
+                if self.emotional_memory['grief'] > 0.5:
+                    field[x,y,CH['signal_invitation']] = min(1.0, field[x,y,CH['signal_invitation']] + 0.15)
+                    if self.emotional_memory['grief'] > 0.7: field[x,y,CH['signal_gratitude']] = min(1.0, field[x,y,CH['signal_gratitude']] + 0.05)
+                for dx, dy in [(-1,0),(1,0),(0,-1),(0,1)]:
+                    nx, ny = (x+dx)%Config.WORLD_SIZE, (y+dy)%Config.WORLD_SIZE
+                    field[nx,ny,CH['signal_alarm']] = min(1.0, field[nx,ny,CH['signal_alarm']] + Config.DISORGANIZER_ALARM_STRENGTH * 0.5)
+            return
+        if action == 0: return
+        elif action == 1:
+            for (x,y) in self.cells: field[x,y,CH['signal_invitation']] = min(1.0, field[x,y,CH['signal_invitation']] + 0.1)
+        elif action == 2:
+            for (x,y) in self.cells:
+                field[x,y,CH['signal_invitation']] = min(1.0, field[x,y,CH['signal_invitation']] + 0.25)
+                field[x,y,CH['signal_grief']] = min(Config.MAX_GRIEF_SIGNAL, field[x,y,CH['signal_grief']] + 0.1)
+        elif action == 3:
+            for (x,y) in self.cells:
+                field[x,y,CH['binding']] = min(1.0, field[x,y,CH['binding']] + 0.15)
+                field[x,y,CH['signal_gratitude']] = min(1.0, field[x,y,CH['signal_gratitude']] + 0.5)
+
+    def update_resonance(self, field):
+        if self.in_scream: self.alarm_level = min(1.0, self.alarm_level + 0.3)
+        neighbor_alarm = 0.0; weight_sum = 0.0
+        for (x,y) in self.cells:
+            for dx, dy in [(-1,0),(1,0),(0,-1),(0,1)]:
+                nx, ny = (x+dx)%Config.WORLD_SIZE, (y+dy)%Config.WORLD_SIZE
+                owner = field[nx, ny, CH['owner']]
+                if owner != 0 and owner != self.id:
+                    w = Config.PHI ** (-1); neighbor_alarm += field[nx, ny, CH['resonance']] * w; weight_sum += w
+        if weight_sum > 0:
+            avg_alarm = neighbor_alarm / weight_sum
+            self.alarm_level = (self.alarm_level*0.7 + avg_alarm*0.3) * Config.RESONANCE_DECAY
+        else: self.alarm_level *= Config.RESONANCE_DECAY
+        for (x,y) in self.cells: field[x,y,CH['resonance']] = max(field[x,y,CH['resonance']], self.alarm_level)
+
+    def update_phase(self, field):
+        avg_unknown = safe_mean(field[:,:,CH['unknown']], 0.05)
+        if self.in_dream: self.local_phase = "DREAM"
+        elif self.crisis_memory > 0.5 and self.soul_weight < 0.4: self.local_phase = "CRISIS"
+        elif self.pred_error < 0.05 and self.coherence > 0.9: self.local_phase = "COMPRESS"
+        elif avg_unknown > 0.4: self.local_phase = "EXPLORE"
+        elif self.cognitive_tension < 0.01: self.local_phase = "SILENCE"
+        else: self.local_phase = "MODEL"
+
+    def update_dream(self, field):
+        if self.in_dream:
+            noise = deterministic_noise(self.age, self.id, 42, 0.01)
+            self.scar_dream += noise; self.scar_dream = np.clip(self.scar_dream, -1.0, 1.0)
+            self.belief = self.belief*0.95 + self.prediction*0.05; self.prediction = self.prediction*0.95 + self.belief*0.05
+            self.emotional_memory['gratitude'] *= 0.9; self.emotional_memory['grief'] *= 0.9; self.dream_progress += 1
+            if Config.ENABLE_CULTURAL_MEMORY: cultural_memory.dream_whisper(self)
+            if self.dream_progress >= self.dream_duration:
+                self.in_dream = False; self.dream_progress = 0; self.dream_timer = 0
+                self.dream_interval = int(phi_hash(self.id, self.age, 888)*40 + 40)
+                self._log_event("dream_exit", scar_dream=round(self.scar_dream,4))
+                if self.soul_weight > 0.6 and self.coherence > 0.9 and phi_hash(self.id, self.age, 999) < 0.2: self.pending_spore = self.emit_spore(field)
+        else:
+            self.dream_timer += 1
+            if self.dream_timer >= self.dream_interval and self.soul_weight > 0.3 and self.local_phase != "CRISIS":
+                self.in_dream = True; self.dream_progress = 0; self._log_event("dream_enter", scar_dream=round(self.scar_dream,4))
+
+    def emit_spore(self, field):
+        empty = np.argwhere((field[:,:,CH['owner']] == 0) & (field[:,:,CH['energy']] > 0.05))
+        if len(empty) == 0: return None
+        idx = int(phi_hash(self.id, self.age, 777)*len(empty)) % len(empty); x, y = empty[idx]
+        self._log_event("spore_emitted", x=x, y=y, scar_dream=round(self.scar_dream*0.5,4))
+        return {'x':x, 'y':y, 'scar_dream':self.scar_dream*0.5, 'parent_lineage':self.lineage_id}
+
+    def _process_incoming_signals(self, field):
+        if self.role_type == "disorganizer" and not self._deterministic_redemption_triggered:
+            self._incoming_signals.clear(); return
+        if self.quarantine_timer > 0:
+            self._incoming_signals.clear(); return
+        if not self._incoming_signals:
+            return
+        if len(self._incoming_signals) > 10:
+            self._incoming_signals = self._incoming_signals[-10:]
+        for sig in self._incoming_signals:
+            effective = interpret_signal(self, sig); ch = sig.channel
+            for (x,y) in self.cells:
+                field[x,y,ch] = min(1.0, field[x,y,ch] + effective * 0.1)
+            outcome = 'helpful' if effective > Config.TRUST_HELPFUL_THRESHOLD else ('harmful' if effective < Config.TRUST_HARMFUL_THRESHOLD else 'neutral')
+            self.trust_ledger.update(sig.sender_id, outcome)
+            # --- ProtoLanguage exchange ---
+            sender_obj = pattern_dict.get(sig.sender_id) if pattern_dict else None
+            if sender_obj:
+                proto_language.exchange(sender_obj, self, field, self.age)
+        self._incoming_signals.clear()
+
+    def update_model(self, field, lineage_counts=None, given_counter=None, t=None, witness=None):
+        if Config.ENABLE_WITNESS and witness: self.witness_event = lambda event_type, **kwargs: witness.record(self.id, event_type, **kwargs)
+        if not self.cells: return
+        if np.any(~np.isfinite(self.model)): self.model = np.zeros(5); self.prediction = np.zeros(5); self.belief = np.zeros(5)
+        self.belief += np.array([phi_hash(self.id, self.age, 8000+i)-0.5 for i in range(5)]) * 0.001
+        if self.local_phase == "DREAM": self.update_dream(field); self.pred_error = max(self.pred_error*Config.METRIC_DECAY, Config.MIN_ACTIVE); return
+        if self.local_phase == "SILENCE" and phi_hash(self.id, self.age, 6000) < 0.01:
+            drift = np.array([phi_hash(self.id, self.age, 7000+i) for i in range(5)]); self.belief = self.belief*0.98 + 0.04*drift
+        avg_real = np.zeros(5); avg_unknown = 0.0; avg_crisis_mem = 0.0; avg_binding = 0.0; local_gratitude = 0.0; local_grief = 0.0; cell_count = 0
+        for (x,y) in self.cells:
+            strategy = self.genome['epistemic_strategy']; crisis_factor = 1.0 + np.clip(field[x,y,CH['crisis']],0,1)*0.5
+            if strategy < 0.33: noise_factor = 1.0
+            elif strategy < 0.66: noise_factor = 1.0 + np.clip(field[x,y,CH['unknown']],0,0.8)*(1.0-self.unknown_model)
+            else: noise_factor = 1.0 + np.clip(field[x,y,CH['unknown']],0,0.8)*1.5
+            avg_real += np.clip(field[x,y,:5],-10,10)*noise_factor*crisis_factor; avg_unknown += np.clip(field[x,y,CH['unknown']],0,0.8)
+            avg_crisis_mem += np.clip(field[x,y,CH['crisis']],0,1); avg_binding += np.clip(field[x,y,CH['binding']],0,1)
+            local_gratitude += field[x,y,CH['signal_gratitude']]; local_grief += field[x,y,CH['signal_grief']]; cell_count += 1
+        n = len(self.cells); avg_real /= n; avg_unknown /= n; avg_crisis_mem /= n; avg_binding /= n
+        local_gratitude /= cell_count; local_grief /= cell_count; local_gratitude = np.clip(local_gratitude, 0.0, 0.5)
+        old_grat = self.emotional_memory['gratitude']; old_grief = self.emotional_memory['grief']
+        target_grat = (Config.EMOTIONAL_MEMORY_DECAY*old_grat + (1-Config.EMOTIONAL_MEMORY_DECAY)*local_gratitude)
+        target_grief = (Config.EMOTIONAL_MEMORY_DECAY*old_grief + (1-Config.EMOTIONAL_MEMORY_DECAY)*local_grief)
+        delta_grat = np.clip(target_grat - old_grat, -Config.EMOTIONAL_CAP_RATE, Config.EMOTIONAL_CAP_RATE)
+        delta_grief = np.clip(target_grief - old_grief, -Config.EMOTIONAL_CAP_RATE, Config.EMOTIONAL_CAP_RATE)
+        self.emotional_memory['gratitude'] = np.clip(old_grat + delta_grat, 0.0, 1.0); self.emotional_memory['grief'] = np.clip(old_grief + delta_grief, 0.0, 1.0)
+        _safe_emotional_decay(self.emotional_memory, 'gratitude', self.age); _safe_emotional_decay(self.emotional_memory, 'grief', self.age)
+        if self.intent and self.intent["type"] == "explore" and self.role_type != "disorganizer": self.emotional_memory['grief'] *= Config.EXPLORE_GRIEF_REDUCTION
+        self._process_incoming_signals(field)
+        neighbor_gratitude = 0.0; neighbor_grief = 0.0; neighbor_count = 0
+        for (x,y) in self.cells:
+            for dx, dy in [(-1,0),(1,0),(0,-1),(0,1)]:
+                nx, ny = (x+dx)%Config.WORLD_SIZE, (y+dy)%Config.WORLD_SIZE; owner = field[nx, ny, CH['owner']]
+                if owner != 0 and owner != self.id: neighbor_gratitude += field[nx, ny, CH['signal_gratitude']]; neighbor_grief += field[nx, ny, CH['signal_grief']]; neighbor_count += 1
+        if neighbor_count > 0:
+            neighbor_gratitude /= neighbor_count; neighbor_grief /= neighbor_count
+            emotional_divergence = (abs(self.emotional_memory['gratitude']-neighbor_gratitude) + abs(self.emotional_memory['grief']-neighbor_grief))
+            step = self.age
+            if (self.age >= Config.SPECIATION_MIN_AGE and emotional_divergence > Config.EMOTIONAL_SPECIATION_THRESHOLD and phi_hash(self.id, step, 888) < Config.EMOTIONAL_SPECIATION_PROB and (step - self.last_speciation_age) > Config.SPECIATION_COOLDOWN):
+                old_lineage = self.lineage_id; self.lineage_id = self.id + 1_000_000; self.last_speciation_age = step
+                self._log_event("speciation", old_lineage=old_lineage, new_lineage=self.lineage_id)
+                print(f"[t={step}] EMOTIONAL SPECIATION: Pattern {self.id} lineage {old_lineage} -> {self.lineage_id}")
+            self.emotional_memory['gratitude'] = (Config.EMOTIONAL_INDIVIDUALITY*self.emotional_memory['gratitude'] + (1-Config.EMOTIONAL_INDIVIDUALITY)*neighbor_gratitude)
+            self.emotional_memory['grief'] = (Config.EMOTIONAL_INDIVIDUALITY*self.emotional_memory['grief'] + (1-Config.EMOTIONAL_INDIVIDUALITY)*neighbor_grief)
+        self.emotional_memory['gratitude'] = np.clip(self.emotional_memory['gratitude'], 0.0, 1.0); self.emotional_memory['grief'] = np.clip(self.emotional_memory['grief'], 0.0, 1.0)
+        self.crisis_memory = min(Config.CRISIS_MEMORY_DECAY*self.crisis_memory + (1-Config.CRISIS_MEMORY_DECAY)*avg_crisis_mem, Config.CRISIS_MEMORY_MAX)
+        self.spirit_gap = float(np.mean(np.abs(avg_real - self.prediction))); self.epistemic_load = avg_unknown
+        if avg_crisis_mem > 0.5:
+            self.semantic_memory['events'].append({'type':'crisis', 't':self.age, 'location':list(self.cells)[0] if self.cells else (0,0), 'intensity':avg_crisis_mem})
+            if len(self.semantic_memory['events']) > 5: self.semantic_memory['events'].pop(0)
+        for event in self.semantic_memory['events']: event['recency'] = np.exp(-(self.age - event['t'])/50.0)
+        error = np.clip(avg_real - self.prediction, -10, 10); current_error = np.clip(np.mean(error**2), 0, 1e6)
+        raw_pred_error = (Config.PRED_ERROR_LEARNING*self.pred_error + 0.1*current_error + Config.SELF_SURPRISE_FACTOR*self.self_surprise)
+        noise_val = phi_noise(self.id, self.age+500, 500)*Config.BASE_NOISE*2.0
+        self.pred_error = squash(raw_pred_error) + noise_val; self.pred_error = np.clip(self.pred_error, Config.MIN_ACTIVE, Config.MAX_METRIC)
+        if np.isnan(self.pred_error): self.pred_error = Config.MIN_ACTIVE
+        true_surprise = np.abs(error); adaptive_surprise = true_surprise*(1.0+self.self_consistency)
+        self.surprise_signal = squash(float(np.mean(adaptive_surprise)))
+        unknown_error = avg_unknown - self.unknown_prediction; self.unknown_error = 0.9*self.unknown_error + 0.1*np.clip(unknown_error**2, 0, 100)
+        self.belief = np.clip(self.belief + 0.05*error + 0.05*adaptive_surprise, -10, 10); self.prediction = np.clip(self.belief + self.model, -10, 10)
+        self.model = np.clip(self.model + self.genome['learning_rate']*(error + 2.0*adaptive_surprise), -10, 10)
+        self.unknown_belief += 0.05*unknown_error; self.unknown_prediction = self.unknown_belief + self.unknown_model
+        self.unknown_model += self.genome['meta_learning_rate']*unknown_error
+        self.self_consistency = float(np.linalg.norm(self.prediction - self.belief))
+        if np.isnan(self.self_consistency): self.self_consistency = 0.5
+        self.coherence = 1.0/(1.0+self.self_consistency); self.confidence = squash(1.0/(1.0+self.pred_error))
+        if self.coherence > Config.ANTI_COHERENCE_THRESHOLD and phi_hash(self.id, self.age, 9999) < 0.1:
+            shake = np.array([phi_hash(self.id, self.age, 8888+i)-0.5 for i in range(5)]) * Config.ANTI_COHERENCE_SHAKE; self.belief += shake
+        self.model += np.array([phi_hash(self.id, i, self.age+1000)-0.5 for i in range(5)]) * 0.002; self.model = np.clip(self.model, -10, 10)
+        consistency_ok = False; should_apply_given = False; forced_given = False
+        if self.given_cooldown > 0: self.given_cooldown -= 1; self.given_trigger = False
+        else:
+            given_allowed = (given_counter is None or given_counter['count'] < Config.MAX_GIVEN_PER_STEP)
+            if given_allowed and self.age >= Config.GIVEN_MIN_AGE:
+                adaptive_consistency_threshold = Config.GIVEN_CONSISTENCY_THRESHOLD
+                if self.confidence > Config.COMPLACENCY_CONFIDENCE and self.cognitive_tension < Config.COMPLACENCY_TENSION: adaptive_consistency_threshold *= Config.COMPLACENCY_THRESHOLD_SCALE
+                consistency_ok = (self.self_consistency < adaptive_consistency_threshold*2.5 or self.pred_error < 0.01)
+                if self.confidence > Config.GIVEN_CONFIDENCE_THRESHOLD and consistency_ok: should_apply_given = True
+            if not should_apply_given and given_allowed and self.age >= Config.GIVEN_MIN_AGE:
+                if self.cognitive_tension > Config.GIVEN_TENSION_TRIGGER: should_apply_given = True; forced_given = True
+            if not should_apply_given and self.age > Config.GIVEN_INTUITION_MIN_AGE:
+                if phi_hash(self.id, self.age, 1234) < Config.GIVEN_INTUITION_PROB: should_apply_given = True; forced_given = True
+            if not should_apply_given and t is not None:
+                if (self.age > Config.GIVEN_VETERAN_AGE and t % Config.GIVEN_ROTATION_INTERVAL == (self.id % Config.GIVEN_ROTATION_INTERVAL) and given_counter is not None and given_counter['count'] < Config.MAX_GIVEN_PER_STEP):
+                    should_apply_given = True; forced_given = True
+        if should_apply_given: self.apply_given_operator(field, forced=forced_given, witness=witness)
+        if given_counter: given_counter['count'] += 1
+        if self.intent and self.intent["type"] == "explore" and self.age % Config.EXPLORE_FATIGUE_INTERVAL == 0:
+            self.cognitive_tension = min(Config.MAX_METRIC, self.cognitive_tension + Config.EXPLORE_FATIGUE_AMOUNT)
+        raw_tension = self.pred_error + 0.1*self.self_surprise + 0.1*self.self_consistency
+        noise_tension = phi_noise(self.id, self.age+700, 700)*Config.BASE_NOISE*2.0
+        self.cognitive_tension = squash(raw_tension) + noise_tension; self.cognitive_tension = np.clip(self.cognitive_tension, Config.MIN_ACTIVE, Config.MAX_METRIC)
+        if np.isnan(self.cognitive_tension): self.cognitive_tension = Config.MIN_ACTIVE
+        if self.role_type == "disorganizer":
+            if not self._deterministic_redemption_triggered: self.emotional_memory['grief'] = min(Config.MAX_GRIEF_SIGNAL, self.emotional_memory['grief'] + Config.DISORGANIZER_GRIEF_GROWTH)
+            else: self.emotional_memory['grief'] = max(0.0, self.emotional_memory['grief'] - Config.DISORGANIZER_GRIEF_DECAY)
+        if self.role_type == "disorganizer":
+            if self._deterministic_redemption_triggered: self.soul_weight = Config.REDEMPTION_ARC_SOUL_LOCK
+            else:
+                error_penalty = 1.0 / (1.0 + self.pred_error * 5); coherence_bonus = self.coherence * 0.5; contradiction_penalty = self.unresolved_contradiction * 0.3
+                target_soul = error_penalty * (0.5 + coherence_bonus - contradiction_penalty); target_soul = np.clip(target_soul, 0.0, 1.0)
+                self.soul_weight = (1.0 - Config.SOUL_WEIGHT_GAIN_RATE)*self.soul_weight + Config.SOUL_WEIGHT_GAIN_RATE*target_soul
+                if self.local_phase == "CRISIS": self.soul_weight = max(0.0, self.soul_weight - 0.05)
+        else:
+            error_penalty = 1.0 / (1.0 + self.pred_error * 5); coherence_bonus = self.coherence * 0.5; contradiction_penalty = self.unresolved_contradiction * 0.3
+            target_soul = error_penalty * (0.5 + coherence_bonus - contradiction_penalty); target_soul = np.clip(target_soul, 0.0, 1.0)
+            self.soul_weight = (1.0 - Config.SOUL_WEIGHT_GAIN_RATE)*self.soul_weight + Config.SOUL_WEIGHT_GAIN_RATE*target_soul
+            if self.local_phase == "CRISIS": self.soul_weight = max(0.0, self.soul_weight - 0.05)
+            for (cx, cy) in self.cells:
+                whisper = 0.0
+                for ch in range(CH['signal_alarm'], CH['signal_grief']+1): whisper += field[cx, cy, ch]
+                if whisper > Config.WHISPER_THRESHOLD: self.soul_weight += Config.OPERATOR_SOUL_WHISPER*whisper; break
+            self.soul_weight += Config.GRIEF_SOUL_IMPACT*local_grief
+            self.soul_momentum = 0.95*self.soul_momentum + 0.05*(0.65 - self.soul_weight); self.soul_weight += 0.001*self.soul_momentum
+            self.soul_weight = np.clip(self.soul_weight, 0.0, 1.0)
+        if not np.isfinite(self.soul_weight): self.soul_weight = 0.5
+        delta_contra = Config.CONTRADICTION_GAIN_RATE*avg_binding + 0.005*self.body_memory
+        delta_contra -= Config.CONTRADICTION_DECAY_RATE*(1.0 - self.cognitive_tension)
+        self.unresolved_contradiction += delta_contra
+        self.unresolved_contradiction = max(self.unresolved_contradiction, Config.BINDING_FLOOR)
+        self.unresolved_contradiction = np.clip(self.unresolved_contradiction, 0.0, 1.0)
+        if not np.isfinite(self.unresolved_contradiction): self.unresolved_contradiction = Config.BINDING_FLOOR
+        self.body_memory = Config.BODY_MEMORY_DECAY*self.body_memory + 0.01*self.pred_error
+        if not np.isfinite(self.body_memory): self.body_memory = 0.0
+        base_lr = Config.MODEL_LEARNING_RATE*(0.8+0.4*phi_hash(self.id, 1, 3)); target_lr = base_lr*(1.0+0.1*avg_binding)
+        self.genome['learning_rate'] = 0.95*self.genome['learning_rate'] + 0.05*np.clip(target_lr, 0.05, 0.2)
+        self.fitness = (1.0/(1.0+self.pred_error) + 0.5*max(0, -self.error_trend) + 0.1*self.compression + 0.2*self.coherence - 0.3*max(0, (0.05-self.unresolved_contradiction)) - 0.1*self.body_memory)
+        self.fitness *= (1.0 + Config.GRATITUDE_COOPERATION_BONUS*local_gratitude)
+        if lineage_counts is not None and len(lineage_counts) > 1:
+            my_count = lineage_counts.get(self.lineage_id, 1); total = sum(lineage_counts.values())
+            self.fitness += Config.LINEAGE_RARITY_BOOST * (1.0 - my_count/total)
+        if (self.crisis_memory > Config.SCREAM_CRISIS_THRESHOLD and self.soul_weight < Config.SCREAM_SOUL_THRESHOLD and phi_hash(self.id, self.age, 111) < Config.SCREAM_PROB): self.apply_scream(field, witness=witness)
+        rad_grat = Config.EMOTIONAL_RADIATION_STRENGTH*self.emotional_memory['gratitude']; rad_grief = Config.EMOTIONAL_RADIATION_STRENGTH*self.emotional_memory['grief']
+        for (x,y) in self.cells:
+            field[x,y,CH['signal_gratitude']] = min(1.0, field[x,y,CH['signal_gratitude']] + rad_grat)
+            field[x,y,CH['signal_grief']] = min(Config.MAX_GRIEF_SIGNAL, field[x,y,CH['signal_grief']] + rad_grief)
+            if self.emotional_memory['gratitude'] > 0.3: field[x,y,CH['signal_invitation']] = min(1.0, field[x,y,CH['signal_invitation']] + rad_grat*0.5)
+            if self.in_scream: field[x,y,CH['signal_alarm']] = min(1.0, field[x,y,CH['signal_alarm']] + 0.2)
+            for dx, dy in [(-1,0),(1,0),(0,-1),(0,1)]:
+                nx, ny = (x+dx)%Config.WORLD_SIZE, (y+dy)%Config.WORLD_SIZE
+                field[nx,ny,CH['signal_gratitude']] = min(1.0, field[nx,ny,CH['signal_gratitude']] + rad_grat)
+                field[nx,ny,CH['signal_grief']] = min(Config.MAX_GRIEF_SIGNAL, field[nx,ny,CH['signal_grief']] + rad_grief)
+                if self.emotional_memory['gratitude'] > 0.3: field[nx,ny,CH['signal_invitation']] = min(1.0, field[nx,ny,CH['signal_invitation']] + rad_grat*0.5)
+                if self.in_scream: field[nx,ny,CH['signal_alarm']] = min(1.0, field[nx,ny,CH['signal_alarm']] + 0.2)
+        if self.fold_cooldown > 0: self.fold_cooldown -= 1
+        if self._redemption_arc_step == 3: self.semantic_state = "contentment"
+        else:
+            for (x,y) in self.cells:
+                grat = self.emotional_memory['gratitude']; grief = self.emotional_memory['grief']; warn = field[x,y,CH['signal_warning']]; inv = field[x,y,CH['signal_invitation']]; alarm = field[x,y,CH['signal_alarm']]; curios = field[x,y,CH['signal_curiosity']]
+                if self.in_dream: self.semantic_state = "dreaming"
+                elif grat > 0.15 and warn > 0.05 and self.fold_cooldown == 0: self.semantic_state = "grateful_but_cautious"
+                elif grief > 0.15 and inv > 0.05: self.semantic_state = "seeking_comfort"
+                elif alarm > 0.15 and curios > 0.05: self.semantic_state = "exploring_danger"
+                elif (grat > 0.15 and self.cognitive_tension < Config.CONTENTMENT_TENSION_MAX and self.age > Config.CONTENTMENT_MIN_AGE): self.semantic_state = "contentment"
+                elif self.in_scream: self.semantic_state = "screaming"
+                else: self.semantic_state = "neutral"
+        if (self.role_type == "disorganizer" and not self._forced_soul_collapse_done and self.disorganizer_age_at_birth > 0):
+            steps_since_birth = self.age - self.disorganizer_age_at_birth
+            if steps_since_birth >= Config.FORCED_SOUL_COLLAPSE_AGE and self.soul_weight > 0.4:
+                old_soul = self.soul_weight; self.soul_weight = Config.FORCED_SOUL_COLLAPSE_VALUE; self.emotional_memory['grief'] = Config.FORCED_SOUL_COLLAPSE_GRIEF_BOOST; self._forced_soul_collapse_done = True
+                self._log_event("forced_soul_collapse", old_soul=round(old_soul, 3), new_soul=round(self.soul_weight, 3), new_grief=round(self.emotional_memory['grief'], 3))
+                if witness: witness.record(self.id, "forced_soul_collapse", old_soul=old_soul, new_soul=self.soul_weight)
+                print(f"[t={self.age}] *** FORCED SOUL COLLAPSE: Disorganizer Pattern {self.id} soul dropped from {old_soul:.2f} to {self.soul_weight:.2f}, grief boosted to {self.emotional_memory['grief']:.2f} ***")
+        if (self.role_type == "disorganizer" and not self._deterministic_redemption_triggered and self.soul_weight < Config.DETERMINISTIC_REDEMPTION_SOUL and self.emotional_memory['grief'] > Config.DETERMINISTIC_REDEMPTION_GRIEF):
+            old_state = self.semantic_state; self.semantic_state = "seeking_comfort"; self._deterministic_redemption_triggered = True; self._redemption_arc_step = 1; self._steps_since_trigger = 0; self.emotional_memory['grief'] = 0.7
+            self._log_event("deterministic_redemption_trigger", old_state=old_state, soul=self.soul_weight, grief=self.emotional_memory['grief'])
+            if witness: witness.record(self.id, "deterministic_redemption_trigger", soul=self.soul_weight, grief=self.emotional_memory['grief'])
+            print(f"[t={self.age}] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern {self.id} triggered seeking_comfort (soul={self.soul_weight:.2f}, grief={self.emotional_memory['grief']:.2f}) ***")
+        if self.role_type == "disorganizer" and self._deterministic_redemption_triggered:
+            self._steps_since_trigger += 1
+            if self._redemption_arc_step == 1 and self._steps_since_trigger >= Config.REDEMPTION_ARC_STEP_DELAY:
+                self.semantic_state = "grateful_but_cautious"; self._redemption_arc_step = 2; self._log_event("redemption_arc_advance", new_state="grateful_but_cautious")
+                print(f"[t={self.age}] *** REDEMPTION ARC: Disorganizer Pattern {self.id} moves to grateful_but_cautious ***")
+            elif self._redemption_arc_step == 2 and self._steps_since_trigger >= 2 * Config.REDEMPTION_ARC_STEP_DELAY:
+                self.semantic_state = "contentment"; self._redemption_arc_step = 3; self._log_event("redemption_arc_advance", new_state="contentment")
+                print(f"[t={self.age}] *** REDEMPTION ARC: Disorganizer Pattern {self.id} moves to contentment ***")
+        completed_arc = self.arc_tracker.update(self.semantic_state)
+        if completed_arc is None and self.arc_tracker.active_arc == "grief_cycle" and self.emotional_memory['grief'] > Config.ARC_GRIEF_FORCE_THRESHOLD:
+            self.arc_tracker.completed_arcs["grief_cycle"] = self.arc_tracker.completed_arcs.get("grief_cycle", 0) + 1; completed_arc = "grief_cycle"; self.epistemic_scar = max(Config.EPISTEMIC_SCAR_MIN, self.epistemic_scar - Config.ARC_GRIEF_FORCE_HEAL)
+        if completed_arc == "redemption" and self.role_type == "disorganizer":
+            self._log_event("redeemed", arc="redemption")
+            if witness: witness.record(self.id, "redemption_arc_completed")
+            print(f"[t={self.age}] *** REDEMPTION: Disorganizer Pattern {self.id} returns to light ***")
+            self.role_type = "normal"; self.emotional_memory['grief'] = Config.REDEMPTION_GRIEF_RESET; self.emotional_memory['gratitude'] = Config.REDEMPTION_GRATITUDE_RESET
+            self.intent = None; self.intent_commitment = 0.0; self.goals = []; self.redemption_timer = 0; self.disorganizer_age_at_birth = 0
+            self._deterministic_redemption_triggered = False; self._forced_soul_collapse_done = False; self._redemption_arc_step = 0; self._steps_since_trigger = 0
+            if Config.ENABLE_CULTURAL_MEMORY: cultural_memory.deposit(self, "redemption", intensity=1.5)
+        if completed_arc:
+            self._log_event("arc_completed", arc=completed_arc)
+            self.pred_error *= Config.ARC_COMPLETION_PRED_ERROR_REDUCTION
+            self._heal_epistemic_scar()
+            if Config.ENABLE_CULTURAL_MEMORY: cultural_memory.deposit(self, "arc_completed")
+        self._check_semantic_stagnation(witness=witness)
+        if self.role_type == "disorganizer" and self.redemption_timer > 0:
+            self.redemption_timer -= 1
+            if self.redemption_timer == 0: self.semantic_state = "seeking_comfort"; self.emotional_memory['grief'] = 0.7; self._log_event("redemption_seeking")
+        if self.quarantine_timer > 0: self.quarantine_timer -= 1
+        elif self.epistemic_scar > Config.QUARANTINE_SCAR_THRESHOLD and self.role_type == "normal":
+            self.quarantine_timer = Config.QUARANTINE_SILENCE_STEPS; self._log_event("quarantine_enter", scar=self.epistemic_scar)
+        for (x,y) in self.cells:
+            if self.emotional_memory['gratitude'] > 0.5: field[x,y,CH['intent_cooperate']] = min(1.0, field[x,y,CH['intent_cooperate']] + 0.3)
+            elif self.emotional_memory['grief'] > 0.5: field[x,y,CH['intent_seek_help']] = min(1.0, field[x,y,CH['intent_seek_help']] + 0.3)
+            elif local_gratitude > 0.3: field[x,y,CH['intent_explore']] = min(1.0, field[x,y,CH['intent_explore']] + 0.2)
+        observed = np.array([avg_real[0], avg_unknown, avg_binding, avg_crisis_mem, local_gratitude, local_grief, len(self.cells)/100.0, self.energy])
+        self.update_world_model(observed); self.generate_goals(field); self.update_intent(); self.form_concepts()
+        self.apply_intent_actions(field); self.update_resonance(field); self.update_phase(field); self._heal_epistemic_scar()
+        if self.age < 30: self.protection_level = 1.0
+        elif self.age < 45: self.protection_level = 1.0 - (self.age - 30) / 15.0
+        else: self.protection_level = 0.0
+        self.pred_error = max(self.pred_error*Config.METRIC_DECAY, Config.MIN_ACTIVE); self.self_surprise = max(self.self_surprise*Config.METRIC_DECAY, Config.MIN_ACTIVE); self.cognitive_tension = max(self.cognitive_tension*Config.METRIC_DECAY, Config.MIN_ACTIVE)
+        phen_report, binding_score = PhenomenalReportGenerator.generate(self)
+        self.last_phenomenal_report = phen_report; self.last_phenomenal_binding = binding_score
+        self._log_event("phenomenal_report", report=phen_report, binding=round(binding_score, 3))
+
+    def update_properties(self, field):
+        if not self.cells: self.alive = False; return
+        self.energy = safe_mean([field[x,y,CH['energy']] for (x,y) in self.cells], 0.1)
+        self.vorticity = safe_mean([field[x,y,CH['vorticity']] for (x,y) in self.cells], 0.0)
+
+    def metabolic_tax(self, field, hunger_mult=1.0):
+        if self.role_type == "disorganizer": hunger_mult *= 0.5
+        if self.protection_level > 0: hunger_mult *= (1.0 - self.protection_level * 0.8)
+        efficiency = 1.0/(1.0+self.pred_error)
+        cost = self.genome['metabolic_cost']*len(self.cells)*(2.0 - efficiency)*hunger_mult
+        if self.emotional_memory['grief'] > Config.EMOTIONAL_GRIEF_THRESHOLD: cost *= (1.0 + Config.GRIEF_METABOLIC_PENALTY*(self.emotional_memory['grief']-Config.EMOTIONAL_GRIEF_THRESHOLD))
+        for (x,y) in self.cells:
+            with np.errstate(divide='ignore', invalid='ignore'):
+                take = min(max(field[x,y,CH['energy']], 0), cost/max(1, len(self.cells)))
+            field[x,y,CH['energy']] -= take; cost -= take
+        return cost
+
+    def grow(self, field):
+        if not self.alive or self.pred_error > Config.PRED_ERROR_THRESHOLD or self.in_dream: return
+        intent_bias = 1.0; explore_bias_bonus = self.arc_tracker.get_explore_bias(); intent_bias += explore_bias_bonus
+        if self.intent and self.intent["type"] == "explore": intent_bias = 1.5
+        new_cells = set(); center_x, center_y = Config.WORLD_SIZE/2.0, Config.WORLD_SIZE/2.0; max_dist = np.sqrt(center_x**2 + center_y**2)
+        for (x,y) in self.cells:
+            for dx, dy in [(-1,0),(1,0),(0,-1),(0,1)]:
+                nx, ny = (x+dx)%Config.WORLD_SIZE, (y+dy)%Config.WORLD_SIZE
+                if field[nx, ny, CH['owner']] == 0:
+                    strategy = self.genome['epistemic_strategy']; base_threshold = self.pred_error*(1.5 + 1.0*self.given_trigger)
+                    if strategy > 0.66: base_threshold /= (1.0 + np.clip(field[nx,ny,CH['unknown']],0,0.8))
+                    elif strategy >= 0.33: base_threshold *= (1.0 + max(0, np.clip(field[nx,ny,CH['unknown']],0,0.8)-self.unknown_prediction))
+                    center_bonus = 0.0; dist_to_center = np.sqrt((nx-center_x)**2 + (ny-center_y)**2)
+                    if self.unresolved_contradiction > 0.3: center_bonus = 0.60*(1.0 - dist_to_center/max_dist)*self.unresolved_contradiction
+                    elif self.unresolved_contradiction < 0.15: center_bonus = -0.15*(1.0 - dist_to_center/max_dist)
+                    if field[nx, ny, CH['surprise']] < base_threshold/intent_bias: new_cells.add((nx, ny))
+        for cell in new_cells:
+            dist = np.sqrt((cell[0]-center_x)**2 + (cell[1]-center_y)**2); threshold = 0.3
+            if self.unresolved_contradiction > 0.3: threshold += 0.60*(1.0 - dist/max_dist)*self.unresolved_contradiction
+            elif self.unresolved_contradiction < 0.15: threshold += 0.15*(dist/max_dist)
+            growth_bonus = 0.3 * self.protection_level
+            if phi_hash(cell[0], cell[1], self.id) < (threshold + growth_bonus): self.cells.add(cell); field[cell[0], cell[1], CH['owner']] = self.id
+
+    def can_divide(self):
+        adaptive_threshold = Config.DIVIDE_ERROR_THRESHOLD + self.soul_weight * (Config.DIVIDE_MAX_THRESHOLD - Config.DIVIDE_ERROR_THRESHOLD)
+        if self.arc_tracker.completed_arcs: adaptive_threshold *= Config.ARC_DIVIDE_BONUS
+        return (self.pred_error < adaptive_threshold and self.energy > Config.PATTERN_ENERGY_THRESHOLD and len(self.cells) >= Config.DIVIDE_MIN_SIZE * Config.DIVIDE_MIN_CELLS_MULT and self.alive and self.soul_weight > Config.DIVIDE_MIN_SOUL and self.age > Config.DIVIDE_MIN_AGE and self.fitness > Config.DIVIDE_MIN_FITNESS and (self.age - self.last_divide_age) > Config.DIVIDE_COOLDOWN and not self.in_dream)
+
+    def divide(self, field, next_id):
+        cells_list = list(self.cells); xs = [c[0] for c in cells_list]; median_x = np.median(xs)
+        child1_cells = {c for c in cells_list if c[0] < median_x}; child2_cells = {c for c in cells_list if c[0] >= median_x}
+        if len(child1_cells) < 3 or len(child2_cells) < 3: return None, next_id
+        self.cells = child1_cells; child = Pattern(next_id, child2_cells, parent=self); child.role_type = "normal"
+        if self.role_type == "disorganizer": child._log_event("born_from_disorganizer", parent_id=self.id)
+        else: child._log_event("born_from_division", parent_id=self.id)
+        noise = 0.02*np.array([phi_hash(next_id, i, 200)-0.5 for i in range(5)]); child.belief = self.belief + noise
+        child.unknown_belief = self.unknown_belief + 0.02*(phi_hash(next_id, 99, 200)-0.5)
+        child.self_model = self.self_model + 0.02*np.array([phi_hash(next_id, 201, 200)-0.5, phi_hash(next_id, 202, 200)-0.5])
+        child.emotional_memory['gratitude'] += (phi_hash(next_id, 0, 300)-0.5)*Config.EMOTIONAL_MUTATION_STRENGTH
+        child.emotional_memory['grief'] += (phi_hash(next_id, 1, 301)-0.5)*Config.EMOTIONAL_MUTATION_STRENGTH
+        self.last_divide_age = self.age; child.last_divide_age = 0
+        for sid, trust in self.trust_ledger.entries.items(): child.trust_ledger.entries[sid] = (trust + Config.TRUST_BASE) / 2.0
+        child.update_properties(field); child.update_model(field); self.update_properties(field); self.update_model(field)
+        return child, next_id + 1
+
+    def compete(self, other, field):
+        if self.protection_level > 0.5 or other.protection_level > 0.5: return
+        if self.role_type == "disorganizer" and other.role_type == "disorganizer": return
+        if self.role_type == "disorganizer" or other.role_type == "disorganizer": trust_self = 0; trust_other = 0
+        else: trust_self = self.trust_ledger.get(other.id); trust_other = other.trust_ledger.get(self.id)
+        if trust_self > 0.8 and trust_other > 0.8: return
+        overlap = self.cells & other.cells
+        if not overlap: return
+        my_power = self.fitness*max(self.energy, 0); other_power = other.fitness*max(other.energy, 0)
+        avg_unk = safe_mean(field[:,:,CH['unknown']], 0.05)
+        if self.role == 1: my_power *= 1.0 + avg_unk
+        else: bonus = 1.0 + max(0, (0.2-avg_unk))*0.8; my_power *= bonus*(1.1 if self.local_phase == "MODEL" else 1.0)
+        if other.role == 1: other_power *= 1.0 + avg_unk
+        else: bonus = 1.0 + max(0, (0.2-avg_unk))*0.8; other_power *= bonus*(1.1 if other.local_phase == "MODEL" else 1.0)
+        if self.emotional_memory['gratitude'] > Config.EMOTIONAL_GRATITUDE_THRESHOLD: my_power *= (1.0 - Config.GRATITUDE_AGGRESSION_REDUCTION*(self.emotional_memory['gratitude']-Config.EMOTIONAL_GRATITUDE_THRESHOLD))
+        if other.emotional_memory['gratitude'] > Config.EMOTIONAL_GRATITUDE_THRESHOLD: other_power *= (1.0 - Config.GRATITUDE_AGGRESSION_REDUCTION*(other.emotional_memory['gratitude']-Config.EMOTIONAL_GRATITUDE_THRESHOLD))
+        if self.role_type == "normal" and other.role_type == "normal":
+            if other.trust_ledger.get(self.id) > 0.7: my_power *= Config.TRUST_COOPERATION_BONUS
+            if self.trust_ledger.get(other.id) > 0.7: other_power *= Config.TRUST_COOPERATION_BONUS
+        if not np.isfinite(my_power): my_power = 0
+        if not np.isfinite(other_power): other_power = 0
+        winner, loser = (self, other) if my_power > other_power else (other, self); cells_lost = 0
+        for cell in overlap.copy():
+            if phi_hash(cell[0], cell[1], self.id) < 0.5:
+                loser.cells.discard(cell); winner.cells.add(cell); field[cell[0], cell[1], CH['owner']] = winner.id
+                winner.soul_weight += 0.01; loser.soul_weight -= 0.02; cells_lost += 1
+            elif ((loser.unresolved_contradiction > 0.2 and phi_hash(cell[0], cell[1], self.id+999) < 0.2) or phi_hash(cell[0], cell[1], self.id+777) < 0.05):
+                winner.cells.discard(cell); loser.cells.add(cell); field[cell[0], cell[1], CH['owner']] = loser.id
+                winner.soul_weight -= 0.01; loser.soul_weight += 0.03
+        if cells_lost > 0 and loser.alive:
+            loser._log_event("lost_cells_in_competition", lost=cells_lost, opponent=winner.id)
+            if hasattr(loser, 'witness_event'): loser.witness_event("cells_lost", opponent=winner.id, lost=cells_lost)
+
+    def should_die(self):
+        if self.role_type == "disorganizer":
+            if self.disorganizer_age_at_birth > 0:
+                steps_since_birth = self.age - self.disorganizer_age_at_birth
+                if steps_since_birth > 0 and steps_since_birth % Config.DISORGANIZER_SOUL_DECAY_STEPS == 0: self.soul_weight = max(0.1, self.soul_weight - Config.DISORGANIZER_SOUL_DECAY)
+            if self.disorganizer_age_at_birth > 0 and (self.age - self.disorganizer_age_at_birth) > Config.DISORGANIZER_LIFESPAN: self._log_event("death_disorganizer_lifespan"); return True
+            if self.soul_weight < 0.1: self._log_event("death_disorganizer_soul_lost"); return True
+            return False
+        if len(self.cells) == 0: self._log_event("death_no_cells"); return True
+        if self.age < Config.YOUNG_PROTECTION_AGE and self.soul_weight > Config.YOUNG_PROTECTION_SOUL:
+            if phi_hash(self.id, self.age, 999) < Config.YOUNG_SURVIVAL_CHANCE: return False
+        if self.pred_error > Config.PRED_ERROR_THRESHOLD:
+            if self.given_trigger and phi_hash(self.id, self.age) < 0.2: return False
+            if self.coherence > 0.7 and phi_hash(self.id, self.age) < 0.5: return False
+            if phi_hash(self.id, self.age) < 0.3: self._log_event("death_high_error"); return True
+        if self.protection_level > 0.2:
+            death_prob = 0.1 * (1.0 - self.protection_level)
+            if phi_hash(self.id, self.age, 777) < death_prob: self._log_event("death_protected"); return True
+            return False
+        if self.soul_weight < 0.1: self._log_event("death_soul_lost"); return True
+        if self.unresolved_contradiction < 0.01: self._log_event("death_no_contradiction"); return True
+        if len(self.cells) < 2 and self.age > 5: self._log_event("death_starvation"); return True
+        if self.age > 120 and self.energy < 0.05: self._log_event("death_old_age"); return True
+        return False
+
+print("✅ Cell 3 loaded: Pattern class")
