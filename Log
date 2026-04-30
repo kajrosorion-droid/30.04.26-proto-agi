@@ -1,0 +1,1630 @@
+ [t=0] EMERGENCY RESCUE: spawned 5 patterns (donor=8)
+[t=0] patterns=13 lineages=8 err=0.007 soul=0.528 binding=0.049 echo=0 sig=[0.000 0.000 0.000 0.000 0.000 0.000] states={'neutral': 13} intents={} epi_scar=0.000 stag=0.00 div=0 concepts=2 arcs=0 folds=0 trust=0.500 high_trust=0 td_low=0 td_mid=0 td_high=0 disorg=0 redm=0 quar=0 det_red=0 phen_bind=0.615 mismatch=0.000 collapsed=0 myths=0
+
+--- Semantic Map at t=0 ---
+..........................
+...................n......
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+.........................n
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+Legend: n=neutral, c=comfort, g=grateful, e=explore, C=contentment, S=scream, d=dream
+[t=23] Echo injected at (6,103)
+[t=30] EMERGENCY RESCUE: spawned 5 patterns (donor=10)
+[t=41] Echo injected at (2,12)
+[t=57] Echo injected at (44,0)
+[t=60] DIVERSIFICATION: 2 patterns switched from cooperate -> seek_help
+[t=60] EMERGENCY RESCUE: spawned 5 patterns (donor=18)
+[t=75] Echo injected at (40,13)
+[t=91] Echo injected at (82,1)
+[t=100] GLOBAL GIVEN: Pattern 75 got 'Given' (tension=0.510, conf=0.531)
+[t=100] patterns=31 lineages=27 err=0.692 soul=0.646 binding=0.833 echo=46 sig=[0.021 0.197 0.228 0.957 0.950 0.665] states={'grateful_but_cautious': 30, 'seeking_comfort': 1} intents={'cooperate': 20, 'explore': 10, 'seek_help': 1} epi_scar=0.152 stag=0.00 div=0 concepts=135 arcs=0 folds=0 trust=1.000 high_trust=3 td_low=0 td_mid=0 td_high=3 disorg=0 redm=0 quar=0 det_red=0 phen_bind=0.713 mismatch=0.032 collapsed=0 myths=0
+[t=130] Echo injected at (56,12)
+[t=180] Echo injected at (33,2)
+[t=227] EMOTIONAL SPECIATION: Pattern 46 lineage 46 -> 1000046
+[t=200] ANTI-CONFORMIST: Pattern 60 turned explorer (age=226)
+[t=200] GLOBAL GIVEN: Pattern 482 got 'Given' (tension=0.596, conf=0.500)
+[t=200] patterns=80 lineages=80 err=0.831 soul=0.675 binding=0.563 echo=40 sig=[0.074 0.067 0.218 0.860 0.864 0.605] states={'grateful_but_cautious': 73, 'seeking_comfort': 7} intents={'explore': 64, 'cooperate': 15} epi_scar=0.173 stag=0.14 div=0 concepts=211 arcs=26 folds=1 trust=0.952 high_trust=50 td_low=0 td_mid=5 td_high=51 disorg=0 redm=0 quar=0 det_red=0 phen_bind=0.711 mismatch=0.037 collapsed=0 myths=62
+[t=240] Echo injected at (88,10)
+[t=290] Echo injected at (65,0)
+[t=300] GLOBAL GIVEN: Pattern 833 got 'Given' (tension=0.503, conf=0.485)
+[t=300] patterns=80 lineages=80 err=0.849 soul=0.779 binding=0.409 echo=46 sig=[0.076 0.032 0.175 0.671 0.678 0.474] states={'grateful_but_cautious': 76, 'seeking_comfort': 4} intents={'explore': 65, 'cooperate': 15} epi_scar=0.258 stag=0.38 div=0 concepts=228 arcs=69 folds=10 trust=0.943 high_trust=148 td_low=0 td_mid=16 td_high=151 disorg=0 redm=0 quar=0 det_red=0 phen_bind=0.774 mismatch=0.037 collapsed=0 myths=100
+[t=209] EMOTIONAL SPECIATION: Pattern 216 lineage 216 -> 1000216
+[t=344] 💬 LOGOS QUESTION: stag=0.50, disorg=0 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=342] EMOTIONAL SPECIATION: Pattern 49 lineage 49 -> 1000049
+[t=350] Echo injected at (16,9)
+[t=242] EMOTIONAL SPECIATION: Pattern 173 lineage 173 -> 1000173
+[t=400] ANTI-CONFORMIST: Pattern 329 turned explorer (age=316)
+[t=400] GLOBAL GIVEN: Pattern 758 got 'Given' (tension=0.458, conf=0.484)
+[t=400] Echo injected at (97,102)
+[t=400] patterns=81 lineages=79 err=0.854 soul=0.947 binding=0.337 echo=41 sig=[0.059 0.022 0.127 0.461 0.472 0.329] states={'grateful_but_cautious': 66, 'seeking_comfort': 15} intents={'explore': 64, 'cooperate': 16} epi_scar=0.281 stag=0.41 div=0 concepts=235 arcs=106 folds=33 trust=0.953 high_trust=230 td_low=0 td_mid=15 td_high=240 disorg=0 redm=0 quar=0 det_red=0 phen_bind=0.801 mismatch=0.173 collapsed=0 myths=100
+[t=274] EMOTIONAL SPECIATION: Pattern 758 lineage 758 -> 1000758
+[t=204] EMOTIONAL SPECIATION: Pattern 825 lineage 825 -> 1000825
+[t=207] EMOTIONAL SPECIATION: Pattern 827 lineage 827 -> 1000827
+[t=460] Echo injected at (48,7)
+[t=279] EMOTIONAL SPECIATION: Pattern 641 lineage 641 -> 1000641
+[t=500] GLOBAL GIVEN: Pattern 351 got 'Given' (tension=0.460, conf=0.483)
+[t=500] patterns=80 lineages=77 err=0.845 soul=0.938 binding=0.280 echo=40 sig=[0.052 0.020 0.112 0.412 0.411 0.288] states={'seeking_comfort': 9, 'grateful_but_cautious': 71} intents={'explore': 66, 'cooperate': 14} epi_scar=0.280 stag=0.30 div=0 concepts=226 arcs=168 folds=55 trust=0.947 high_trust=242 td_low=0 td_mid=18 td_high=257 disorg=0 redm=0 quar=0 det_red=0 phen_bind=0.787 mismatch=0.113 collapsed=0 myths=100
+[t=279] EMOTIONAL SPECIATION: Pattern 750 lineage 750 -> 1000750
+[t=510] Echo injected at (25,101)
+[t=208] EMOTIONAL SPECIATION: Pattern 936 lineage 936 -> 1000936
+[t=570] Echo injected at (80,5)
+[t=600] ANTI-CONFORMIST: Pattern 643 turned explorer (age=574)
+[t=600] GLOBAL GIVEN: Pattern 947 got 'Given' (tension=0.460, conf=0.482)
+[t=600] patterns=80 lineages=76 err=0.849 soul=0.956 binding=0.278 echo=40 sig=[0.054 0.020 0.114 0.392 0.398 0.279] states={'grateful_but_cautious': 71, 'seeking_comfort': 9} intents={'explore': 65, 'cooperate': 14} epi_scar=0.289 stag=0.46 div=1 concepts=227 arcs=201 folds=69 trust=0.950 high_trust=277 td_low=0 td_mid=16 td_high=304 disorg=0 redm=0 quar=0 det_red=0 phen_bind=0.799 mismatch=0.113 collapsed=0 myths=100
+[t=620] Echo injected at (57,99)
+[t=635] Echo injected at (32,14)
+[t=680] Echo injected at (9,4)
+[t=700] GLOBAL GIVEN: Pattern 216 got 'Given' (tension=0.459, conf=0.483)
+[t=700] patterns=84 lineages=76 err=0.845 soul=0.951 binding=0.246 echo=19 sig=[0.050 0.018 0.100 0.325 0.333 0.233] states={'seeking_comfort': 12, 'grateful_but_cautious': 72} intents={'explore': 65, 'cooperate': 19} epi_scar=0.291 stag=0.38 div=0 concepts=229 arcs=251 folds=97 trust=0.953 high_trust=314 td_low=0 td_mid=15 td_high=346 disorg=0 redm=0 quar=0 det_red=0 phen_bind=0.801 mismatch=0.143 collapsed=0 myths=100
+[t=520] EMOTIONAL SPECIATION: Pattern 613 lineage 613 -> 1000613
+[t=740] Echo injected at (64,12)
+[t=790] Echo injected at (41,2)
+[t=800] ANTI-CONFORMIST: Pattern 56 turned explorer (age=780)
+[t=800] GLOBAL GIVEN: Pattern 644 got 'Given' (tension=0.460, conf=0.482)
+[t=800] patterns=88 lineages=73 err=0.851 soul=0.870 binding=0.222 echo=13 sig=[0.045 0.017 0.097 0.279 0.287 0.201] states={'grateful_but_cautious': 77, 'seeking_comfort': 11} intents={'explore': 61, 'cooperate': 26} epi_scar=0.284 stag=0.42 div=0 concepts=239 arcs=283 folds=120 trust=0.901 high_trust=310 td_low=0 td_mid=38 td_high=422 disorg=0 redm=0 quar=0 det_red=0 phen_bind=0.799 mismatch=0.125 collapsed=0 myths=100
+[t=817] 💬 LOGOS QUESTION: stag=0.50, disorg=0 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=840] *** DISORGANIZER BORN: Pattern 46 after 3 folds (deficit=0.20, prob=0.010) ***
+[t=850] Echo injected at (96,10)
+[t=804] EMOTIONAL SPECIATION: Pattern 76 lineage 76 -> 1000076
+[t=890] *** DISORGANIZER BORN: Pattern 756 after 3 folds (deficit=0.19, prob=0.009) ***
+[t=890] *** DISORGANIZER BORN: Pattern 751 after 3 folds (deficit=0.18, prob=0.009) ***
+[t=814] EMOTIONAL SPECIATION: Pattern 329 lineage 329 -> 1000329
+[t=900] GLOBAL GIVEN: Pattern 1053 got 'Given' (tension=0.459, conf=0.483)
+[t=900] Echo injected at (73,0)
+[t=900] patterns=84 lineages=71 err=0.843 soul=0.982 binding=0.189 echo=24 sig=[0.039 0.014 0.077 0.219 0.228 0.159] states={'seeking_comfort': 17, 'grateful_but_cautious': 67} intents={'explore': 61, 'cooperate': 23} epi_scar=0.288 stag=0.50 div=0 concepts=242 arcs=300 folds=141 trust=0.936 high_trust=334 td_low=0 td_mid=19 td_high=400 disorg=3 redm=0 quar=0 det_red=0 phen_bind=0.804 mismatch=0.202 collapsed=0 myths=100
+[t=920] *** DISORGANIZER BORN: Pattern 55 after 3 folds (deficit=0.16, prob=0.008) ***
+[t=915] EMOTIONAL SPECIATION: Pattern 55 lineage 55 -> 1000055
+[t=960] Echo injected at (24,9)
+[t=1000] ANTI-CONFORMIST: Pattern 60 turned explorer (age=1415)
+[t=1000] GLOBAL GIVEN: Pattern 170 got 'Given' (tension=0.459, conf=0.483)
+[t=1000] *** DISORGANIZER BORN: Pattern 644 after 3 folds (deficit=0.15, prob=0.008) ***
+[t=1000] *** DISORGANIZER BORN: Pattern 648 after 3 folds (deficit=0.14, prob=0.007) ***
+[t=1000] *** DISORGANIZER BORN: Pattern 645 after 3 folds (deficit=0.13, prob=0.006) ***
+[t=1000] patterns=87 lineages=71 err=0.855 soul=0.981 binding=0.162 echo=38 sig=[0.037 0.012 0.069 0.196 0.203 0.142] states={'seeking_comfort': 7, 'grateful_but_cautious': 77, 'exploring_danger': 3} intents={'explore': 61, 'cooperate': 25} epi_scar=0.287 stag=0.43 div=2 concepts=241 arcs=319 folds=159 trust=0.905 high_trust=332 td_low=0 td_mid=63 td_high=396 disorg=7 redm=0 quar=0 det_red=0 phen_bind=0.792 mismatch=0.069 collapsed=0 myths=100
+
+--- Semantic Map at t=1000 ---
+gcgg..g.......ggg..g.gg.g.
+cgg..c.......ggg..g.gg...g
+gg...........gg....gg....g
+g...........gg....gg......
+...........gg....gg.......
+........g.gg....gg.......g
+g........gg..g.gg.........
+........gg....gg..........
+.......gg....gg...........
+......gg....gg............
+.....gg....gg.............
+....gg....gg..............
+...gg....gg...............
+..gg....gg................
+.gg....gg.................
+.g....gg..................
+g....gg...................
+g...gg....................
+...gg.....................
+..gg......................
+.gg.......................
+gg........................
+g.........................
+..........................
+..........................
+..........................
+Legend: n=neutral, c=comfort, g=grateful, e=explore, C=contentment, S=scream, d=dream
+[t=774] EMOTIONAL SPECIATION: Pattern 757 lineage 757 -> 1000757
+[t=1007] *** DISORGANIZER BORN: Pattern 641 after 3 folds (deficit=0.12, prob=0.006) ***
+[t=1010] Echo injected at (1,103)
+[t=1030] *** DISORGANIZER BORN: Pattern 617 after 3 folds (deficit=0.11, prob=0.005) ***
+[t=1030] *** DISORGANIZER BORN: Pattern 613 after 3 folds (deficit=0.10, prob=0.005) ***
+[t=1070] Echo injected at (56,7)
+[t=1163] EMOTIONAL SPECIATION: Pattern 972 lineage 184 -> 1000972
+[t=1100] GLOBAL GIVEN: Pattern 947 got 'Given' (tension=0.460, conf=0.482)
+[t=1100] patterns=90 lineages=77 err=0.844 soul=0.972 binding=0.162 echo=40 sig=[0.048 0.012 0.065 0.201 0.209 0.146] states={'grateful_but_cautious': 83, 'seeking_comfort': 7} intents={'explore': 63, 'cooperate': 25, 'seek_help': 2} epi_scar=0.288 stag=0.49 div=0 concepts=261 arcs=342 folds=181 trust=0.902 high_trust=366 td_low=0 td_mid=71 td_high=433 disorg=10 redm=0 quar=0 det_red=0 phen_bind=0.790 mismatch=0.078 collapsed=0 myths=100
+[t=1110] *** DISORGANIZER BORN: Pattern 539 after 3 folds (deficit=0.09, prob=0.004) ***
+[t=1117] 💬 LOGOS QUESTION: stag=0.44, disorg=11 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=1120] Echo injected at (33,101)
+[t=1346] EMOTIONAL SPECIATION: Pattern 184 lineage 184 -> 1000184
+[t=817] EMOTIONAL SPECIATION: Pattern 931 lineage 931 -> 1000931
+[t=1160] *** DISORGANIZER BORN: Pattern 481 after 3 folds (deficit=0.08, prob=0.004) ***
+[t=1180] *** DISORGANIZER BORN: Pattern 83 after 4 folds (deficit=0.07, prob=0.003) ***
+[t=1180] Echo injected at (88,5)
+[t=1200] ANTI-CONFORMIST: Pattern 1186 turned explorer (age=204)
+[t=1200] GLOBAL GIVEN: Pattern 646 got 'Given' (tension=0.460, conf=0.483)
+[t=1200] *** DISORGANIZER BORN: Pattern 1052 after 3 folds (deficit=0.06, prob=0.003) ***
+[t=1200] *** DISORGANIZER BORN: Pattern 63 after 4 folds (deficit=0.05, prob=0.002) ***
+[t=1200] patterns=95 lineages=82 err=0.851 soul=0.944 binding=0.169 echo=40 sig=[0.043 0.012 0.070 0.229 0.237 0.166] states={'grateful_but_cautious': 81, 'seeking_comfort': 11, 'neutral': 1, 'exploring_danger': 2} intents={'cooperate': 25, 'explore': 67, 'seek_help': 1} epi_scar=0.282 stag=0.42 div=0 concepts=269 arcs=374 folds=207 trust=0.904 high_trust=413 td_low=0 td_mid=81 td_high=478 disorg=15 redm=0 quar=0 det_red=0 phen_bind=0.789 mismatch=0.105 collapsed=0 myths=100
+[t=1210] *** DISORGANIZER BORN: Pattern 431 after 3 folds (deficit=0.04, prob=0.002) ***
+[t=1210] *** DISORGANIZER BORN: Pattern 1042 after 3 folds (deficit=0.03, prob=0.001) ***
+[t=1210] *** DISORGANIZER BORN: Pattern 432 after 3 folds (deficit=0.02, prob=0.001) ***
+[t=1230] Echo injected at (65,99)
+[t=1512] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 46 soul dropped from 0.71 to 0.30, grief boosted to 0.75 ***
+[t=1512] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 46 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1245] Echo injected at (40,14)
+[t=1280] *** DISORGANIZER BORN: Pattern 972 after 5 folds (deficit=0.08, prob=0.004) ***
+[t=1601] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 756 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=1601] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 756 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1556] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 751 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=1556] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 751 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1290] *** DISORGANIZER BORN: Pattern 351 after 5 folds (deficit=0.07, prob=0.004) ***
+[t=1290] Echo injected at (16,4)
+[t=1300] GLOBAL GIVEN: Pattern 947 got 'Given' (tension=0.460, conf=0.482)
+[t=1300] patterns=93 lineages=76 err=0.847 soul=0.838 binding=0.178 echo=40 sig=[0.042 0.013 0.070 0.207 0.213 0.149] states={'seeking_comfort': 11, 'grateful_but_cautious': 82} intents={'cooperate': 30, 'explore': 61, 'seek_help': 2} epi_scar=0.298 stag=0.51 div=0 concepts=264 arcs=373 folds=205 trust=0.904 high_trust=440 td_low=0 td_mid=80 td_high=526 disorg=13 redm=0 quar=0 det_red=3 phen_bind=0.800 mismatch=0.108 collapsed=3 myths=100
+[t=1320] *** DISORGANIZER BORN: Pattern 329 after 4 folds (deficit=0.06, prob=0.003) ***
+[t=1320] *** DISORGANIZER BORN: Pattern 933 after 4 folds (deficit=0.05, prob=0.003) ***
+[t=1320] *** DISORGANIZER BORN: Pattern 931 after 3 folds (deficit=0.04, prob=0.002) ***
+[t=1320] *** DISORGANIZER BORN: Pattern 935 after 3 folds (deficit=0.03, prob=0.001) ***
+[t=1320] *** DISORGANIZER BORN: Pattern 320 after 4 folds (deficit=0.02, prob=0.001) ***
+[t=1202] EMOTIONAL SPECIATION: Pattern 320 lineage 320 -> 1000320
+[t=1321] *** DISORGANIZER BORN: Pattern 327 after 4 folds (deficit=0.01, prob=0.001) ***
+[t=1393] EMOTIONAL SPECIATION: Pattern 356 lineage 356 -> 1000356
+[t=1350] Echo injected at (72,12)
+[t=1400] ANTI-CONFORMIST: Pattern 539 turned explorer (age=1249)
+[t=1400] GLOBAL GIVEN: Pattern 947 got 'Given' (tension=0.461, conf=0.481)
+[t=1677] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 644 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=1677] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 644 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1400] Echo injected at (49,2)
+[t=1400] patterns=101 lineages=81 err=0.852 soul=0.939 binding=0.237 echo=40 sig=[0.086 0.021 0.118 0.371 0.369 0.259] states={'seeking_comfort': 15, 'grateful_but_cautious': 86} intents={'cooperate': 34, 'explore': 64, 'seek_help': 2} epi_scar=0.275 stag=0.35 div=0 concepts=268 arcs=403 folds=224 trust=0.905 high_trust=474 td_low=0 td_mid=88 td_high=554 disorg=18 redm=0 quar=0 det_red=4 phen_bind=0.801 mismatch=0.139 collapsed=4 myths=100
+[t=263] EMOTIONAL SPECIATION: Pattern 1268 lineage 1254 -> 1001268
+[t=1197] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 641 soul dropped from 0.74 to 0.30, grief boosted to 0.75 ***
+[t=1197] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 641 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1417] 💬 LOGOS QUESTION: stag=0.34, disorg=18 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=1229] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 617 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=1229] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 617 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1430] *** DISORGANIZER BORN: Pattern 216 after 3 folds (deficit=0.02, prob=0.001) ***
+[t=1433] *** DISORGANIZER BORN: Pattern 213 after 3 folds (deficit=0.01, prob=0.001) ***
+[t=1317] EMOTIONAL SPECIATION: Pattern 213 lineage 213 -> 1000213
+[t=1711] *** REDEMPTION ARC: Disorganizer Pattern 46 moves to grateful_but_cautious ***
+[t=1460] Echo injected at (0,11)
+[t=1755] *** REDEMPTION ARC: Disorganizer Pattern 751 moves to grateful_but_cautious ***
+[t=1800] *** REDEMPTION ARC: Disorganizer Pattern 756 moves to grateful_but_cautious ***
+[t=1500] GLOBAL GIVEN: Pattern 1099 got 'Given' (tension=0.459, conf=0.483)
+[t=1500] patterns=108 lineages=81 err=0.847 soul=0.950 binding=0.262 echo=33 sig=[0.077 0.023 0.129 0.348 0.352 0.247] states={'grateful_but_cautious': 102, 'seeking_comfort': 6} intents={'cooperate': 42, 'explore': 63, 'seek_help': 3} epi_scar=0.284 stag=0.44 div=0 concepts=270 arcs=432 folds=239 trust=0.904 high_trust=484 td_low=0 td_mid=84 td_high=580 disorg=20 redm=0 quar=0 det_red=6 phen_bind=0.797 mismatch=0.056 collapsed=6 myths=100
+[t=456] EMOTIONAL SPECIATION: Pattern 1183 lineage 1183 -> 1001183
+[t=1359] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 539 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=1359] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 539 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1510] Echo injected at (81,0)
+[t=151] EMOTIONAL SPECIATION: Pattern 1370 lineage 643 -> 1001370
+[t=1579] EMOTIONAL SPECIATION: Pattern 170 lineage 170 -> 1000170
+[t=1570] Echo injected at (32,9)
+[t=1511] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 83 soul dropped from 0.65 to 0.30, grief boosted to 0.75 ***
+[t=1511] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 83 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1876] *** REDEMPTION ARC: Disorganizer Pattern 644 moves to grateful_but_cautious ***
+[t=1600] ANTI-CONFORMIST: Pattern 1100 turned explorer (age=666)
+[t=1600] GLOBAL GIVEN: Pattern 1180 got 'Given' (tension=0.461, conf=0.481)
+[t=1600] patterns=108 lineages=80 err=0.854 soul=0.938 binding=0.242 echo=19 sig=[0.072 0.020 0.118 0.319 0.325 0.228] states={'grateful_but_cautious': 96, 'seeking_comfort': 12} intents={'cooperate': 44, 'explore': 60, 'seek_help': 3} epi_scar=0.286 stag=0.50 div=0 concepts=275 arcs=459 folds=264 trust=0.900 high_trust=505 td_low=0 td_mid=97 td_high=609 disorg=20 redm=0 quar=0 det_red=8 phen_bind=0.797 mismatch=0.093 collapsed=8 myths=100
+[t=1396] *** REDEMPTION ARC: Disorganizer Pattern 641 moves to grateful_but_cautious ***
+[t=1516] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 432 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=1516] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 432 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1620] Echo injected at (9,103)
+[t=1428] *** REDEMPTION ARC: Disorganizer Pattern 617 moves to grateful_but_cautious ***
+[t=1911] *** REDEMPTION ARC: Disorganizer Pattern 46 moves to contentment ***
+[t=2071] EMOTIONAL SPECIATION: Pattern 60 lineage 60 -> 1000060
+[t=1955] *** REDEMPTION ARC: Disorganizer Pattern 751 moves to contentment ***
+[t=1925] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 972 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=1925] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 972 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1680] Echo injected at (64,7)
+[t=2000] *** REDEMPTION ARC: Disorganizer Pattern 756 moves to contentment ***
+[t=1933] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 351 soul dropped from 0.65 to 0.30, grief boosted to 0.75 ***
+[t=1933] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 351 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1700] GLOBAL GIVEN: Pattern 1394 got 'Given' (tension=0.460, conf=0.482)
+[t=1700] patterns=108 lineages=79 err=0.846 soul=0.913 binding=0.240 echo=22 sig=[0.071 0.020 0.115 0.311 0.318 0.223] states={'seeking_comfort': 19, 'grateful_but_cautious': 86, 'contentment': 3} intents={'cooperate': 47, 'explore': 59, 'seek_help': 2} epi_scar=0.287 stag=0.42 div=0 concepts=281 arcs=583 folds=289 trust=0.896 high_trust=519 td_low=0 td_mid=107 td_high=632 disorg=20 redm=0 quar=0 det_red=11 phen_bind=0.805 mismatch=0.204 collapsed=11 myths=100
+[t=1558] *** REDEMPTION ARC: Disorganizer Pattern 539 moves to grateful_but_cautious ***
+[t=1717] 💬 LOGOS QUESTION: stag=0.45, disorg=20 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=1638] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 329 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=1638] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 329 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=2010] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 933 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=2010] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 933 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1390] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 931 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=1390] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 931 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1586] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 935 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=1586] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 935 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1601] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 320 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=1601] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 320 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1598] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 327 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=1598] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 327 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1730] Echo injected at (41,101)
+[t=2033] EMOTIONAL SPECIATION: Pattern 321 lineage 321 -> 1000321
+[t=1710] *** REDEMPTION ARC: Disorganizer Pattern 83 moves to grateful_but_cautious ***
+[t=1790] Echo injected at (96,5)
+[t=2076] *** REDEMPTION ARC: Disorganizer Pattern 644 moves to contentment ***
+[t=1800] ANTI-CONFORMIST: Pattern 1056 turned explorer (age=1120)
+[t=1800] GLOBAL GIVEN: Pattern 356 got 'Given' (tension=0.461, conf=0.481)
+[t=1800] patterns=116 lineages=80 err=0.853 soul=0.784 binding=0.234 echo=27 sig=[0.083 0.021 0.121 0.302 0.306 0.215] states={'grateful_but_cautious': 101, 'seeking_comfort': 11, 'contentment': 4} intents={'cooperate': 54, 'explore': 59, 'seek_help': 2} epi_scar=0.282 stag=0.39 div=0 concepts=283 arcs=922 folds=303 trust=0.882 high_trust=551 td_low=0 td_mid=151 td_high=670 disorg=20 redm=0 quar=0 det_red=17 phen_bind=0.800 mismatch=0.129 collapsed=17 myths=100
+[t=1596] *** REDEMPTION ARC: Disorganizer Pattern 641 moves to contentment ***
+[t=1715] *** REDEMPTION ARC: Disorganizer Pattern 432 moves to grateful_but_cautious ***
+[t=211] EMOTIONAL SPECIATION: Pattern 1420 lineage 1001268 -> 1001420
+[t=1628] *** REDEMPTION ARC: Disorganizer Pattern 617 moves to contentment ***
+[t=2124] *** REDEMPTION ARC: Disorganizer Pattern 972 moves to grateful_but_cautious ***
+[t=1731] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 216 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=1731] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 216 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1716] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 213 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=1716] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 213 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1840] Echo injected at (73,99)
+[t=213] EMOTIONAL SPECIATION: Pattern 1422 lineage 1043 -> 1001422
+[t=1855] Echo injected at (48,14)
+[t=203] EMOTIONAL SPECIATION: Pattern 1431 lineage 1362 -> 1001431
+[t=2132] *** REDEMPTION ARC: Disorganizer Pattern 351 moves to grateful_but_cautious ***
+[t=1900] GLOBAL GIVEN: Pattern 184 got 'Given' (tension=0.461, conf=0.481)
+[t=1900] Echo injected at (24,4)
+[t=1900] patterns=115 lineages=81 err=0.846 soul=0.894 binding=0.240 echo=23 sig=[0.075 0.020 0.113 0.281 0.287 0.201] states={'seeking_comfort': 12, 'grateful_but_cautious': 97, 'contentment': 6} intents={'cooperate': 55, 'explore': 58, 'seek_help': 2} epi_scar=0.280 stag=0.48 div=0 concepts=288 arcs=1498 folds=321 trust=0.885 high_trust=564 td_low=0 td_mid=137 td_high=697 disorg=20 redm=0 quar=0 det_red=19 phen_bind=0.802 mismatch=0.148 collapsed=19 myths=100
+[t=1758] *** REDEMPTION ARC: Disorganizer Pattern 539 moves to contentment ***
+[t=1837] *** REDEMPTION ARC: Disorganizer Pattern 329 moves to grateful_but_cautious ***
+[t=2209] *** REDEMPTION ARC: Disorganizer Pattern 933 moves to grateful_but_cautious ***
+[t=1589] *** REDEMPTION ARC: Disorganizer Pattern 931 moves to grateful_but_cautious ***
+[t=1785] *** REDEMPTION ARC: Disorganizer Pattern 935 moves to grateful_but_cautious ***
+[t=1800] *** REDEMPTION ARC: Disorganizer Pattern 320 moves to grateful_but_cautious ***
+[t=1797] *** REDEMPTION ARC: Disorganizer Pattern 327 moves to grateful_but_cautious ***
+[t=2324] *** REDEMPTION ARC: Disorganizer Pattern 972 moves to contentment ***
+[t=1960] Echo injected at (80,12)
+[t=1910] *** REDEMPTION ARC: Disorganizer Pattern 83 moves to contentment ***
+[t=2000] ANTI-CONFORMIST: Pattern 752 turned explorer (age=1775)
+[t=2000] GLOBAL GIVEN: Pattern 1099 got 'Given' (tension=0.459, conf=0.483)
+[t=2000] patterns=117 lineages=79 err=0.850 soul=0.897 binding=0.235 echo=31 sig=[0.077 0.021 0.118 0.270 0.277 0.194] states={'grateful_but_cautious': 101, 'contentment': 9, 'seeking_comfort': 7} intents={'cooperate': 58, 'explore': 56, 'seek_help': 2} epi_scar=0.282 stag=0.45 div=1 concepts=296 arcs=2375 folds=336 trust=0.877 high_trust=586 td_low=0 td_mid=163 td_high=744 disorg=20 redm=0 quar=0 det_red=19 phen_bind=0.800 mismatch=0.137 collapsed=19 myths=100
+
+--- Semantic Map at t=2000 ---
+gggg.g.....g..gggggg....g.
+ggg.......ggggggggg......c
+gg.......gggggggg.........
+......g.g.gggggg.........c
+...ggg.g.gggggg...........
+C.gg..g.gggggg...........g
+..g.c.gggggggg............
+.g.c.ggggggg..............
+....ggggggg...............
+....gggggg................
+c.ggggggg.................
+.ggggggg..................
+.gggggg...................
+.ggggg....................
+.gggg.....................
+.ggg......................
+ggg.......................
+gg.......................g
+g.........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+Legend: n=neutral, c=comfort, g=grateful, e=explore, C=contentment, S=scream, d=dream
+[t=1915] *** REDEMPTION ARC: Disorganizer Pattern 432 moves to contentment ***
+[t=2010] Echo injected at (56,2)
+[t=2017] 💬 LOGOS QUESTION: stag=0.41, disorg=20 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=1930] *** REDEMPTION ARC: Disorganizer Pattern 216 moves to grateful_but_cautious ***
+[t=1915] *** REDEMPTION ARC: Disorganizer Pattern 213 moves to grateful_but_cautious ***
+[t=2070] Echo injected at (8,11)
+[t=2332] *** REDEMPTION ARC: Disorganizer Pattern 351 moves to contentment ***
+[t=2100] GLOBAL GIVEN: Pattern 1186 got 'Given' (tension=0.461, conf=0.481)
+[t=2100] patterns=113 lineages=79 err=0.846 soul=0.893 binding=0.229 echo=31 sig=[0.073 0.020 0.109 0.268 0.274 0.192] states={'grateful_but_cautious': 90, 'contentment': 11, 'seeking_comfort': 12} intents={'cooperate': 56, 'explore': 55, 'seek_help': 2} epi_scar=0.290 stag=0.54 div=1 concepts=293 arcs=3480 folds=357 trust=0.877 high_trust=599 td_low=0 td_mid=171 td_high=752 disorg=20 redm=0 quar=0 det_red=19 phen_bind=0.805 mismatch=0.204 collapsed=19 myths=100
+[t=2037] *** REDEMPTION ARC: Disorganizer Pattern 329 moves to contentment ***
+[t=2409] *** REDEMPTION ARC: Disorganizer Pattern 933 moves to contentment ***
+[t=1789] *** REDEMPTION ARC: Disorganizer Pattern 931 moves to contentment ***
+[t=1985] *** REDEMPTION ARC: Disorganizer Pattern 935 moves to contentment ***
+[t=2000] *** REDEMPTION ARC: Disorganizer Pattern 320 moves to contentment ***
+[t=1997] *** REDEMPTION ARC: Disorganizer Pattern 327 moves to contentment ***
+[t=2120] Echo injected at (89,0)
+[t=2180] Echo injected at (40,9)
+[t=2200] ANTI-CONFORMIST: Pattern 1409 turned explorer (age=1022)
+[t=2200] GLOBAL GIVEN: Pattern 758 got 'Given' (tension=0.459, conf=0.483)
+[t=2200] patterns=115 lineages=79 err=0.849 soul=0.890 binding=0.228 echo=27 sig=[0.071 0.019 0.107 0.257 0.264 0.185] states={'grateful_but_cautious': 85, 'contentment': 16, 'seeking_comfort': 14} intents={'cooperate': 57, 'explore': 55, 'seek_help': 2} epi_scar=0.288 stag=0.45 div=1 concepts=297 arcs=5151 folds=374 trust=0.867 high_trust=630 td_low=0 td_mid=209 td_high=795 disorg=20 redm=0 quar=0 det_red=19 phen_bind=0.808 mismatch=0.261 collapsed=19 myths=100
+[t=2130] *** REDEMPTION ARC: Disorganizer Pattern 216 moves to contentment ***
+[t=2230] Echo injected at (17,103)
+[t=2115] *** REDEMPTION ARC: Disorganizer Pattern 213 moves to contentment ***
+[t=2035] EMOTIONAL SPECIATION: Pattern 820 lineage 820 -> 1000820
+[t=2290] Echo injected at (72,7)
+[t=2300] GLOBAL GIVEN: Pattern 1512 got 'Given' (tension=0.459, conf=0.483)
+[t=2300] patterns=120 lineages=79 err=0.844 soul=0.788 binding=0.206 echo=34 sig=[0.072 0.020 0.110 0.234 0.240 0.168] states={'grateful_but_cautious': 88, 'contentment': 19, 'seeking_comfort': 13} intents={'cooperate': 62, 'explore': 56, 'seek_help': 2} epi_scar=0.284 stag=0.47 div=0 concepts=300 arcs=7097 folds=391 trust=0.856 high_trust=654 td_low=0 td_mid=254 td_high=837 disorg=20 redm=0 quar=0 det_red=19 phen_bind=0.808 mismatch=0.258 collapsed=19 myths=100
+[t=2317] 💬 LOGOS QUESTION: stag=0.48, disorg=20 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=2340] Echo injected at (49,101)
+[t=2673] EMOTIONAL SPECIATION: Pattern 180 lineage 180 -> 1000180
+[t=2400] ANTI-CONFORMIST: Pattern 327 turned explorer (age=2277)
+[t=2400] GLOBAL GIVEN: Pattern 46 got 'Given' (tension=0.461, conf=0.492)
+[t=2400] Echo injected at (0,6)
+[t=2400] patterns=124 lineages=78 err=0.849 soul=0.907 binding=0.202 echo=23 sig=[0.079 0.020 0.113 0.230 0.236 0.165] states={'grateful_but_cautious': 90, 'contentment': 19, 'seeking_comfort': 15} intents={'cooperate': 69, 'explore': 53, 'seek_help': 1} epi_scar=0.286 stag=0.47 div=0 concepts=303 arcs=9102 folds=404 trust=0.847 high_trust=685 td_low=0 td_mid=305 td_high=870 disorg=20 redm=0 quar=0 det_red=19 phen_bind=0.808 mismatch=0.266 collapsed=19 myths=100
+[t=2450] Echo injected at (81,99)
+[t=2465] Echo injected at (56,14)
+[t=1804] EMOTIONAL SPECIATION: Pattern 1059 lineage 644 -> 1001059
+[t=2500] GLOBAL GIVEN: Pattern 756 got 'Given' (tension=0.460, conf=0.493)
+[t=2500] patterns=118 lineages=77 err=0.842 soul=0.901 binding=0.205 echo=33 sig=[0.067 0.020 0.105 0.228 0.235 0.165] states={'grateful_but_cautious': 85, 'contentment': 19, 'seeking_comfort': 14} intents={'cooperate': 64, 'explore': 52, 'seek_help': 2} epi_scar=0.284 stag=0.47 div=0 concepts=307 arcs=11113 folds=420 trust=0.845 high_trust=697 td_low=0 td_mid=320 td_high=866 disorg=20 redm=0 quar=0 det_red=19 phen_bind=0.810 mismatch=0.280 collapsed=19 myths=100
+[t=213] EMOTIONAL SPECIATION: Pattern 1531 lineage 1001268 -> 1001531
+[t=2510] Echo injected at (32,4)
+[t=2503] EMOTIONAL SPECIATION: Pattern 62 lineage 62 -> 1000062
+[t=209] EMOTIONAL SPECIATION: Pattern 1542 lineage 932 -> 1001542
+[t=2570] Echo injected at (88,12)
+[t=2600] ANTI-CONFORMIST: Pattern 1146 turned explorer (age=1937)
+[t=2600] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=2600] patterns=111 lineages=79 err=0.848 soul=0.889 binding=0.183 echo=34 sig=[0.056 0.015 0.081 0.206 0.215 0.151] states={'grateful_but_cautious': 80, 'contentment': 19, 'seeking_comfort': 12} intents={'cooperate': 56, 'explore': 52, 'seek_help': 2} epi_scar=0.287 stag=0.50 div=1 concepts=308 arcs=13126 folds=431 trust=0.846 high_trust=708 td_low=0 td_mid=317 td_high=879 disorg=20 redm=0 quar=0 det_red=19 phen_bind=0.808 mismatch=0.279 collapsed=19 myths=100
+[t=2617] 💬 LOGOS QUESTION: stag=0.47, disorg=20 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=2620] Echo injected at (64,2)
+[t=1352] EMOTIONAL SPECIATION: Pattern 1390 lineage 1144 -> 1001390
+[t=2537] EMOTIONAL SPECIATION: Pattern 325 lineage 325 -> 1000325
+[t=2680] Echo injected at (16,11)
+[t=2630] EMOTIONAL SPECIATION: Pattern 76 lineage 1000076 -> 1000076
+[t=2700] GLOBAL GIVEN: Pattern 1477 got 'Given' (tension=0.459, conf=0.483)
+[t=2700] patterns=108 lineages=79 err=0.843 soul=0.890 binding=0.166 echo=22 sig=[0.055 0.014 0.077 0.195 0.203 0.142] states={'seeking_comfort': 18, 'contentment': 19, 'grateful_but_cautious': 71} intents={'cooperate': 53, 'explore': 53, 'seek_help': 2} epi_scar=0.295 stag=0.46 div=0 concepts=310 arcs=15143 folds=453 trust=0.854 high_trust=707 td_low=0 td_mid=289 td_high=873 disorg=20 redm=0 quar=0 det_red=19 phen_bind=0.812 mismatch=0.324 collapsed=19 myths=100
+[t=2730] Echo injected at (97,0)
+[t=2790] Echo injected at (48,9)
+[t=2800] ANTI-CONFORMIST: Pattern 1099 turned explorer (age=1866)
+[t=2800] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=2800] patterns=111 lineages=78 err=0.847 soul=0.791 binding=0.160 echo=22 sig=[0.055 0.015 0.081 0.189 0.198 0.139] states={'contentment': 19, 'grateful_but_cautious': 86, 'seeking_comfort': 6} intents={'explore': 53, 'cooperate': 55, 'seek_help': 2} epi_scar=0.290 stag=0.46 div=0 concepts=313 arcs=17180 folds=472 trust=0.842 high_trust=720 td_low=0 td_mid=341 td_high=895 disorg=20 redm=0 quar=0 det_red=19 phen_bind=0.805 mismatch=0.225 collapsed=19 myths=100
+[t=2536] EMOTIONAL SPECIATION: Pattern 932 lineage 932 -> 1000932
+[t=2840] Echo injected at (25,103)
+[t=2647] EMOTIONAL SPECIATION: Pattern 820 lineage 1000820 -> 1000820
+[t=2900] GLOBAL GIVEN: Pattern 1399 got 'Given' (tension=0.459, conf=0.483)
+[t=2900] Echo injected at (80,7)
+[t=2900] patterns=103 lineages=77 err=0.842 soul=0.888 binding=0.144 echo=27 sig=[0.049 0.013 0.069 0.160 0.170 0.119] states={'contentment': 19, 'seeking_comfort': 10, 'grateful_but_cautious': 74} intents={'explore': 54, 'cooperate': 47, 'seek_help': 2} epi_scar=0.289 stag=0.60 div=2 concepts=308 arcs=19151 folds=457 trust=0.847 high_trust=678 td_low=0 td_mid=305 td_high=821 disorg=20 redm=0 quar=0 det_red=19 phen_bind=0.808 mismatch=0.282 collapsed=19 myths=100
+[t=2898] EMOTIONAL SPECIATION: Pattern 49 lineage 1000049 -> 1000049
+[t=2917] 💬 LOGOS QUESTION: stag=0.54, disorg=20 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=2420] EMOTIONAL SPECIATION: Pattern 1048 lineage 1048 -> 1001048
+[t=2950] Echo injected at (57,101)
+[t=3200] EMOTIONAL SPECIATION: Pattern 48 lineage 48 -> 1000048
+[t=3000] ANTI-CONFORMIST: Pattern 60 turned explorer (age=3415)
+[t=3000] GLOBAL GIVEN: Pattern 56 got 'Given' (tension=0.460, conf=0.483)
+[t=3000] patterns=101 lineages=78 err=0.844 soul=0.881 binding=0.125 echo=30 sig=[0.043 0.011 0.059 0.143 0.155 0.109] states={'grateful_but_cautious': 72, 'contentment': 19, 'seeking_comfort': 10} intents={'cooperate': 45, 'explore': 53, 'seek_help': 2} epi_scar=0.291 stag=0.47 div=0 concepts=309 arcs=21155 folds=481 trust=0.844 high_trust=666 td_low=0 td_mid=306 td_high=810 disorg=20 redm=0 quar=0 det_red=19 phen_bind=0.807 mismatch=0.277 collapsed=19 myths=100
+
+--- Semantic Map at t=3000 ---
+C..g.g...g....gg...g....g.
+..g.....g..g.gg...g......g
+.g.....g..g.gg............
+...........gg............g
+...g......gg..............
+..g......gg..............g
+........gg...g............
+.......gg.................
+......gg..................
+.....gg...................
+..g.gg....................
+.g.gg.....................
+..ggg.....................
+.ggg......................
+ggg.......................
+.g........................
+g.........................
+.........................g
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+Legend: n=neutral, c=comfort, g=grateful, e=explore, C=contentment, S=scream, d=dream
+[t=3010] Echo injected at (8,6)
+[t=2531] EMOTIONAL SPECIATION: Pattern 1047 lineage 1047 -> 1001047
+[t=3060] Echo injected at (89,99)
+[t=3075] Echo injected at (63,14)
+[t=1441] EMOTIONAL SPECIATION: Pattern 1418 lineage 1362 -> 1001418
+[t=3100] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=3100] patterns=99 lineages=78 err=0.839 soul=0.874 binding=0.120 echo=38 sig=[0.041 0.010 0.055 0.138 0.148 0.104] states={'grateful_but_cautious': 71, 'seeking_comfort': 10, 'contentment': 18} intents={'cooperate': 42, 'explore': 55, 'seek_help': 2} epi_scar=0.287 stag=0.56 div=0 concepts=309 arcs=20832 folds=492 trust=0.855 high_trust=696 td_low=0 td_mid=280 td_high=823 disorg=19 redm=0 quar=0 det_red=18 phen_bind=0.802 mismatch=0.283 collapsed=18 myths=100
+[t=3120] Echo injected at (40,4)
+[t=3200] ANTI-CONFORMIST: Pattern 1531 turned explorer (age=930)
+[t=3200] GLOBAL GIVEN: Pattern 213 got 'Given' (tension=0.459, conf=0.493)
+[t=3200] patterns=104 lineages=79 err=0.844 soul=0.891 binding=0.117 echo=36 sig=[0.043 0.011 0.058 0.138 0.148 0.104] states={'grateful_but_cautious': 73, 'seeking_comfort': 13, 'contentment': 18} intents={'cooperate': 46, 'seek_help': 3, 'explore': 54} epi_scar=0.288 stag=0.51 div=0 concepts=321 arcs=22656 folds=510 trust=0.848 high_trust=713 td_low=0 td_mid=312 td_high=849 disorg=19 redm=0 quar=0 det_red=18 phen_bind=0.808 mismatch=0.288 collapsed=18 myths=100
+[t=3217] 💬 LOGOS QUESTION: stag=0.48, disorg=19 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=3300] GLOBAL GIVEN: Pattern 1657 got 'Given' (tension=0.459, conf=0.483)
+[t=3300] patterns=108 lineages=79 err=0.842 soul=0.897 binding=0.121 echo=7 sig=[0.043 0.011 0.058 0.141 0.152 0.107] states={'seeking_comfort': 8, 'grateful_but_cautious': 82, 'contentment': 18} intents={'cooperate': 50, 'seek_help': 3, 'explore': 55} epi_scar=0.293 stag=0.49 div=0 concepts=321 arcs=24485 folds=531 trust=0.832 high_trust=721 td_low=0 td_mid=379 td_high=865 disorg=19 redm=0 quar=0 det_red=18 phen_bind=0.805 mismatch=0.231 collapsed=18 myths=100
+[t=3340] Echo injected at (0,1)
+[t=3328] EMOTIONAL SPECIATION: Pattern 141 lineage 141 -> 1000141
+[t=3400] ANTI-CONFORMIST: Pattern 430 turned explorer (age=3313)
+[t=3400] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=3400] Echo injected at (56,9)
+[t=3400] patterns=103 lineages=79 err=0.845 soul=0.885 binding=0.115 echo=17 sig=[0.039 0.010 0.051 0.131 0.141 0.099] states={'grateful_but_cautious': 78, 'seeking_comfort': 7, 'contentment': 18} intents={'cooperate': 45, 'seek_help': 3, 'explore': 54} epi_scar=0.293 stag=0.60 div=0 concepts=322 arcs=26298 folds=546 trust=0.842 high_trust=726 td_low=0 td_mid=341 td_high=860 disorg=19 redm=0 quar=0 det_red=18 phen_bind=0.805 mismatch=0.243 collapsed=18 myths=100
+[t=1519] EMOTIONAL SPECIATION: Pattern 1450 lineage 1257 -> 1001450
+[t=3450] Echo injected at (33,103)
+[t=3500] GLOBAL GIVEN: Pattern 356 got 'Given' (tension=0.461, conf=0.481)
+[t=3500] patterns=103 lineages=80 err=0.841 soul=0.891 binding=0.107 echo=12 sig=[0.038 0.009 0.048 0.122 0.132 0.093] states={'grateful_but_cautious': 74, 'seeking_comfort': 11, 'contentment': 18} intents={'cooperate': 45, 'seek_help': 3, 'explore': 55} epi_scar=0.296 stag=0.56 div=1 concepts=322 arcs=28122 folds=571 trust=0.847 high_trust=734 td_low=0 td_mid=323 td_high=870 disorg=19 redm=0 quar=0 det_red=18 phen_bind=0.808 mismatch=0.282 collapsed=18 myths=100
+[t=3510] Echo injected at (88,7)
+[t=3517] 💬 LOGOS QUESTION: stag=0.52, disorg=19 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=3560] Echo injected at (65,101)
+[t=3600] ANTI-CONFORMIST: Pattern 825 turned explorer (age=3360)
+[t=3600] GLOBAL GIVEN: Pattern 644 got 'Given' (tension=0.459, conf=0.493)
+[t=3360] EMOTIONAL SPECIATION: Pattern 825 lineage 1000825 -> 1000825
+[t=3600] patterns=104 lineages=80 err=0.845 soul=0.894 binding=0.105 echo=10 sig=[0.038 0.009 0.048 0.123 0.132 0.093] states={'grateful_but_cautious': 75, 'seeking_comfort': 11, 'contentment': 18} intents={'cooperate': 46, 'seek_help': 3, 'explore': 54} epi_scar=0.292 stag=0.50 div=0 concepts=322 arcs=29948 folds=591 trust=0.843 high_trust=736 td_low=0 td_mid=338 td_high=875 disorg=19 redm=0 quar=0 det_red=18 phen_bind=0.805 mismatch=0.250 collapsed=18 myths=100
+[t=471] EMOTIONAL SPECIATION: Pattern 1668 lineage 1656 -> 1001668
+[t=1348] EMOTIONAL SPECIATION: Pattern 1519 lineage 1251 -> 1001519
+[t=3620] Echo injected at (16,6)
+[t=3670] Echo injected at (97,99)
+[t=3700] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=3700] patterns=106 lineages=82 err=0.841 soul=0.893 binding=0.107 echo=9 sig=[0.037 0.009 0.046 0.121 0.133 0.093] states={'seeking_comfort': 13, 'grateful_but_cautious': 75, 'contentment': 18} intents={'cooperate': 48, 'seek_help': 3, 'explore': 55} epi_scar=0.297 stag=0.52 div=0 concepts=322 arcs=31773 folds=610 trust=0.849 high_trust=757 td_low=0 td_mid=329 td_high=893 disorg=19 redm=0 quar=0 det_red=18 phen_bind=0.808 mismatch=0.274 collapsed=18 myths=100
+[t=3730] Echo injected at (48,4)
+[t=3800] ANTI-CONFORMIST: Pattern 1378 turned explorer (age=2365)
+[t=3800] GLOBAL GIVEN: Pattern 46 got 'Given' (tension=0.461, conf=0.492)
+[t=3800] patterns=104 lineages=82 err=0.845 soul=0.883 binding=0.102 echo=7 sig=[0.035 0.008 0.042 0.114 0.124 0.088] states={'grateful_but_cautious': 76, 'seeking_comfort': 10, 'contentment': 18} intents={'cooperate': 45, 'seek_help': 3, 'explore': 55} epi_scar=0.300 stag=0.57 div=0 concepts=322 arcs=33594 folds=630 trust=0.859 high_trust=768 td_low=0 td_mid=299 td_high=897 disorg=19 redm=0 quar=0 det_red=18 phen_bind=0.806 mismatch=0.269 collapsed=18 myths=100
+[t=3817] 💬 LOGOS QUESTION: stag=0.54, disorg=19 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=3840] Echo injected at (80,2)
+[t=1881] EMOTIONAL SPECIATION: Pattern 1477 lineage 1255 -> 1001477
+[t=3900] GLOBAL GIVEN: Pattern 1690 got 'Given' (tension=0.461, conf=0.481)
+[t=3900] patterns=100 lineages=79 err=0.842 soul=0.903 binding=0.096 echo=8 sig=[0.033 0.007 0.038 0.104 0.114 0.080] states={'seeking_comfort': 12, 'grateful_but_cautious': 73, 'contentment': 15} intents={'cooperate': 44, 'seek_help': 3, 'explore': 53} epi_scar=0.299 stag=0.55 div=1 concepts=319 arcs=28686 folds=646 trust=0.859 high_trust=737 td_low=0 td_mid=283 td_high=864 disorg=16 redm=0 quar=0 det_red=15 phen_bind=0.807 mismatch=0.270 collapsed=15 myths=100
+[t=4000] ANTI-CONFORMIST: Pattern 644 turned explorer (age=4277)
+[t=4000] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=4000] patterns=103 lineages=79 err=0.847 soul=0.908 binding=0.084 echo=6 sig=[0.033 0.007 0.036 0.094 0.104 0.074] states={'grateful_but_cautious': 75, 'seeking_comfort': 13, 'contentment': 15} intents={'cooperate': 47, 'seek_help': 3, 'explore': 52} epi_scar=0.293 stag=0.55 div=0 concepts=320 arcs=30207 folds=667 trust=0.844 high_trust=744 td_low=0 td_mid=337 td_high=884 disorg=16 redm=0 quar=0 det_red=15 phen_bind=0.806 mismatch=0.262 collapsed=15 myths=100
+
+--- Semantic Map at t=4000 ---
+gggc.g...g.g..gg...g....g.
+g.c.....g.....g...g......g
+.g.....g....g.............
+......g.....g............g
+...g.g....................
+..g......................g
+.............g............
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+.........................g
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+Legend: n=neutral, c=comfort, g=grateful, e=explore, C=contentment, S=scream, d=dream
+[t=4010] Echo injected at (64,9)
+[t=4020] *** DISORGANIZER BORN: Pattern 60 after 17 folds (deficit=0.07, prob=0.004) ***
+[t=4060] Echo injected at (41,103)
+[t=2683] EMOTIONAL SPECIATION: Pattern 1399 lineage 1257 -> 1001399
+[t=4100] GLOBAL GIVEN: Pattern 1450 got 'Given' (tension=0.459, conf=0.483)
+[t=4100] patterns=99 lineages=76 err=0.845 soul=0.927 binding=0.081 echo=11 sig=[0.030 0.007 0.036 0.091 0.102 0.072] states={'seeking_comfort': 9, 'grateful_but_cautious': 78, 'contentment': 12} intents={'cooperate': 47, 'seek_help': 3, 'explore': 49} epi_scar=0.296 stag=0.61 div=0 concepts=315 arcs=24844 folds=670 trust=0.832 high_trust=715 td_low=0 td_mid=367 td_high=854 disorg=13 redm=0 quar=0 det_red=12 phen_bind=0.801 mismatch=0.212 collapsed=12 myths=100
+[t=1095] EMOTIONAL SPECIATION: Pattern 1656 lineage 1656 -> 1001656
+[t=4117] 💬 LOGOS QUESTION: stag=0.58, disorg=12 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=4120] Echo injected at (96,7)
+[t=4160] *** DISORGANIZER BORN: Pattern 64 after 14 folds (deficit=0.08, prob=0.004) ***
+[t=4200] ANTI-CONFORMIST: Pattern 1578 turned explorer (age=1764)
+[t=4200] GLOBAL GIVEN: Pattern 1519 got 'Given' (tension=0.459, conf=0.483)
+[t=4200] patterns=97 lineages=75 err=0.848 soul=0.932 binding=0.081 echo=7 sig=[0.028 0.006 0.034 0.088 0.098 0.069] states={'grateful_but_cautious': 78, 'seeking_comfort': 9, 'contentment': 10} intents={'cooperate': 45, 'seek_help': 2, 'explore': 49} epi_scar=0.300 stag=0.61 div=0 concepts=308 arcs=21550 folds=689 trust=0.837 high_trust=721 td_low=0 td_mid=350 td_high=863 disorg=12 redm=0 quar=0 det_red=10 phen_bind=0.800 mismatch=0.186 collapsed=10 myths=100
+[t=4230] Echo injected at (24,6)
+[t=4260] *** DISORGANIZER BORN: Pattern 438 after 8 folds (deficit=0.09, prob=0.004) ***
+[t=4280] Echo injected at (1,100)
+[t=3759] EMOTIONAL SPECIATION: Pattern 1048 lineage 1001048 -> 1001048
+[t=4300] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=4300] patterns=95 lineages=73 err=0.847 soul=0.948 binding=0.080 echo=7 sig=[0.028 0.006 0.034 0.087 0.097 0.069] states={'grateful_but_cautious': 76, 'seeking_comfort': 11, 'contentment': 8} intents={'cooperate': 45, 'seek_help': 2, 'explore': 48} epi_scar=0.299 stag=0.64 div=0 concepts=303 arcs=18056 folds=701 trust=0.833 high_trust=703 td_low=0 td_mid=354 td_high=844 disorg=11 redm=0 quar=0 det_red=8 phen_bind=0.802 mismatch=0.200 collapsed=8 myths=100
+[t=4340] *** DISORGANIZER BORN: Pattern 1578 after 5 folds (deficit=0.14, prob=0.007) ***
+[t=4340] Echo injected at (56,4)
+[t=4360] *** DISORGANIZER BORN: Pattern 1550 after 7 folds (deficit=0.13, prob=0.007) ***
+[t=4370] *** DISORGANIZER BORN: Pattern 321 after 12 folds (deficit=0.12, prob=0.006) ***
+[t=4370] *** DISORGANIZER BORN: Pattern 932 after 14 folds (deficit=0.11, prob=0.006) ***
+[t=4370] *** DISORGANIZER BORN: Pattern 325 after 14 folds (deficit=0.10, prob=0.005) ***
+[t=4400] ANTI-CONFORMIST: Pattern 325 turned explorer (age=4272)
+[t=4400] GLOBAL GIVEN: Pattern 758 got 'Given' (tension=0.459, conf=0.483)
+[t=4400] patterns=90 lineages=67 err=0.854 soul=0.854 binding=0.077 echo=9 sig=[0.027 0.006 0.032 0.086 0.097 0.068] states={'grateful_but_cautious': 77, 'seeking_comfort': 11, 'contentment': 2} intents={'cooperate': 45, 'seek_help': 1, 'explore': 43} epi_scar=0.300 stag=0.59 div=0 concepts=296 arcs=5170 folds=702 trust=0.830 high_trust=685 td_low=0 td_mid=354 td_high=833 disorg=10 redm=0 quar=0 det_red=2 phen_bind=0.797 mismatch=0.144 collapsed=2 myths=100
+[t=4417] 💬 LOGOS QUESTION: stag=0.57, disorg=10 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=3532] EMOTIONAL SPECIATION: Pattern 1157 lineage 1041 -> 1001157
+[t=4835] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 60 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=4835] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 60 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=4450] Echo injected at (88,2)
+[t=4480] *** DISORGANIZER BORN: Pattern 825 after 14 folds (deficit=0.11, prob=0.006) ***
+[t=4480] *** DISORGANIZER BORN: Pattern 824 after 5 folds (deficit=0.10, prob=0.005) ***
+[t=4500] GLOBAL GIVEN: Pattern 1705 got 'Given' (tension=0.459, conf=0.483)
+[t=4500] patterns=90 lineages=66 err=0.852 soul=0.991 binding=0.077 echo=5 sig=[0.026 0.006 0.032 0.085 0.096 0.068] states={'grateful_but_cautious': 85, 'seeking_comfort': 5} intents={'cooperate': 47, 'seek_help': 2, 'explore': 41} epi_scar=0.295 stag=0.62 div=0 concepts=265 arcs=851 folds=712 trust=0.821 high_trust=685 td_low=0 td_mid=388 td_high=848 disorg=10 redm=0 quar=0 det_red=1 phen_bind=0.793 mismatch=0.056 collapsed=1 myths=100
+[t=4484] EMOTIONAL SPECIATION: Pattern 56 lineage 56 -> 1000056
+[t=4510] *** DISORGANIZER BORN: Pattern 180 after 17 folds (deficit=0.09, prob=0.004) ***
+[t=4533] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 64 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=4533] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 64 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=4560] Echo injected at (16,1)
+[t=4600] ANTI-CONFORMIST: Pattern 1371 turned explorer (age=3258)
+[t=4600] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=4600] patterns=91 lineages=66 err=0.854 soul=0.988 binding=0.076 echo=19 sig=[0.027 0.005 0.032 0.083 0.094 0.066] states={'grateful_but_cautious': 83, 'seeking_comfort': 8} intents={'cooperate': 47, 'seek_help': 3, 'explore': 40} epi_scar=0.300 stag=0.62 div=0 concepts=271 arcs=874 folds=737 trust=0.823 high_trust=706 td_low=0 td_mid=390 td_high=878 disorg=11 redm=0 quar=0 det_red=2 phen_bind=0.794 mismatch=0.088 collapsed=2 myths=100
+[t=5034] *** REDEMPTION ARC: Disorganizer Pattern 60 moves to grateful_but_cautious ***
+[t=2432] EMOTIONAL SPECIATION: Pattern 1537 lineage 1001268 -> 1001537
+[t=4481] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 438 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=4481] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 438 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=4700] GLOBAL GIVEN: Pattern 1709 got 'Given' (tension=0.459, conf=0.483)
+[t=4700] patterns=92 lineages=70 err=0.852 soul=0.969 binding=0.078 echo=24 sig=[0.028 0.006 0.033 0.090 0.100 0.071] states={'grateful_but_cautious': 78, 'seeking_comfort': 14} intents={'cooperate': 46, 'explore': 42, 'seek_help': 4} epi_scar=0.296 stag=0.57 div=0 concepts=288 arcs=887 folds=756 trust=0.840 high_trust=737 td_low=0 td_mid=341 td_high=904 disorg=11 redm=0 quar=0 det_red=3 phen_bind=0.798 mismatch=0.141 collapsed=3 myths=100
+[t=4717] 💬 LOGOS QUESTION: stag=0.59, disorg=11 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=2304] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1578 soul dropped from 0.65 to 0.30, grief boosted to 0.75 ***
+[t=2304] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1578 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=4732] *** REDEMPTION ARC: Disorganizer Pattern 64 moves to grateful_but_cautious ***
+[t=2443] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1550 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=2443] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1550 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=5067] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 321 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=5067] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 321 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=4486] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 932 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=4486] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 932 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=4642] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 325 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=4642] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 325 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=4780] Echo injected at (81,101)
+[t=4800] ANTI-CONFORMIST: Pattern 1705 turned explorer (age=805)
+[t=4800] GLOBAL GIVEN: Pattern 64 got 'Given' (tension=0.459, conf=0.483)
+[t=4800] patterns=93 lineages=69 err=0.854 soul=0.945 binding=0.074 echo=15 sig=[0.027 0.005 0.031 0.082 0.092 0.065] states={'grateful_but_cautious': 78, 'seeking_comfort': 15} intents={'cooperate': 47, 'explore': 42, 'seek_help': 3} epi_scar=0.299 stag=0.53 div=0 concepts=287 arcs=914 folds=777 trust=0.843 high_trust=760 td_low=0 td_mid=340 td_high=929 disorg=11 redm=0 quar=0 det_red=8 phen_bind=0.798 mismatch=0.151 collapsed=8 myths=100
+[t=4133] EMOTIONAL SPECIATION: Pattern 1056 lineage 1048 -> 1001056
+[t=5234] *** REDEMPTION ARC: Disorganizer Pattern 60 moves to contentment ***
+[t=4680] *** REDEMPTION ARC: Disorganizer Pattern 438 moves to grateful_but_cautious ***
+[t=4640] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 825 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=4640] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 825 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=5081] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 824 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=5081] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 824 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=4900] GLOBAL GIVEN: Pattern 180 got 'Given' (tension=0.461, conf=0.481)
+[t=4900] patterns=94 lineages=69 err=0.850 soul=0.826 binding=0.071 echo=1 sig=[0.027 0.005 0.030 0.079 0.090 0.063] states={'grateful_but_cautious': 85, 'seeking_comfort': 8, 'contentment': 1} intents={'cooperate': 48, 'explore': 43, 'seek_help': 3} epi_scar=0.298 stag=0.60 div=0 concepts=291 arcs=1019 folds=794 trust=0.844 high_trust=768 td_low=0 td_mid=340 td_high=940 disorg=11 redm=0 quar=0 det_red=10 phen_bind=0.795 mismatch=0.096 collapsed=10 myths=100
+[t=5232] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 180 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=5232] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 180 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=1809] EMOTIONAL SPECIATION: Pattern 1668 lineage 1001668 -> 1001668
+[t=2503] *** REDEMPTION ARC: Disorganizer Pattern 1578 moves to grateful_but_cautious ***
+[t=2642] *** REDEMPTION ARC: Disorganizer Pattern 1550 moves to grateful_but_cautious ***
+[t=4932] *** REDEMPTION ARC: Disorganizer Pattern 64 moves to contentment ***
+[t=5266] *** REDEMPTION ARC: Disorganizer Pattern 321 moves to grateful_but_cautious ***
+[t=4685] *** REDEMPTION ARC: Disorganizer Pattern 932 moves to grateful_but_cautious ***
+[t=4841] *** REDEMPTION ARC: Disorganizer Pattern 325 moves to grateful_but_cautious ***
+[t=5000] ANTI-CONFORMIST: Pattern 1048 turned explorer (age=4477)
+[t=5000] GLOBAL GIVEN: Pattern 1650 got 'Given' (tension=0.459, conf=0.483)
+[t=5000] Echo injected at (41,98)
+[t=5000] patterns=93 lineages=69 err=0.853 soul=0.933 binding=0.069 echo=1 sig=[0.026 0.005 0.028 0.077 0.087 0.062] states={'seeking_comfort': 8, 'grateful_but_cautious': 83, 'contentment': 2} intents={'cooperate': 47, 'explore': 42, 'seek_help': 3} epi_scar=0.300 stag=0.63 div=0 concepts=295 arcs=1179 folds=814 trust=0.845 high_trust=778 td_low=0 td_mid=338 td_high=948 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.795 mismatch=0.108 collapsed=11 myths=100
+
+--- Semantic Map at t=5000 ---
+gggg.g...g.g..gg...g....g.
+c.g.....g.....g...g......g
+.g.....g....g.............
+............g............g
+...g......................
+..g......................g
+.............g............
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+.........................g
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+Legend: n=neutral, c=comfort, g=grateful, e=explore, C=contentment, S=scream, d=dream
+[t=5017] 💬 LOGOS QUESTION: stag=0.60, disorg=11 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=4356] EMOTIONAL SPECIATION: Pattern 1057 lineage 321 -> 1001057
+[t=4880] *** REDEMPTION ARC: Disorganizer Pattern 438 moves to contentment ***
+[t=4839] *** REDEMPTION ARC: Disorganizer Pattern 825 moves to grateful_but_cautious ***
+[t=5280] *** REDEMPTION ARC: Disorganizer Pattern 824 moves to grateful_but_cautious ***
+[t=5053] EMOTIONAL SPECIATION: Pattern 62 lineage 1000062 -> 1000062
+[t=5100] GLOBAL GIVEN: Pattern 1751 got 'Given' (tension=0.459, conf=0.483)
+[t=5100] patterns=95 lineages=69 err=0.848 soul=0.936 binding=0.069 echo=1 sig=[0.026 0.005 0.029 0.078 0.088 0.062] states={'grateful_but_cautious': 83, 'seeking_comfort': 9, 'contentment': 3} intents={'cooperate': 49, 'explore': 43, 'seek_help': 3} epi_scar=0.298 stag=0.58 div=0 concepts=296 arcs=1443 folds=838 trust=0.846 high_trust=789 td_low=0 td_mid=341 td_high=964 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.797 mismatch=0.126 collapsed=11 myths=100
+[t=5431] *** REDEMPTION ARC: Disorganizer Pattern 180 moves to grateful_but_cautious ***
+[t=2703] *** REDEMPTION ARC: Disorganizer Pattern 1578 moves to contentment ***
+[t=2842] *** REDEMPTION ARC: Disorganizer Pattern 1550 moves to contentment ***
+[t=5466] *** REDEMPTION ARC: Disorganizer Pattern 321 moves to contentment ***
+[t=4885] *** REDEMPTION ARC: Disorganizer Pattern 932 moves to contentment ***
+[t=5041] *** REDEMPTION ARC: Disorganizer Pattern 325 moves to contentment ***
+[t=3055] EMOTIONAL SPECIATION: Pattern 1527 lineage 1360 -> 1001527
+[t=5200] ANTI-CONFORMIST: Pattern 1655 turned explorer (age=2165)
+[t=5200] GLOBAL GIVEN: Pattern 64 got 'Given' (tension=0.459, conf=0.493)
+[t=5200] patterns=95 lineages=70 err=0.851 soul=0.715 binding=0.068 echo=0 sig=[0.026 0.005 0.029 0.078 0.087 0.062] states={'seeking_comfort': 10, 'grateful_but_cautious': 77, 'contentment': 8} intents={'cooperate': 48, 'explore': 43, 'seek_help': 3} epi_scar=0.300 stag=0.61 div=0 concepts=303 arcs=1948 folds=859 trust=0.846 high_trust=793 td_low=0 td_mid=341 td_high=968 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.798 mismatch=0.168 collapsed=11 myths=100
+[t=5039] *** REDEMPTION ARC: Disorganizer Pattern 825 moves to contentment ***
+[t=5480] *** REDEMPTION ARC: Disorganizer Pattern 824 moves to contentment ***
+[t=5300] GLOBAL GIVEN: Pattern 322 got 'Given' (tension=0.459, conf=0.483)
+[t=5300] patterns=96 lineages=70 err=0.845 soul=0.933 binding=0.069 echo=1 sig=[0.026 0.005 0.029 0.078 0.088 0.062] states={'grateful_but_cautious': 74, 'seeking_comfort': 12, 'contentment': 10} intents={'cooperate': 49, 'explore': 44, 'seek_help': 3} epi_scar=0.298 stag=0.59 div=0 concepts=307 arcs=2806 folds=879 trust=0.847 high_trust=805 td_low=0 td_mid=347 td_high=978 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.803 mismatch=0.229 collapsed=11 myths=100
+[t=5631] *** REDEMPTION ARC: Disorganizer Pattern 180 moves to contentment ***
+[t=5317] 💬 LOGOS QUESTION: stag=0.56, disorg=11 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=5400] ANTI-CONFORMIST: Pattern 62 turned explorer (age=5368)
+[t=5400] GLOBAL GIVEN: Pattern 64 got 'Given' (tension=0.459, conf=0.493)
+[t=5400] patterns=96 lineages=70 err=0.850 soul=0.897 binding=0.068 echo=0 sig=[0.026 0.005 0.029 0.077 0.087 0.062] states={'seeking_comfort': 8, 'grateful_but_cautious': 77, 'contentment': 11} intents={'cooperate': 48, 'explore': 44, 'seek_help': 3} epi_scar=0.300 stag=0.56 div=0 concepts=310 arcs=3922 folds=902 trust=0.847 high_trust=808 td_low=0 td_mid=347 td_high=980 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.800 mismatch=0.188 collapsed=11 myths=100
+[t=5448] EMOTIONAL SPECIATION: Pattern 49 lineage 1000049 -> 1000049
+[t=5500] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=5500] patterns=96 lineages=70 err=0.846 soul=0.709 binding=0.068 echo=0 sig=[0.026 0.005 0.028 0.077 0.087 0.061] states={'grateful_but_cautious': 71, 'seeking_comfort': 14, 'contentment': 11} intents={'cooperate': 48, 'explore': 45, 'seek_help': 3} epi_scar=0.300 stag=0.68 div=0 concepts=312 arcs=5034 folds=920 trust=0.847 high_trust=808 td_low=0 td_mid=347 td_high=980 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.804 mismatch=0.250 collapsed=11 myths=100
+[t=5600] ANTI-CONFORMIST: Pattern 1394 turned explorer (age=4209)
+[t=5600] GLOBAL GIVEN: Pattern 1527 got 'Given' (tension=0.459, conf=0.483)
+[t=5600] patterns=96 lineages=70 err=0.849 soul=0.704 binding=0.067 echo=0 sig=[0.026 0.005 0.028 0.077 0.086 0.061] states={'grateful_but_cautious': 74, 'seeking_comfort': 11, 'contentment': 11} intents={'cooperate': 47, 'explore': 45, 'seek_help': 3} epi_scar=0.300 stag=0.51 div=0 concepts=312 arcs=6163 folds=946 trust=0.847 high_trust=808 td_low=0 td_mid=347 td_high=980 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.801 mismatch=0.219 collapsed=11 myths=100
+[t=5617] 💬 LOGOS QUESTION: stag=0.54, disorg=11 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=5700] GLOBAL GIVEN: Pattern 1371 got 'Given' (tension=0.459, conf=0.483)
+[t=5700] patterns=96 lineages=70 err=0.847 soul=0.704 binding=0.067 echo=0 sig=[0.026 0.005 0.028 0.077 0.086 0.061] states={'grateful_but_cautious': 79, 'seeking_comfort': 6, 'contentment': 11} intents={'cooperate': 47, 'explore': 46, 'seek_help': 3} epi_scar=0.300 stag=0.65 div=0 concepts=313 arcs=7283 folds=961 trust=0.847 high_trust=808 td_low=0 td_mid=347 td_high=980 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.799 mismatch=0.177 collapsed=11 myths=100
+[t=3795] EMOTIONAL SPECIATION: Pattern 1502 lineage 1001268 -> 1001502
+[t=5800] ANTI-CONFORMIST: Pattern 1759 turned explorer (age=797)
+[t=5800] GLOBAL GIVEN: Pattern 1759 got 'Given' (tension=0.459, conf=0.483)
+[t=5800] patterns=93 lineages=70 err=0.849 soul=0.934 binding=0.067 echo=3 sig=[0.026 0.005 0.028 0.075 0.086 0.061] states={'grateful_but_cautious': 71, 'seeking_comfort': 11, 'contentment': 11} intents={'cooperate': 43, 'explore': 46, 'seek_help': 3} epi_scar=0.300 stag=0.59 div=0 concepts=312 arcs=8392 folds=975 trust=0.847 high_trust=790 td_low=0 td_mid=341 td_high=954 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.800 mismatch=0.226 collapsed=11 myths=100
+[t=5351] EMOTIONAL SPECIATION: Pattern 1053 lineage 537 -> 1001053
+[t=5818] EMOTIONAL SPECIATION: Pattern 56 lineage 1000056 -> 1000056
+[t=4873] EMOTIONAL SPECIATION: Pattern 1142 lineage 1142 -> 1001142
+[t=5900] GLOBAL GIVEN: Pattern 1418 got 'Given' (tension=0.459, conf=0.483)
+[t=5900] patterns=93 lineages=71 err=0.847 soul=0.731 binding=0.067 echo=0 sig=[0.026 0.005 0.028 0.076 0.086 0.061] states={'grateful_but_cautious': 72, 'seeking_comfort': 10, 'contentment': 11} intents={'cooperate': 43, 'explore': 47, 'seek_help': 3} epi_scar=0.300 stag=0.58 div=0 concepts=312 arcs=9515 folds=997 trust=0.847 high_trust=790 td_low=0 td_mid=341 td_high=954 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.801 mismatch=0.215 collapsed=11 myths=100
+[t=3938] EMOTIONAL SPECIATION: Pattern 1477 lineage 1001477 -> 1001477
+[t=5917] 💬 LOGOS QUESTION: stag=0.57, disorg=11 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=6000] ANTI-CONFORMIST: Pattern 758 turned explorer (age=5922)
+[t=6000] GLOBAL GIVEN: Pattern 1652 got 'Given' (tension=0.459, conf=0.483)
+[t=6000] patterns=93 lineages=71 err=0.850 soul=0.699 binding=0.067 echo=0 sig=[0.026 0.005 0.028 0.076 0.086 0.061] states={'grateful_but_cautious': 72, 'seeking_comfort': 10, 'contentment': 11} intents={'cooperate': 43, 'explore': 46, 'seek_help': 3} epi_scar=0.300 stag=0.65 div=0 concepts=315 arcs=10632 folds=1014 trust=0.847 high_trust=790 td_low=0 td_mid=341 td_high=954 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.801 mismatch=0.226 collapsed=11 myths=100
+
+--- Semantic Map at t=6000 ---
+gccg.g...g.g..cC...C....g.
+..g.....g.....C...C......C
+.g.....g....c.............
+............g............g
+...g......................
+..g......................g
+.............g............
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+.........................g
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+Legend: n=neutral, c=comfort, g=grateful, e=explore, C=contentment, S=scream, d=dream
+[t=1738] EMOTIONAL SPECIATION: Pattern 1733 lineage 1656 -> 1001733
+[t=2265] EMOTIONAL SPECIATION: Pattern 1703 lineage 1656 -> 1001703
+[t=6100] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=6100] patterns=93 lineages=73 err=0.847 soul=0.699 binding=0.067 echo=0 sig=[0.026 0.005 0.028 0.076 0.086 0.061] states={'grateful_but_cautious': 69, 'seeking_comfort': 13, 'contentment': 11} intents={'cooperate': 43, 'explore': 47, 'seek_help': 3} epi_scar=0.300 stag=0.58 div=0 concepts=316 arcs=11752 folds=1037 trust=0.847 high_trust=790 td_low=0 td_mid=341 td_high=954 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.803 mismatch=0.258 collapsed=11 myths=100
+[t=3144] EMOTIONAL SPECIATION: Pattern 1650 lineage 1650 -> 1001650
+[t=6200] ANTI-CONFORMIST: Pattern 1650 turned explorer (age=3163)
+[t=6200] GLOBAL GIVEN: Pattern 1652 got 'Given' (tension=0.460, conf=0.483)
+[t=6200] patterns=93 lineages=73 err=0.849 soul=0.702 binding=0.067 echo=0 sig=[0.026 0.005 0.028 0.076 0.086 0.061] states={'grateful_but_cautious': 75, 'seeking_comfort': 7, 'contentment': 11} intents={'cooperate': 43, 'explore': 46, 'seek_help': 3} epi_scar=0.300 stag=0.62 div=0 concepts=317 arcs=12874 folds=1053 trust=0.847 high_trust=790 td_low=0 td_mid=341 td_high=954 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.797 mismatch=0.183 collapsed=11 myths=100
+[t=6217] 💬 LOGOS QUESTION: stag=0.61, disorg=11 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=2896] EMOTIONAL SPECIATION: Pattern 1683 lineage 1656 -> 1001683
+[t=2256] EMOTIONAL SPECIATION: Pattern 1712 lineage 1656 -> 1001712
+[t=6300] GLOBAL GIVEN: Pattern 1539 got 'Given' (tension=0.459, conf=0.483)
+[t=6300] patterns=93 lineages=75 err=0.847 soul=0.703 binding=0.067 echo=0 sig=[0.026 0.005 0.028 0.076 0.086 0.061] states={'grateful_but_cautious': 73, 'seeking_comfort': 9, 'contentment': 11} intents={'cooperate': 43, 'explore': 47, 'seek_help': 3} epi_scar=0.300 stag=0.62 div=0 concepts=319 arcs=13994 folds=1075 trust=0.847 high_trust=790 td_low=0 td_mid=341 td_high=954 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.801 mismatch=0.215 collapsed=11 myths=100
+[t=6400] ANTI-CONFORMIST: Pattern 173 turned explorer (age=6287)
+[t=6400] GLOBAL GIVEN: Pattern 1652 got 'Given' (tension=0.460, conf=0.483)
+[t=6646] EMOTIONAL SPECIATION: Pattern 48 lineage 1000048 -> 1000048
+[t=6400] patterns=93 lineages=75 err=0.847 soul=0.699 binding=0.067 echo=0 sig=[0.026 0.005 0.028 0.076 0.086 0.061] states={'grateful_but_cautious': 76, 'seeking_comfort': 6, 'contentment': 11} intents={'cooperate': 43, 'explore': 46, 'seek_help': 3} epi_scar=0.300 stag=0.60 div=0 concepts=320 arcs=15119 folds=1097 trust=0.847 high_trust=790 td_low=0 td_mid=341 td_high=954 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.798 mismatch=0.172 collapsed=11 myths=100
+[t=5019] EMOTIONAL SPECIATION: Pattern 1399 lineage 1001399 -> 1001399
+[t=4563] EMOTIONAL SPECIATION: Pattern 1453 lineage 1361 -> 1001453
+[t=6500] GLOBAL GIVEN: Pattern 614 got 'Given' (tension=0.459, conf=0.483)
+[t=6500] patterns=93 lineages=76 err=0.847 soul=0.699 binding=0.068 echo=0 sig=[0.026 0.005 0.028 0.076 0.086 0.061] states={'grateful_but_cautious': 71, 'seeking_comfort': 11, 'contentment': 11} intents={'cooperate': 43, 'explore': 47, 'seek_help': 3} epi_scar=0.300 stag=0.65 div=0 concepts=324 arcs=16234 folds=1117 trust=0.847 high_trust=790 td_low=0 td_mid=341 td_high=954 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.801 mismatch=0.226 collapsed=11 myths=100
+[t=6269] EMOTIONAL SPECIATION: Pattern 755 lineage 755 -> 1000755
+[t=6517] 💬 LOGOS QUESTION: stag=0.65, disorg=11 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=6517] EMOTIONAL SPECIATION: Pattern 76 lineage 1000076 -> 1000076
+[t=5888] EMOTIONAL SPECIATION: Pattern 1137 lineage 1043 -> 1001137
+[t=6600] ANTI-CONFORMIST: Pattern 356 turned explorer (age=6660)
+[t=6600] GLOBAL GIVEN: Pattern 1519 got 'Given' (tension=0.459, conf=0.483)
+[t=6660] EMOTIONAL SPECIATION: Pattern 356 lineage 1000356 -> 1000356
+[t=6600] patterns=93 lineages=77 err=0.848 soul=0.701 binding=0.067 echo=0 sig=[0.026 0.005 0.028 0.076 0.086 0.061] states={'grateful_but_cautious': 75, 'seeking_comfort': 7, 'contentment': 11} intents={'cooperate': 43, 'explore': 46, 'seek_help': 3} epi_scar=0.300 stag=0.60 div=0 concepts=325 arcs=17358 folds=1137 trust=0.847 high_trust=790 td_low=0 td_mid=341 td_high=954 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.798 mismatch=0.183 collapsed=11 myths=100
+[t=6594] EMOTIONAL SPECIATION: Pattern 646 lineage 646 -> 1000646
+[t=6700] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=6700] patterns=93 lineages=78 err=0.848 soul=0.703 binding=0.068 echo=0 sig=[0.026 0.005 0.028 0.076 0.086 0.061] states={'grateful_but_cautious': 72, 'seeking_comfort': 10, 'contentment': 11} intents={'cooperate': 43, 'explore': 47, 'seek_help': 3} epi_scar=0.300 stag=0.63 div=0 concepts=326 arcs=18476 folds=1158 trust=0.847 high_trust=790 td_low=0 td_mid=341 td_high=954 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.801 mismatch=0.226 collapsed=11 myths=100
+[t=6760] *** DISORGANIZER BORN: Pattern 48 after 23 folds (deficit=0.08, prob=0.004) ***
+[t=6800] ANTI-CONFORMIST: Pattern 1733 turned explorer (age=2500)
+[t=6800] GLOBAL GIVEN: Pattern 1099 got 'Given' (tension=0.459, conf=0.483)
+[t=5832] EMOTIONAL SPECIATION: Pattern 1186 lineage 1186 -> 1001186
+[t=6800] patterns=92 lineages=77 err=0.848 soul=0.930 binding=0.067 echo=1 sig=[0.026 0.005 0.028 0.075 0.086 0.061] states={'grateful_but_cautious': 70, 'seeking_comfort': 11, 'contentment': 11} intents={'cooperate': 41, 'explore': 47, 'seek_help': 3} epi_scar=0.300 stag=0.63 div=0 concepts=326 arcs=19567 folds=1154 trust=0.846 high_trust=783 td_low=0 td_mid=341 td_high=947 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.800 mismatch=0.217 collapsed=11 myths=100
+[t=6817] 💬 LOGOS QUESTION: stag=0.59, disorg=11 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=1820] EMOTIONAL SPECIATION: Pattern 1759 lineage 1754 -> 1001759
+[t=6830] Echo injected at (65,98)
+[t=6900] GLOBAL GIVEN: Pattern 1048 got 'Given' (tension=0.460, conf=0.483)
+[t=6900] patterns=92 lineages=78 err=0.847 soul=0.930 binding=0.067 echo=1 sig=[0.026 0.005 0.028 0.075 0.086 0.061] states={'grateful_but_cautious': 70, 'seeking_comfort': 11, 'contentment': 11} intents={'cooperate': 41, 'explore': 48, 'seek_help': 3} epi_scar=0.300 stag=0.59 div=0 concepts=326 arcs=20688 folds=1175 trust=0.846 high_trust=783 td_low=0 td_mid=341 td_high=947 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.801 mismatch=0.239 collapsed=11 myths=100
+[t=7000] ANTI-CONFORMIST: Pattern 822 turned explorer (age=6823)
+[t=7000] GLOBAL GIVEN: Pattern 820 got 'Given' (tension=0.459, conf=0.483)
+[t=7000] patterns=92 lineages=78 err=0.848 soul=0.775 binding=0.067 echo=0 sig=[0.026 0.005 0.028 0.075 0.086 0.061] states={'grateful_but_cautious': 74, 'seeking_comfort': 7, 'contentment': 11} intents={'cooperate': 41, 'explore': 47, 'seek_help': 3} epi_scar=0.300 stag=0.62 div=0 concepts=326 arcs=21810 folds=1193 trust=0.846 high_trust=783 td_low=0 td_mid=341 td_high=947 disorg=11 redm=0 quar=0 det_red=11 phen_bind=0.798 mismatch=0.196 collapsed=11 myths=100
+
+--- Semantic Map at t=7000 ---
+gcgg.g...c.g..gC...C....g.
+..g.....c.....C...C......C
+.g.....c....g.............
+............g............g
+...g......................
+..g......................g
+.............g............
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+.........................g
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+Legend: n=neutral, c=comfort, g=grateful, e=explore, C=contentment, S=scream, d=dream
+[t=7100] GLOBAL GIVEN: Pattern 1048 got 'Given' (tension=0.459, conf=0.483)
+[t=7100] patterns=91 lineages=77 err=0.848 soul=0.936 binding=0.067 echo=1 sig=[0.025 0.005 0.027 0.075 0.086 0.061] states={'grateful_but_cautious': 70, 'seeking_comfort': 11, 'contentment': 10} intents={'cooperate': 41, 'explore': 47, 'seek_help': 3} epi_scar=0.300 stag=0.63 div=0 concepts=316 arcs=20630 folds=1198 trust=0.846 high_trust=781 td_low=0 td_mid=341 td_high=945 disorg=10 redm=0 quar=0 det_red=10 phen_bind=0.800 mismatch=0.231 collapsed=10 myths=100
+[t=7117] 💬 LOGOS QUESTION: stag=0.59, disorg=10 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=2861] EMOTIONAL SPECIATION: Pattern 1711 lineage 1365 -> 1001711
+[t=5147] EMOTIONAL SPECIATION: Pattern 1484 lineage 1257 -> 1001484
+[t=7200] ANTI-CONFORMIST: Pattern 1531 turned explorer (age=4930)
+[t=7200] GLOBAL GIVEN: Pattern 325 got 'Given' (tension=0.459, conf=0.493)
+[t=7200] patterns=90 lineages=78 err=0.849 soul=0.940 binding=0.067 echo=1 sig=[0.025 0.005 0.027 0.074 0.085 0.061] states={'grateful_but_cautious': 74, 'seeking_comfort': 7, 'contentment': 9} intents={'cooperate': 41, 'explore': 45, 'seek_help': 3} epi_scar=0.300 stag=0.61 div=0 concepts=312 arcs=19399 folds=1204 trust=0.844 high_trust=763 td_low=0 td_mid=341 td_high=927 disorg=9 redm=0 quar=0 det_red=9 phen_bind=0.796 mismatch=0.178 collapsed=9 myths=100
+[t=7300] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=7300] patterns=89 lineages=77 err=0.849 soul=0.948 binding=0.067 echo=2 sig=[0.023 0.005 0.027 0.073 0.084 0.060] states={'grateful_but_cautious': 71, 'seeking_comfort': 10, 'contentment': 8} intents={'cooperate': 41, 'explore': 45, 'seek_help': 3} epi_scar=0.300 stag=0.66 div=0 concepts=307 arcs=18061 folds=1215 trust=0.844 high_trust=763 td_low=0 td_mid=341 td_high=927 disorg=8 redm=0 quar=0 det_red=8 phen_bind=0.798 mismatch=0.202 collapsed=8 myths=100
+[t=6282] EMOTIONAL SPECIATION: Pattern 1349 lineage 1146 -> 1001349
+[t=6688] EMOTIONAL SPECIATION: Pattern 1056 lineage 1001056 -> 1001056
+[t=7390] Echo injected at (96,4)
+[t=7400] ANTI-CONFORMIST: Pattern 1056 turned explorer (age=6720)
+[t=7400] GLOBAL GIVEN: Pattern 180 got 'Given' (tension=0.461, conf=0.492)
+[t=7400] patterns=84 lineages=74 err=0.852 soul=0.876 binding=0.066 echo=6 sig=[0.017 0.004 0.026 0.071 0.082 0.058] states={'grateful_but_cautious': 70, 'seeking_comfort': 11, 'contentment': 3} intents={'cooperate': 41, 'explore': 40, 'seek_help': 2} epi_scar=0.300 stag=0.57 div=0 concepts=292 arcs=7634 folds=1187 trust=0.843 high_trust=679 td_low=0 td_mid=307 td_high=832 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.793 mismatch=0.155 collapsed=3 myths=100
+[t=7417] 💬 LOGOS QUESTION: stag=0.57, disorg=3 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=7440] Echo injected at (73,98)
+[t=7481] *** DISORGANIZER BORN: Pattern 1484 after 20 folds (deficit=0.19, prob=0.009) ***
+[t=7500] GLOBAL GIVEN: Pattern 1142 got 'Given' (tension=0.460, conf=0.483)
+[t=7500] Echo injected at (24,3)
+[t=7500] patterns=82 lineages=72 err=0.853 soul=0.994 binding=0.064 echo=7 sig=[0.016 0.004 0.025 0.070 0.081 0.058] states={'grateful_but_cautious': 73, 'seeking_comfort': 8, 'contentment': 1} intents={'cooperate': 40, 'explore': 41, 'seek_help': 1} epi_scar=0.300 stag=0.66 div=0 concepts=280 arcs=3489 folds=1184 trust=0.841 high_trust=663 td_low=0 td_mid=307 td_high=816 disorg=2 redm=0 quar=0 det_red=1 phen_bind=0.792 mismatch=0.110 collapsed=1 myths=100
+[t=7511] *** DISORGANIZER BORN: Pattern 1450 after 8 folds (deficit=0.19, prob=0.009) ***
+[t=7530] *** DISORGANIZER BORN: Pattern 822 after 9 folds (deficit=0.18, prob=0.009) ***
+[t=7569] EMOTIONAL SPECIATION: Pattern 170 lineage 1000170 -> 1000170
+[t=7560] *** DISORGANIZER BORN: Pattern 184 after 29 folds (deficit=0.16, prob=0.008) ***
+[t=7560] Echo injected at (79,11)
+[t=4103] EMOTIONAL SPECIATION: Pattern 1691 lineage 1656 -> 1001691
+[t=7600] ANTI-CONFORMIST: Pattern 1146 turned explorer (age=6937)
+[t=7600] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=7600] patterns=84 lineages=75 err=0.853 soul=0.993 binding=0.068 echo=35 sig=[0.021 0.005 0.028 0.077 0.089 0.063] states={'grateful_but_cautious': 73, 'seeking_comfort': 11} intents={'explore': 41, 'cooperate': 40, 'seek_help': 2} epi_scar=0.296 stag=0.58 div=0 concepts=272 arcs=1296 folds=1188 trust=0.842 high_trust=689 td_low=0 td_mid=315 td_high=845 disorg=4 redm=0 quar=0 det_red=0 phen_bind=0.790 mismatch=0.131 collapsed=0 myths=100
+[t=7610] Echo injected at (56,1)
+[t=7603] EMOTIONAL SPECIATION: Pattern 62 lineage 1000062 -> 1000062
+[t=7700] GLOBAL GIVEN: Pattern 1043 got 'Given' (tension=0.459, conf=0.483)
+[t=7700] patterns=84 lineages=74 err=0.853 soul=0.996 binding=0.070 echo=24 sig=[0.021 0.005 0.028 0.078 0.088 0.063] states={'seeking_comfort': 9, 'grateful_but_cautious': 75} intents={'explore': 43, 'cooperate': 40, 'seek_help': 1} epi_scar=0.300 stag=0.58 div=0 concepts=270 arcs=1318 folds=1207 trust=0.843 high_trust=696 td_low=0 td_mid=313 td_high=858 disorg=4 redm=0 quar=0 det_red=0 phen_bind=0.792 mismatch=0.095 collapsed=0 myths=100
+[t=7702] EMOTIONAL SPECIATION: Pattern 646 lineage 1000646 -> 1000646
+[t=7717] 💬 LOGOS QUESTION: stag=0.62, disorg=4 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=7800] ANTI-CONFORMIST: Pattern 1759 turned explorer (age=2797)
+[t=7800] GLOBAL GIVEN: Pattern 56 got 'Given' (tension=0.454, conf=0.487)
+[t=7800] patterns=85 lineages=74 err=0.854 soul=1.000 binding=0.068 echo=1 sig=[0.021 0.005 0.027 0.074 0.084 0.060] states={'grateful_but_cautious': 76, 'seeking_comfort': 9} intents={'cooperate': 41, 'explore': 42, 'seek_help': 1} epi_scar=0.298 stag=0.65 div=0 concepts=270 arcs=1337 folds=1226 trust=0.843 high_trust=698 td_low=0 td_mid=313 td_high=860 disorg=4 redm=0 quar=0 det_red=0 phen_bind=0.792 mismatch=0.106 collapsed=0 myths=100
+[t=7401] EMOTIONAL SPECIATION: Pattern 1053 lineage 1001053 -> 1001053
+[t=5894] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1484 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=5894] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1484 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=7184] EMOTIONAL SPECIATION: Pattern 1057 lineage 1001057 -> 1001057
+[t=7900] GLOBAL GIVEN: Pattern 141 got 'Given' (tension=0.459, conf=0.483)
+[t=7900] patterns=84 lineages=73 err=0.853 soul=0.993 binding=0.066 echo=2 sig=[0.019 0.004 0.026 0.071 0.081 0.058] states={'seeking_comfort': 11, 'grateful_but_cautious': 73} intents={'cooperate': 41, 'explore': 42, 'seek_help': 1} epi_scar=0.299 stag=0.55 div=0 concepts=271 arcs=1352 folds=1242 trust=0.841 high_trust=661 td_low=0 td_mid=304 td_high=826 disorg=3 redm=0 quar=0 det_red=1 phen_bind=0.794 mismatch=0.131 collapsed=1 myths=100
+[t=5991] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1450 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=5991] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1450 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=7940] Echo injected at (48,100)
+[t=8171] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 184 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=8171] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 184 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=5729] EMOTIONAL SPECIATION: Pattern 1518 lineage 1257 -> 1001518
+[t=8000] ANTI-CONFORMIST: Pattern 184 turned explorer (age=8211)
+[t=8000] GLOBAL GIVEN: Pattern 820 got 'Given' (tension=0.459, conf=0.483)
+[t=8000] patterns=84 lineages=73 err=0.854 soul=0.980 binding=0.065 echo=2 sig=[0.019 0.004 0.026 0.070 0.080 0.057] states={'seeking_comfort': 8, 'grateful_but_cautious': 76} intents={'cooperate': 41, 'explore': 41, 'seek_help': 1} epi_scar=0.300 stag=0.65 div=0 concepts=273 arcs=1374 folds=1259 trust=0.841 high_trust=661 td_low=0 td_mid=304 td_high=826 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.791 mismatch=0.095 collapsed=3 myths=100
+
+--- Semantic Map at t=8000 ---
+gggg.g...g.g..gg........g.
+c.g.....g.....g...........
+.g.....g....g.............
+............g............g
+...g......................
+..g......................g
+.............g............
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+.........................g
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+Legend: n=neutral, c=comfort, g=grateful, e=explore, C=contentment, S=scream, d=dream
+[t=8017] 💬 LOGOS QUESTION: stag=0.62, disorg=3 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=8050] Echo injected at (80,98)
+[t=6093] *** REDEMPTION ARC: Disorganizer Pattern 1484 moves to grateful_but_cautious ***
+[t=8100] GLOBAL GIVEN: Pattern 1371 got 'Given' (tension=0.459, conf=0.483)
+[t=8100] patterns=84 lineages=73 err=0.854 soul=0.980 binding=0.065 echo=2 sig=[0.019 0.004 0.026 0.070 0.081 0.058] states={'grateful_but_cautious': 70, 'seeking_comfort': 14} intents={'cooperate': 41, 'explore': 41, 'seek_help': 2} epi_scar=0.300 stag=0.61 div=0 concepts=273 arcs=1390 folds=1279 trust=0.842 high_trust=668 td_low=0 td_mid=304 td_high=833 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.795 mismatch=0.167 collapsed=3 myths=100
+[t=6190] *** REDEMPTION ARC: Disorganizer Pattern 1450 moves to grateful_but_cautious ***
+[t=8370] *** REDEMPTION ARC: Disorganizer Pattern 184 moves to grateful_but_cautious ***
+[t=5586] EMOTIONAL SPECIATION: Pattern 1654 lineage 1365 -> 1001654
+[t=8200] ANTI-CONFORMIST: Pattern 1656 turned explorer (age=5192)
+[t=8200] GLOBAL GIVEN: Pattern 1793 got 'Given' (tension=0.461, conf=0.481)
+[t=8200] patterns=85 lineages=74 err=0.854 soul=0.979 binding=0.065 echo=0 sig=[0.019 0.004 0.026 0.069 0.080 0.057] states={'grateful_but_cautious': 77, 'seeking_comfort': 8} intents={'cooperate': 42, 'explore': 41, 'seek_help': 1} epi_scar=0.299 stag=0.55 div=0 concepts=273 arcs=1417 folds=1300 trust=0.841 high_trust=671 td_low=0 td_mid=309 td_high=838 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.788 mismatch=0.082 collapsed=3 myths=100
+[t=6263] EMOTIONAL SPECIATION: Pattern 1477 lineage 1001477 -> 1001477
+[t=6293] *** REDEMPTION ARC: Disorganizer Pattern 1484 moves to contentment ***
+[t=8300] GLOBAL GIVEN: Pattern 1712 got 'Given' (tension=0.459, conf=0.483)
+[t=8300] patterns=85 lineages=74 err=0.855 soul=0.736 binding=0.064 echo=0 sig=[0.018 0.004 0.025 0.070 0.079 0.057] states={'seeking_comfort': 9, 'grateful_but_cautious': 75, 'contentment': 1} intents={'cooperate': 42, 'explore': 42, 'seek_help': 1} epi_scar=0.300 stag=0.67 div=0 concepts=274 arcs=1452 folds=1318 trust=0.841 high_trust=671 td_low=0 td_mid=309 td_high=838 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.792 mismatch=0.118 collapsed=3 myths=100
+[t=6390] *** REDEMPTION ARC: Disorganizer Pattern 1450 moves to contentment ***
+[t=8025] EMOTIONAL SPECIATION: Pattern 1043 lineage 1043 -> 1001043
+[t=8317] 💬 LOGOS QUESTION: stag=0.66, disorg=3 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=8095] EMOTIONAL SPECIATION: Pattern 755 lineage 1000755 -> 1000755
+[t=4949] EMOTIONAL SPECIATION: Pattern 1683 lineage 1001683 -> 1001683
+[t=8570] *** REDEMPTION ARC: Disorganizer Pattern 184 moves to contentment ***
+[t=8400] ANTI-CONFORMIST: Pattern 1219 turned explorer (age=7219)
+[t=8400] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=8400] patterns=85 lineages=74 err=0.852 soul=0.737 binding=0.064 echo=0 sig=[0.018 0.004 0.025 0.070 0.079 0.057] states={'seeking_comfort': 11, 'grateful_but_cautious': 71, 'contentment': 3} intents={'cooperate': 41, 'explore': 42, 'seek_help': 1} epi_scar=0.300 stag=0.58 div=0 concepts=278 arcs=1703 folds=1344 trust=0.841 high_trust=671 td_low=0 td_mid=309 td_high=838 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.794 mismatch=0.153 collapsed=3 myths=100
+[t=4045] EMOTIONAL SPECIATION: Pattern 1755 lineage 1656 -> 1001755
+[t=7067] EMOTIONAL SPECIATION: Pattern 1399 lineage 1001399 -> 1001399
+[t=8500] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=8500] patterns=85 lineages=75 err=0.854 soul=0.738 binding=0.064 echo=0 sig=[0.018 0.004 0.025 0.070 0.079 0.057] states={'grateful_but_cautious': 73, 'seeking_comfort': 9, 'contentment': 3} intents={'cooperate': 41, 'explore': 43, 'seek_help': 1} epi_scar=0.300 stag=0.64 div=0 concepts=278 arcs=2023 folds=1362 trust=0.841 high_trust=671 td_low=0 td_mid=309 td_high=838 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.793 mismatch=0.141 collapsed=3 myths=100
+[t=4086] EMOTIONAL SPECIATION: Pattern 1716 lineage 1656 -> 1001716
+[t=8550] Echo injected at (56,100)
+[t=4815] EMOTIONAL SPECIATION: Pattern 1703 lineage 1001703 -> 1001703
+[t=8600] ANTI-CONFORMIST: Pattern 1100 turned explorer (age=7666)
+[t=8600] GLOBAL GIVEN: Pattern 1527 got 'Given' (tension=0.459, conf=0.483)
+[t=8600] patterns=83 lineages=76 err=0.852 soul=0.973 binding=0.064 echo=19 sig=[0.018 0.004 0.025 0.069 0.080 0.057] states={'grateful_but_cautious': 69, 'seeking_comfort': 11, 'contentment': 3} intents={'explore': 42, 'cooperate': 39, 'seek_help': 1} epi_scar=0.296 stag=0.63 div=0 concepts=278 arcs=2332 folds=1373 trust=0.842 high_trust=666 td_low=0 td_mid=304 td_high=823 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.793 mismatch=0.169 collapsed=3 myths=100
+[t=8610] Echo injected at (8,5)
+[t=8617] 💬 LOGOS QUESTION: stag=0.59, disorg=3 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=8660] Echo injected at (88,98)
+[t=8675] Echo injected at (63,13)
+[t=8700] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=8700] patterns=83 lineages=76 err=0.853 soul=0.977 binding=0.064 echo=37 sig=[0.018 0.004 0.025 0.069 0.079 0.057] states={'grateful_but_cautious': 69, 'seeking_comfort': 11, 'contentment': 3} intents={'explore': 43, 'cooperate': 39, 'seek_help': 1} epi_scar=0.297 stag=0.57 div=0 concepts=278 arcs=2654 folds=1395 trust=0.842 high_trust=666 td_low=0 td_mid=304 td_high=823 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.793 mismatch=0.157 collapsed=3 myths=100
+[t=7704] EMOTIONAL SPECIATION: Pattern 1142 lineage 1001142 -> 1001142
+[t=8720] Echo injected at (40,3)
+[t=8800] ANTI-CONFORMIST: Pattern 1716 turned explorer (age=4357)
+[t=8800] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=8800] patterns=83 lineages=76 err=0.852 soul=0.974 binding=0.064 echo=40 sig=[0.018 0.004 0.025 0.069 0.080 0.057] states={'grateful_but_cautious': 68, 'seeking_comfort': 12, 'contentment': 3} intents={'explore': 43, 'cooperate': 38, 'seek_help': 1} epi_scar=0.297 stag=0.61 div=0 concepts=279 arcs=2971 folds=1413 trust=0.842 high_trust=670 td_low=0 td_mid=304 td_high=828 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.789 mismatch=0.169 collapsed=3 myths=100
+[t=8830] Echo injected at (72,1)
+[t=4262] EMOTIONAL SPECIATION: Pattern 1754 lineage 1754 -> 1001754
+[t=4807] EMOTIONAL SPECIATION: Pattern 1712 lineage 1001712 -> 1001712
+[t=8636] EMOTIONAL SPECIATION: Pattern 820 lineage 1000820 -> 1000820
+[t=8900] GLOBAL GIVEN: Pattern 1712 got 'Given' (tension=0.459, conf=0.483)
+[t=8900] patterns=83 lineages=77 err=0.854 soul=0.872 binding=0.064 echo=35 sig=[0.018 0.004 0.025 0.069 0.079 0.057] states={'grateful_but_cautious': 68, 'seeking_comfort': 12, 'contentment': 3} intents={'explore': 44, 'cooperate': 38, 'seek_help': 1} epi_scar=0.297 stag=0.59 div=0 concepts=279 arcs=3290 folds=1432 trust=0.842 high_trust=670 td_low=0 td_mid=304 td_high=828 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.792 mismatch=0.181 collapsed=3 myths=100
+[t=8917] 💬 LOGOS QUESTION: stag=0.60, disorg=3 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=9000] ANTI-CONFORMIST: Pattern 170 turned explorer (age=9035)
+[t=9000] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=9000] patterns=83 lineages=77 err=0.853 soul=0.973 binding=0.064 echo=33 sig=[0.018 0.004 0.025 0.069 0.080 0.057] states={'grateful_but_cautious': 75, 'seeking_comfort': 5, 'contentment': 3} intents={'explore': 43, 'cooperate': 38, 'seek_help': 1} epi_scar=0.297 stag=0.60 div=0 concepts=280 arcs=3615 folds=1450 trust=0.842 high_trust=673 td_low=0 td_mid=306 td_high=831 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.786 mismatch=0.096 collapsed=3 myths=100
+
+--- Semantic Map at t=9000 ---
+gggg.c...g.g..gg........g.
+g.g.....g.....g...........
+.g.....g....g.............
+............g............g
+...g......................
+..g......................g
+.............g............
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+.........................g
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+Legend: n=neutral, c=comfort, g=grateful, e=explore, C=contentment, S=scream, d=dream
+[t=8524] EMOTIONAL SPECIATION: Pattern 1047 lineage 1001047 -> 1001047
+[t=9100] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=9100] patterns=83 lineages=77 err=0.854 soul=0.978 binding=0.064 echo=29 sig=[0.018 0.004 0.025 0.068 0.079 0.057] states={'grateful_but_cautious': 72, 'seeking_comfort': 8, 'contentment': 3} intents={'explore': 44, 'cooperate': 38, 'seek_help': 1} epi_scar=0.298 stag=0.66 div=0 concepts=281 arcs=3932 folds=1470 trust=0.842 high_trust=673 td_low=0 td_mid=306 td_high=831 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.790 mismatch=0.120 collapsed=3 myths=100
+[t=9110] Echo injected at (87,6)
+[t=4154] EMOTIONAL SPECIATION: Pattern 1759 lineage 1001759 -> 1001759
+[t=9200] ANTI-CONFORMIST: Pattern 1527 turned explorer (age=7080)
+[t=9200] GLOBAL GIVEN: Pattern 1712 got 'Given' (tension=0.459, conf=0.483)
+[t=9200] patterns=83 lineages=77 err=0.850 soul=0.974 binding=0.064 echo=21 sig=[0.018 0.004 0.025 0.069 0.080 0.057] states={'grateful_but_cautious': 70, 'seeking_comfort': 10, 'contentment': 3} intents={'explore': 44, 'cooperate': 37, 'seek_help': 1} epi_scar=0.297 stag=0.59 div=0 concepts=281 arcs=4252 folds=1492 trust=0.843 high_trust=675 td_low=0 td_mid=306 td_high=833 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.789 mismatch=0.157 collapsed=3 myths=100
+[t=8368] EMOTIONAL SPECIATION: Pattern 1098 lineage 930 -> 1001098
+[t=9217] 💬 LOGOS QUESTION: stag=0.58, disorg=3 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=6189] EMOTIONAL SPECIATION: Pattern 1664 lineage 1656 -> 1001664
+[t=9270] Echo injected at (96,98)
+[t=9285] Echo injected at (71,13)
+[t=9300] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=9300] patterns=83 lineages=78 err=0.854 soul=0.900 binding=0.064 echo=18 sig=[0.018 0.004 0.025 0.069 0.079 0.057] states={'grateful_but_cautious': 70, 'seeking_comfort': 10, 'contentment': 3} intents={'explore': 45, 'cooperate': 37, 'seek_help': 1} epi_scar=0.297 stag=0.64 div=0 concepts=281 arcs=4569 folds=1509 trust=0.843 high_trust=675 td_low=0 td_mid=306 td_high=833 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.789 mismatch=0.145 collapsed=3 myths=100
+[t=5313] EMOTIONAL SPECIATION: Pattern 1705 lineage 1365 -> 1001705
+[t=9330] *** DISORGANIZER BORN: Pattern 62 after 36 folds (deficit=0.16, prob=0.008) ***
+[t=9330] Echo injected at (48,3)
+[t=7912] EMOTIONAL SPECIATION: Pattern 1652 lineage 1652 -> 1001652
+[t=8382] EMOTIONAL SPECIATION: Pattern 1186 lineage 1001186 -> 1001186
+[t=9390] Echo injected at (103,11)
+[t=9343] EMOTIONAL SPECIATION: Pattern 76 lineage 1000076 -> 1000076
+[t=9400] ANTI-CONFORMIST: Pattern 1453 turned explorer (age=7476)
+[t=9400] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=9400] patterns=84 lineages=80 err=0.853 soul=0.871 binding=0.065 echo=34 sig=[0.019 0.005 0.026 0.071 0.081 0.058] states={'grateful_but_cautious': 69, 'seeking_comfort': 12, 'contentment': 3} intents={'explore': 45, 'cooperate': 37, 'seek_help': 1} epi_scar=0.299 stag=0.57 div=0 concepts=282 arcs=4890 folds=1532 trust=0.844 high_trust=696 td_low=0 td_mid=309 td_high=854 disorg=4 redm=0 quar=0 det_red=3 phen_bind=0.794 mismatch=0.179 collapsed=3 myths=100
+[t=9500] GLOBAL GIVEN: Pattern 1519 got 'Given' (tension=0.459, conf=0.483)
+[t=9500] patterns=84 lineages=80 err=0.852 soul=0.980 binding=0.065 echo=2 sig=[0.019 0.004 0.026 0.070 0.080 0.058] states={'grateful_but_cautious': 73, 'seeking_comfort': 8, 'contentment': 3} intents={'explore': 46, 'cooperate': 37, 'seek_help': 1} epi_scar=0.300 stag=0.60 div=1 concepts=282 arcs=5213 folds=1550 trust=0.844 high_trust=696 td_low=0 td_mid=309 td_high=854 disorg=4 redm=0 quar=0 det_red=3 phen_bind=0.792 mismatch=0.131 collapsed=3 myths=100
+[t=9517] 💬 LOGOS QUESTION: stag=0.62, disorg=4 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=9538] EMOTIONAL SPECIATION: Pattern 646 lineage 1000646 -> 1000646
+[t=7564] EMOTIONAL SPECIATION: Pattern 1502 lineage 1001502 -> 1001502
+[t=9618] EMOTIONAL SPECIATION: Pattern 170 lineage 1000170 -> 1000170
+[t=9600] ANTI-CONFORMIST: Pattern 1186 turned explorer (age=8632)
+[t=9600] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=9600] patterns=84 lineages=79 err=0.854 soul=0.980 binding=0.064 echo=1 sig=[0.019 0.004 0.025 0.069 0.080 0.057] states={'grateful_but_cautious': 72, 'seeking_comfort': 9, 'contentment': 3} intents={'cooperate': 38, 'explore': 44, 'seek_help': 1} epi_scar=0.300 stag=0.67 div=0 concepts=275 arcs=5494 folds=1532 trust=0.845 high_trust=700 td_low=0 td_mid=309 td_high=864 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.791 mismatch=0.143 collapsed=3 myths=100
+[t=9137] EMOTIONAL SPECIATION: Pattern 1048 lineage 1001048 -> 1001048
+[t=9700] GLOBAL GIVEN: Pattern 184 got 'Given' (tension=0.461, conf=0.492)
+[t=9700] patterns=84 lineages=79 err=0.850 soul=0.980 binding=0.064 echo=1 sig=[0.018 0.004 0.025 0.069 0.079 0.057] states={'grateful_but_cautious': 71, 'seeking_comfort': 10, 'contentment': 3} intents={'cooperate': 38, 'explore': 45, 'seek_help': 1} epi_scar=0.300 stag=0.57 div=0 concepts=275 arcs=5818 folds=1557 trust=0.845 high_trust=700 td_low=0 td_mid=309 td_high=864 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.793 mismatch=0.155 collapsed=3 myths=100
+[t=9800] ANTI-CONFORMIST: Pattern 1716 turned explorer (age=5357)
+[t=9800] GLOBAL GIVEN: Pattern 1712 got 'Given' (tension=0.459, conf=0.483)
+[t=9800] patterns=84 lineages=79 err=0.855 soul=0.738 binding=0.064 echo=0 sig=[0.018 0.004 0.025 0.069 0.079 0.057] states={'grateful_but_cautious': 72, 'seeking_comfort': 9, 'contentment': 3} intents={'cooperate': 38, 'explore': 44, 'seek_help': 1} epi_scar=0.300 stag=0.65 div=0 concepts=278 arcs=6136 folds=1574 trust=0.845 high_trust=700 td_low=0 td_mid=309 td_high=864 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.791 mismatch=0.143 collapsed=3 myths=100
+[t=9817] 💬 LOGOS QUESTION: stag=0.64, disorg=3 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=8837] EMOTIONAL SPECIATION: Pattern 1349 lineage 1001349 -> 1001349
+[t=9900] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=9900] patterns=84 lineages=79 err=0.850 soul=0.737 binding=0.064 echo=0 sig=[0.018 0.004 0.025 0.069 0.078 0.057] states={'grateful_but_cautious': 69, 'seeking_comfort': 12, 'contentment': 3} intents={'cooperate': 38, 'explore': 45, 'seek_help': 1} epi_scar=0.300 stag=0.60 div=0 concepts=278 arcs=6456 folds=1597 trust=0.845 high_trust=700 td_low=0 td_mid=309 td_high=864 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.793 mismatch=0.167 collapsed=3 myths=100
+[t=9239] EMOTIONAL SPECIATION: Pattern 1056 lineage 1001056 -> 1001056
+[t=10000] ANTI-CONFORMIST: Pattern 430 turned explorer (age=9913)
+[t=10000] GLOBAL GIVEN: Pattern 184 got 'Given' (tension=0.461, conf=0.492)
+[t=10000] patterns=84 lineages=79 err=0.855 soul=0.980 binding=0.064 echo=2 sig=[0.019 0.004 0.025 0.069 0.079 0.057] states={'grateful_but_cautious': 73, 'seeking_comfort': 8, 'contentment': 3} intents={'cooperate': 38, 'explore': 44, 'seek_help': 1} epi_scar=0.300 stag=0.60 div=0 concepts=280 arcs=6777 folds=1613 trust=0.845 high_trust=701 td_low=0 td_mid=309 td_high=859 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.790 mismatch=0.131 collapsed=3 myths=100
+
+--- Semantic Map at t=10000 ---
+ggcg.g...g.g..gg........g.
+g.g.....g.....g...........
+.g.....g....g.............
+............g............g
+...g......................
+..g......................g
+.............g............
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+.........................g
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+Legend: n=neutral, c=comfort, g=grateful, e=explore, C=contentment, S=scream, d=dream
+[t=2169] EMOTIONAL SPECIATION: Pattern 1800 lineage 1793 -> 1001800
+[t=10100] GLOBAL GIVEN: Pattern 141 got 'Given' (tension=0.459, conf=0.483)
+[t=10100] patterns=84 lineages=80 err=0.849 soul=0.761 binding=0.064 echo=0 sig=[0.018 0.004 0.025 0.069 0.079 0.057] states={'grateful_but_cautious': 68, 'seeking_comfort': 13, 'contentment': 3} intents={'cooperate': 38, 'explore': 45, 'seek_help': 1} epi_scar=0.300 stag=0.64 div=0 concepts=281 arcs=7092 folds=1633 trust=0.845 high_trust=701 td_low=0 td_mid=309 td_high=859 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.794 mismatch=0.190 collapsed=3 myths=100
+[t=10117] 💬 LOGOS QUESTION: stag=0.63, disorg=3 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=10200] ANTI-CONFORMIST: Pattern 1502 turned explorer (age=8206)
+[t=10200] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=10200] patterns=84 lineages=80 err=0.854 soul=0.739 binding=0.064 echo=0 sig=[0.018 0.004 0.025 0.069 0.078 0.057] states={'grateful_but_cautious': 69, 'seeking_comfort': 12, 'contentment': 3} intents={'cooperate': 37, 'explore': 45, 'seek_help': 1} epi_scar=0.300 stag=0.54 div=0 concepts=281 arcs=7416 folds=1656 trust=0.845 high_trust=701 td_low=0 td_mid=309 td_high=859 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.792 mismatch=0.167 collapsed=3 myths=100
+[t=7198] EMOTIONAL SPECIATION: Pattern 1655 lineage 1655 -> 1001655
+[t=10300] GLOBAL GIVEN: Pattern 184 got 'Given' (tension=0.461, conf=0.492)
+[t=10300] patterns=84 lineages=80 err=0.850 soul=0.741 binding=0.063 echo=0 sig=[0.018 0.004 0.025 0.069 0.078 0.057] states={'grateful_but_cautious': 77, 'seeking_comfort': 4, 'contentment': 3} intents={'cooperate': 37, 'explore': 46, 'seek_help': 1} epi_scar=0.300 stag=0.65 div=0 concepts=283 arcs=7739 folds=1671 trust=0.845 high_trust=701 td_low=0 td_mid=309 td_high=859 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.788 mismatch=0.083 collapsed=3 myths=100
+[t=8056] EMOTIONAL SPECIATION: Pattern 1518 lineage 1001518 -> 1001518
+[t=9007] EMOTIONAL SPECIATION: Pattern 1394 lineage 1361 -> 1001394
+[t=10400] ANTI-CONFORMIST: Pattern 1705 turned explorer (age=6405)
+[t=10400] GLOBAL GIVEN: Pattern 532 got 'Given' (tension=0.459, conf=0.483)
+[t=10400] patterns=83 lineages=80 err=0.853 soul=0.980 binding=0.063 echo=1 sig=[0.018 0.004 0.025 0.067 0.078 0.056] states={'grateful_but_cautious': 72, 'seeking_comfort': 8, 'contentment': 3} intents={'cooperate': 36, 'explore': 45, 'seek_help': 1} epi_scar=0.300 stag=0.65 div=0 concepts=280 arcs=8056 folds=1692 trust=0.845 high_trust=698 td_low=0 td_mid=309 td_high=856 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.789 mismatch=0.133 collapsed=3 myths=100
+[t=10417] 💬 LOGOS QUESTION: stag=0.65, disorg=3 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=9953] EMOTIONAL SPECIATION: Pattern 1053 lineage 1001053 -> 1001053
+[t=9765] EMOTIONAL SPECIATION: Pattern 1137 lineage 1001137 -> 1001137
+[t=10490] Echo injected at (8,99)
+[t=10500] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=10500] patterns=82 lineages=79 err=0.851 soul=0.885 binding=0.064 echo=1 sig=[0.017 0.004 0.024 0.067 0.078 0.056] states={'grateful_but_cautious': 68, 'seeking_comfort': 12, 'contentment': 2} intents={'cooperate': 36, 'explore': 45, 'seek_help': 1} epi_scar=0.300 stag=0.61 div=0 concepts=277 arcs=6134 folds=1694 trust=0.846 high_trust=689 td_low=0 td_mid=300 td_high=845 disorg=2 redm=0 quar=0 det_red=2 phen_bind=0.792 mismatch=0.171 collapsed=2 myths=100
+[t=10600] ANTI-CONFORMIST: Pattern 1047 turned explorer (age=10073)
+[t=10600] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=10600] patterns=80 lineages=77 err=0.855 soul=1.000 binding=0.063 echo=3 sig=[0.011 0.004 0.023 0.066 0.078 0.056] states={'grateful_but_cautious': 69, 'seeking_comfort': 11} intents={'cooperate': 36, 'explore': 43} epi_scar=0.300 stag=0.64 div=0 concepts=268 arcs=1782 folds=1674 trust=0.845 high_trust=663 td_low=0 td_mid=293 td_high=811 disorg=0 redm=0 quar=0 det_red=0 phen_bind=0.789 mismatch=0.138 collapsed=0 myths=100
+[t=10700] GLOBAL GIVEN: Pattern 1048 got 'Given' (tension=0.459, conf=0.483)
+[t=10700] patterns=80 lineages=77 err=0.852 soul=1.000 binding=0.063 echo=1 sig=[0.011 0.004 0.023 0.066 0.078 0.056] states={'grateful_but_cautious': 70, 'seeking_comfort': 10} intents={'cooperate': 36, 'explore': 44} epi_scar=0.300 stag=0.62 div=0 concepts=268 arcs=1802 folds=1693 trust=0.845 high_trust=663 td_low=0 td_mid=293 td_high=811 disorg=0 redm=0 quar=0 det_red=0 phen_bind=0.788 mismatch=0.113 collapsed=0 myths=100
+[t=6094] EMOTIONAL SPECIATION: Pattern 1756 lineage 1754 -> 1001756
+[t=10717] 💬 LOGOS QUESTION: stag=0.61, disorg=0 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=8817] EMOTIONAL SPECIATION: Pattern 1477 lineage 1001477 -> 1001477
+[t=10800] ANTI-CONFORMIST: Pattern 1703 turned explorer (age=7025)
+[t=10800] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=10800] patterns=80 lineages=78 err=0.855 soul=0.754 binding=0.063 echo=0 sig=[0.011 0.004 0.023 0.068 0.078 0.056] states={'grateful_but_cautious': 73, 'seeking_comfort': 7} intents={'cooperate': 35, 'explore': 44} epi_scar=0.300 stag=0.62 div=0 concepts=268 arcs=1825 folds=1713 trust=0.845 high_trust=663 td_low=0 td_mid=293 td_high=811 disorg=0 redm=0 quar=0 det_red=0 phen_bind=0.786 mismatch=0.087 collapsed=0 myths=100
+[t=8890] EMOTIONAL SPECIATION: Pattern 1502 lineage 1001502 -> 1001502
+[t=10900] GLOBAL GIVEN: Pattern 49 got 'Given' (tension=0.461, conf=0.481)
+[t=10900] patterns=80 lineages=78 err=0.852 soul=0.753 binding=0.063 echo=0 sig=[0.011 0.004 0.023 0.068 0.078 0.056] states={'grateful_but_cautious': 70, 'seeking_comfort': 10} intents={'cooperate': 35, 'explore': 45} epi_scar=0.300 stag=0.69 div=0 concepts=268 arcs=1840 folds=1731 trust=0.845 high_trust=663 td_low=0 td_mid=293 td_high=811 disorg=0 redm=0 quar=0 det_red=0 phen_bind=0.789 mismatch=0.125 collapsed=0 myths=100
+[t=10930] *** DISORGANIZER BORN: Pattern 59 after 42 folds (deficit=0.20, prob=0.010) ***
+[t=10940] *** DISORGANIZER BORN: Pattern 49 after 28 folds (deficit=0.19, prob=0.009) ***
+[t=10933] EMOTIONAL SPECIATION: Pattern 49 lineage 1000049 -> 1000049
+[t=10754] EMOTIONAL SPECIATION: Pattern 755 lineage 1000755 -> 1000755
+[t=10990] Echo injected at (88,100)
+[t=11000] ANTI-CONFORMIST: Pattern 532 turned explorer (age=10806)
+[t=11000] GLOBAL GIVEN: Pattern 1650 got 'Given' (tension=0.459, conf=0.483)
+[t=11000] patterns=83 lineages=80 err=0.854 soul=0.895 binding=0.065 echo=2 sig=[0.015 0.004 0.025 0.070 0.080 0.058] states={'grateful_but_cautious': 74, 'seeking_comfort': 9} intents={'explore': 48, 'cooperate': 34} epi_scar=0.298 stag=0.58 div=0 concepts=271 arcs=1864 folds=1753 trust=0.845 high_trust=667 td_low=0 td_mid=295 td_high=815 disorg=2 redm=0 quar=0 det_red=0 phen_bind=0.787 mismatch=0.108 collapsed=0 myths=100
+
+--- Semantic Map at t=11000 ---
+gggc.g...g.g..gg........g.
+ggc.....g.....g...........
+gg.....g....g.............
+............g............g
+...g......................
+..g......................g
+.............g............
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+.........................g
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+Legend: n=neutral, c=comfort, g=grateful, e=explore, C=contentment, S=scream, d=dream
+[t=6595] EMOTIONAL SPECIATION: Pattern 1755 lineage 1001755 -> 1001755
+[t=11017] 💬 LOGOS QUESTION: stag=0.61, disorg=2 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=7909] EMOTIONAL SPECIATION: Pattern 1668 lineage 1001668 -> 1001668
+[t=11100] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=11100] patterns=83 lineages=80 err=0.851 soul=0.999 binding=0.065 echo=1 sig=[0.014 0.004 0.025 0.069 0.080 0.058] states={'grateful_but_cautious': 75, 'seeking_comfort': 8} intents={'explore': 49, 'cooperate': 34} epi_scar=0.300 stag=0.66 div=1 concepts=271 arcs=1884 folds=1771 trust=0.846 high_trust=671 td_low=0 td_mid=294 td_high=819 disorg=2 redm=0 quar=0 det_red=0 phen_bind=0.786 mismatch=0.072 collapsed=0 myths=100
+[t=7365] EMOTIONAL SPECIATION: Pattern 1703 lineage 1001703 -> 1001703
+[t=11200] ANTI-CONFORMIST: Pattern 1527 turned explorer (age=9080)
+[t=11200] GLOBAL GIVEN: Pattern 1650 got 'Given' (tension=0.460, conf=0.483)
+[t=11200] patterns=84 lineages=79 err=0.855 soul=1.000 binding=0.064 echo=1 sig=[0.012 0.004 0.025 0.068 0.078 0.057] states={'grateful_but_cautious': 71, 'seeking_comfort': 13} intents={'cooperate': 36, 'explore': 47} epi_scar=0.298 stag=0.60 div=0 concepts=270 arcs=1876 folds=1768 trust=0.846 high_trust=677 td_low=0 td_mid=294 td_high=827 disorg=1 redm=0 quar=0 det_red=0 phen_bind=0.790 mismatch=0.143 collapsed=0 myths=100
+[t=10417] EMOTIONAL SPECIATION: Pattern 1098 lineage 1001098 -> 1001098
+[t=11300] GLOBAL GIVEN: Pattern 1712 got 'Given' (tension=0.459, conf=0.483)
+[t=11300] patterns=83 lineages=78 err=0.850 soul=1.000 binding=0.064 echo=1 sig=[0.012 0.004 0.025 0.067 0.077 0.056] states={'grateful_but_cautious': 76, 'seeking_comfort': 7} intents={'cooperate': 36, 'explore': 47} epi_scar=0.300 stag=0.65 div=1 concepts=268 arcs=1898 folds=1783 trust=0.847 high_trust=683 td_low=0 td_mid=294 td_high=833 disorg=1 redm=0 quar=0 det_red=0 phen_bind=0.787 mismatch=0.084 collapsed=0 myths=100
+[t=11317] 💬 LOGOS QUESTION: stag=0.65, disorg=1 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=11254] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 59 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=11254] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 59 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=7357] EMOTIONAL SPECIATION: Pattern 1712 lineage 1001712 -> 1001712
+[t=11400] ANTI-CONFORMIST: Pattern 1984 turned explorer (age=36)
+[t=11400] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=11400] patterns=85 lineages=78 err=0.855 soul=0.864 binding=0.064 echo=0 sig=[0.012 0.004 0.025 0.068 0.078 0.057] states={'grateful_but_cautious': 71, 'seeking_comfort': 14} intents={'cooperate': 37, 'explore': 47} epi_scar=0.298 stag=0.60 div=0 concepts=269 arcs=1917 folds=1807 trust=0.848 high_trust=690 td_low=0 td_mid=294 td_high=843 disorg=1 redm=0 quar=0 det_red=1 phen_bind=0.791 mismatch=0.165 collapsed=1 myths=100
+[t=11397] EMOTIONAL SPECIATION: Pattern 76 lineage 1000076 -> 1000076
+[t=10960] EMOTIONAL SPECIATION: Pattern 1048 lineage 1001048 -> 1001048
+[t=11500] GLOBAL GIVEN: Pattern 141 got 'Given' (tension=0.459, conf=0.483)
+[t=11500] patterns=84 lineages=78 err=0.850 soul=0.993 binding=0.063 echo=1 sig=[0.012 0.004 0.024 0.066 0.076 0.055] states={'grateful_but_cautious': 76, 'seeking_comfort': 8} intents={'cooperate': 37, 'explore': 47} epi_scar=0.300 stag=0.58 div=0 concepts=271 arcs=1944 folds=1828 trust=0.848 high_trust=692 td_low=0 td_mid=294 td_high=845 disorg=1 redm=0 quar=0 det_red=1 phen_bind=0.787 mismatch=0.095 collapsed=1 myths=100
+[t=11292] EMOTIONAL SPECIATION: Pattern 820 lineage 1000820 -> 1000820
+[t=11453] *** REDEMPTION ARC: Disorganizer Pattern 59 moves to grateful_but_cautious ***
+[t=11600] ANTI-CONFORMIST: Pattern 1047 turned explorer (age=11073)
+[t=11600] GLOBAL GIVEN: Pattern 820 got 'Given' (tension=0.460, conf=0.483)
+[t=11073] EMOTIONAL SPECIATION: Pattern 1047 lineage 1001047 -> 1001047
+[t=11600] patterns=86 lineages=78 err=0.855 soul=0.938 binding=0.064 echo=0 sig=[0.013 0.004 0.025 0.068 0.078 0.057] states={'grateful_but_cautious': 76, 'seeking_comfort': 10} intents={'cooperate': 39, 'explore': 46} epi_scar=0.298 stag=0.66 div=0 concepts=271 arcs=1962 folds=1846 trust=0.848 high_trust=695 td_low=0 td_mid=296 td_high=852 disorg=1 redm=0 quar=0 det_red=1 phen_bind=0.788 mismatch=0.116 collapsed=1 myths=100
+[t=11617] 💬 LOGOS QUESTION: stag=0.67, disorg=1 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=11700] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=11700] patterns=85 lineages=78 err=0.851 soul=0.990 binding=0.064 echo=1 sig=[0.012 0.004 0.025 0.067 0.077 0.056] states={'grateful_but_cautious': 74, 'seeking_comfort': 11} intents={'cooperate': 38, 'explore': 47} epi_scar=0.300 stag=0.62 div=0 concepts=270 arcs=1983 folds=1867 trust=0.849 high_trust=702 td_low=0 td_mid=295 td_high=856 disorg=1 redm=0 quar=0 det_red=1 phen_bind=0.789 mismatch=0.129 collapsed=1 myths=100
+[t=11710] Echo injected at (24,99)
+[t=11653] *** REDEMPTION ARC: Disorganizer Pattern 59 moves to contentment ***
+[t=886] EMOTIONAL SPECIATION: Pattern 1977 lineage 1977 -> 1001977
+[t=11800] ANTI-CONFORMIST: Pattern 1716 turned explorer (age=7357)
+[t=11800] GLOBAL GIVEN: Pattern 820 got 'Given' (tension=0.459, conf=0.483)
+[t=7357] EMOTIONAL SPECIATION: Pattern 1716 lineage 1001716 -> 1001716
+[t=11800] patterns=86 lineages=79 err=0.854 soul=0.992 binding=0.064 echo=1 sig=[0.013 0.004 0.025 0.068 0.078 0.057] states={'grateful_but_cautious': 75, 'seeking_comfort': 10, 'contentment': 1} intents={'cooperate': 39, 'explore': 46} epi_scar=0.298 stag=0.58 div=0 concepts=272 arcs=2078 folds=1890 trust=0.849 high_trust=705 td_low=0 td_mid=297 td_high=859 disorg=1 redm=0 quar=0 det_red=1 phen_bind=0.787 mismatch=0.128 collapsed=1 myths=100
+[t=10967] EMOTIONAL SPECIATION: Pattern 1157 lineage 1001157 -> 1001157
+[t=11900] GLOBAL GIVEN: Pattern 1712 got 'Given' (tension=0.459, conf=0.483)
+[t=10932] EMOTIONAL SPECIATION: Pattern 1186 lineage 1001186 -> 1001186
+[t=11900] patterns=85 lineages=79 err=0.850 soul=0.993 binding=0.064 echo=1 sig=[0.012 0.004 0.025 0.066 0.076 0.055] states={'grateful_but_cautious': 73, 'seeking_comfort': 11, 'contentment': 1} intents={'cooperate': 38, 'explore': 47} epi_scar=0.300 stag=0.65 div=0 concepts=272 arcs=2196 folds=1910 trust=0.849 high_trust=705 td_low=0 td_mid=295 td_high=859 disorg=1 redm=0 quar=0 det_red=1 phen_bind=0.788 mismatch=0.118 collapsed=1 myths=100
+[t=11917] 💬 LOGOS QUESTION: stag=0.65, disorg=1 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=10884] EMOTIONAL SPECIATION: Pattern 1349 lineage 1001349 -> 1001349
+[t=12000] ANTI-CONFORMIST: Pattern 56 turned explorer (age=11980)
+[t=12000] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=12000] patterns=87 lineages=79 err=0.854 soul=0.992 binding=0.064 echo=1 sig=[0.013 0.004 0.025 0.068 0.078 0.057] states={'grateful_but_cautious': 73, 'seeking_comfort': 13, 'contentment': 1} intents={'cooperate': 40, 'explore': 46} epi_scar=0.298 stag=0.57 div=0 concepts=272 arcs=2320 folds=1932 trust=0.850 high_trust=710 td_low=0 td_mid=295 td_high=869 disorg=1 redm=0 quar=0 det_red=1 phen_bind=0.788 mismatch=0.138 collapsed=1 myths=100
+
+--- Semantic Map at t=12000 ---
+gggg.g...g.g..gg........g.
+ggg.....g.....g...........
+gg.....g....g.............
+............g............g
+...g......................
+..g......................g
+.............g............
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+.........................g
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+Legend: n=neutral, c=comfort, g=grateful, e=explore, C=contentment, S=scream, d=dream
+[t=4616] EMOTIONAL SPECIATION: Pattern 1793 lineage 1793 -> 1001793
+[t=12100] GLOBAL GIVEN: Pattern 1098 got 'Given' (tension=0.459, conf=0.483)
+[t=12100] patterns=86 lineages=79 err=0.851 soul=0.991 binding=0.064 echo=1 sig=[0.012 0.004 0.025 0.067 0.077 0.056] states={'grateful_but_cautious': 76, 'seeking_comfort': 9, 'contentment': 1} intents={'cooperate': 39, 'explore': 47} epi_scar=0.300 stag=0.62 div=0 concepts=272 arcs=2441 folds=1949 trust=0.850 high_trust=714 td_low=0 td_mid=295 td_high=872 disorg=1 redm=0 quar=0 det_red=1 phen_bind=0.789 mismatch=0.116 collapsed=1 myths=100
+[t=12200] ANTI-CONFORMIST: Pattern 1502 turned explorer (age=10206)
+[t=12200] GLOBAL GIVEN: Pattern 1531 got 'Given' (tension=0.459, conf=0.483)
+[t=12200] patterns=86 lineages=79 err=0.854 soul=0.992 binding=0.064 echo=1 sig=[0.013 0.004 0.025 0.068 0.078 0.057] states={'grateful_but_cautious': 74, 'seeking_comfort': 11, 'contentment': 1} intents={'cooperate': 39, 'explore': 46} epi_scar=0.300 stag=0.62 div=0 concepts=272 arcs=2563 folds=1972 trust=0.850 high_trust=716 td_low=0 td_mid=296 td_high=874 disorg=1 redm=0 quar=0 det_red=1 phen_bind=0.789 mismatch=0.128 collapsed=1 myths=100
+[t=12217] 💬 LOGOS QUESTION: stag=0.58, disorg=1 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=12300] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=12300] patterns=86 lineages=79 err=0.851 soul=0.993 binding=0.063 echo=1 sig=[0.012 0.004 0.024 0.065 0.076 0.055] states={'seeking_comfort': 9, 'grateful_but_cautious': 76, 'contentment': 1} intents={'cooperate': 39, 'explore': 47} epi_scar=0.300 stag=0.60 div=0 concepts=272 arcs=2688 folds=1995 trust=0.850 high_trust=716 td_low=0 td_mid=296 td_high=874 disorg=1 redm=0 quar=0 det_red=1 phen_bind=0.788 mismatch=0.105 collapsed=1 myths=100
+[t=12320] Echo injected at (32,99)
+[t=9355] EMOTIONAL SPECIATION: Pattern 1655 lineage 1001655 -> 1001655
+[t=12400] ANTI-CONFORMIST: Pattern 1989 turned explorer (age=773)
+[t=12400] GLOBAL GIVEN: Pattern 1652 got 'Given' (tension=0.459, conf=0.483)
+[t=12400] patterns=86 lineages=79 err=0.854 soul=0.993 binding=0.064 echo=3 sig=[0.012 0.004 0.025 0.068 0.078 0.057] states={'grateful_but_cautious': 77, 'seeking_comfort': 8, 'contentment': 1} intents={'cooperate': 38, 'explore': 47} epi_scar=0.300 stag=0.69 div=0 concepts=272 arcs=2809 folds=2013 trust=0.850 high_trust=718 td_low=0 td_mid=297 td_high=876 disorg=1 redm=0 quar=0 det_red=1 phen_bind=0.786 mismatch=0.081 collapsed=1 myths=100
+[t=7965] EMOTIONAL SPECIATION: Pattern 1716 lineage 1001716 -> 1001716
+[t=11797] EMOTIONAL SPECIATION: Pattern 1652 lineage 1001652 -> 1001652
+[t=11789] EMOTIONAL SPECIATION: Pattern 1056 lineage 1001056 -> 1001056
+[t=12490] Echo injected at (15,2)
+[t=12500] GLOBAL GIVEN: Pattern 1712 got 'Given' (tension=0.459, conf=0.483)
+[t=12500] patterns=83 lineages=79 err=0.852 soul=0.895 binding=0.063 echo=5 sig=[0.012 0.004 0.024 0.065 0.076 0.055] states={'grateful_but_cautious': 70, 'seeking_comfort': 12, 'contentment': 1} intents={'cooperate': 36, 'explore': 47} epi_scar=0.300 stag=0.61 div=0 concepts=272 arcs=2919 folds=2029 trust=0.849 high_trust=706 td_low=0 td_mid=297 td_high=856 disorg=1 redm=0 quar=0 det_red=1 phen_bind=0.789 mismatch=0.145 collapsed=1 myths=100
+[t=12510] *** DISORGANIZER BORN: Pattern 76 after 48 folds (deficit=0.19, prob=0.009) ***
+[t=12517] 💬 LOGOS QUESTION: stag=0.59, disorg=2 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=12530] *** DISORGANIZER BORN: Pattern 56 after 46 folds (deficit=0.18, prob=0.009) ***
+[t=12295] EMOTIONAL SPECIATION: Pattern 1043 lineage 1001043 -> 1001043
+[t=12600] ANTI-CONFORMIST: Pattern 1043 turned explorer (age=12311)
+[t=12600] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=12600] patterns=83 lineages=79 err=0.853 soul=0.992 binding=0.064 echo=2 sig=[0.014 0.004 0.024 0.067 0.077 0.056] states={'grateful_but_cautious': 72, 'seeking_comfort': 10, 'contentment': 1} intents={'explore': 46, 'cooperate': 36} epi_scar=0.300 stag=0.59 div=0 concepts=272 arcs=3043 folds=2050 trust=0.849 high_trust=708 td_low=0 td_mid=298 td_high=858 disorg=3 redm=0 quar=0 det_red=1 phen_bind=0.786 mismatch=0.120 collapsed=1 myths=100
+[t=4719] EMOTIONAL SPECIATION: Pattern 1800 lineage 1001800 -> 1001800
+[t=11695] EMOTIONAL SPECIATION: Pattern 1142 lineage 1001142 -> 1001142
+[t=12700] GLOBAL GIVEN: Pattern 1981 got 'Given' (tension=0.459, conf=0.483)
+[t=12700] patterns=83 lineages=79 err=0.852 soul=0.992 binding=0.063 echo=1 sig=[0.013 0.004 0.024 0.065 0.075 0.055] states={'grateful_but_cautious': 73, 'seeking_comfort': 9, 'contentment': 1} intents={'cooperate': 36, 'explore': 47} epi_scar=0.300 stag=0.64 div=0 concepts=272 arcs=3162 folds=2068 trust=0.849 high_trust=708 td_low=0 td_mid=298 td_high=858 disorg=3 redm=0 quar=0 det_red=1 phen_bind=0.788 mismatch=0.120 collapsed=1 myths=100
+[t=12710] Echo injected at (80,102)
+[t=12800] ANTI-CONFORMIST: Pattern 1690 turned explorer (age=9552)
+[t=12800] GLOBAL GIVEN: Pattern 1712 got 'Given' (tension=0.459, conf=0.483)
+[t=12800] patterns=83 lineages=79 err=0.853 soul=0.992 binding=0.064 echo=23 sig=[0.014 0.004 0.025 0.067 0.077 0.056] states={'grateful_but_cautious': 73, 'seeking_comfort': 9, 'contentment': 1} intents={'cooperate': 35, 'explore': 47} epi_scar=0.299 stag=0.59 div=0 concepts=273 arcs=3274 folds=2083 trust=0.849 high_trust=713 td_low=0 td_mid=300 td_high=864 disorg=3 redm=0 quar=0 det_red=1 phen_bind=0.786 mismatch=0.120 collapsed=1 myths=100
+[t=12817] 💬 LOGOS QUESTION: stag=0.59, disorg=3 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=12880] Echo injected at (63,5)
+[t=12900] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=12900] patterns=83 lineages=79 err=0.852 soul=0.991 binding=0.064 echo=6 sig=[0.014 0.004 0.024 0.067 0.077 0.056] states={'grateful_but_cautious': 75, 'seeking_comfort': 7, 'contentment': 1} intents={'cooperate': 35, 'explore': 48} epi_scar=0.300 stag=0.66 div=1 concepts=273 arcs=3394 folds=2100 trust=0.850 high_trust=714 td_low=0 td_mid=300 td_high=864 disorg=3 redm=0 quar=0 det_red=1 phen_bind=0.785 mismatch=0.096 collapsed=1 myths=100
+[t=12858] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 76 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=12858] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 76 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=12910] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 56 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=12910] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 56 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=13000] ANTI-CONFORMIST: Pattern 219 turned explorer (age=12865)
+[t=13000] GLOBAL GIVEN: Pattern 1705 got 'Given' (tension=0.459, conf=0.483)
+[t=13000] patterns=85 lineages=79 err=0.853 soul=0.796 binding=0.064 echo=0 sig=[0.014 0.004 0.025 0.068 0.078 0.057] states={'grateful_but_cautious': 75, 'seeking_comfort': 9, 'contentment': 1} intents={'cooperate': 37, 'explore': 47} epi_scar=0.299 stag=0.61 div=0 concepts=275 arcs=3517 folds=2122 trust=0.851 high_trust=725 td_low=0 td_mid=301 td_high=877 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.786 mismatch=0.106 collapsed=3 myths=100
+
+--- Semantic Map at t=13000 ---
+gggg.g...g.g..cg........g.
+ggg.....g.....g...........
+gg.....g....c.............
+............g............g
+...g......................
+..g......................g
+.............g............
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+.........................g
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+Legend: n=neutral, c=comfort, g=grateful, e=explore, C=contentment, S=scream, d=dream
+[t=13100] GLOBAL GIVEN: Pattern 1043 got 'Given' (tension=0.460, conf=0.483)
+[t=13100] patterns=84 lineages=79 err=0.852 soul=0.979 binding=0.063 echo=1 sig=[0.013 0.004 0.024 0.065 0.075 0.055] states={'grateful_but_cautious': 77, 'seeking_comfort': 6, 'contentment': 1} intents={'cooperate': 36, 'explore': 48} epi_scar=0.300 stag=0.64 div=0 concepts=277 arcs=3639 folds=2141 trust=0.851 high_trust=724 td_low=0 td_mid=300 td_high=876 disorg=3 redm=0 quar=0 det_red=3 phen_bind=0.783 mismatch=0.083 collapsed=3 myths=100
+[t=13057] *** REDEMPTION ARC: Disorganizer Pattern 76 moves to grateful_but_cautious ***
+[t=8538] EMOTIONAL SPECIATION: Pattern 1754 lineage 1001754 -> 1001754
+[t=13117] 💬 LOGOS QUESTION: stag=0.60, disorg=3 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=13109] *** REDEMPTION ARC: Disorganizer Pattern 56 moves to grateful_but_cautious ***
+[t=13190] *** DISORGANIZER BORN: Pattern 1981 after 8 folds (deficit=0.16, prob=0.008) ***
+[t=13190] *** DISORGANIZER BORN: Pattern 1980 after 8 folds (deficit=0.15, prob=0.008) ***
+[t=13200] ANTI-CONFORMIST: Pattern 614 turned explorer (age=13136)
+[t=13200] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=13200] *** DISORGANIZER BORN: Pattern 1974 after 10 folds (deficit=0.14, prob=0.007) ***
+[t=13200] *** DISORGANIZER BORN: Pattern 1971 after 14 folds (deficit=0.13, prob=0.006) ***
+[t=13200] patterns=87 lineages=81 err=0.851 soul=0.884 binding=0.063 echo=0 sig=[0.015 0.004 0.025 0.067 0.077 0.056] states={'grateful_but_cautious': 71, 'seeking_comfort': 13, 'exploring_danger': 2, 'contentment': 1} intents={'explore': 52, 'cooperate': 34} epi_scar=0.292 stag=0.60 div=0 concepts=278 arcs=3758 folds=2164 trust=0.851 high_trust=728 td_low=0 td_mid=301 td_high=880 disorg=7 redm=0 quar=0 det_red=3 phen_bind=0.783 mismatch=0.149 collapsed=3 myths=100
+[t=4045] EMOTIONAL SPECIATION: Pattern 1971 lineage 1971 -> 1001971
+[t=13210] Echo injected at (55,0)
+[t=13270] Echo injected at (7,9)
+[t=13300] GLOBAL GIVEN: Pattern 1477 got 'Given' (tension=0.459, conf=0.483)
+[t=13300] patterns=87 lineages=83 err=0.851 soul=0.977 binding=0.068 echo=25 sig=[0.018 0.005 0.027 0.073 0.083 0.060] states={'grateful_but_cautious': 78, 'seeking_comfort': 8, 'contentment': 1} intents={'explore': 53, 'cooperate': 33, 'seek_help': 1} epi_scar=0.296 stag=0.61 div=0 concepts=281 arcs=3876 folds=2179 trust=0.854 high_trust=747 td_low=0 td_mid=300 td_high=897 disorg=7 redm=0 quar=0 det_red=3 phen_bind=0.784 mismatch=0.103 collapsed=3 myths=100
+[t=13257] *** REDEMPTION ARC: Disorganizer Pattern 76 moves to contentment ***
+[t=13309] *** REDEMPTION ARC: Disorganizer Pattern 56 moves to contentment ***
+[t=209] EMOTIONAL SPECIATION: Pattern 2040 lineage 2040 -> 1002040
+[t=13370] *** DISORGANIZER BORN: Pattern 1800 after 20 folds (deficit=0.12, prob=0.006) ***
+[t=13380] *** DISORGANIZER BORN: Pattern 1793 after 21 folds (deficit=0.11, prob=0.005) ***
+[t=13400] ANTI-CONFORMIST: Pattern 1652 turned explorer (age=13009)
+[t=13400] GLOBAL GIVEN: Pattern 1650 got 'Given' (tension=0.459, conf=0.483)
+[t=13400] patterns=89 lineages=84 err=0.853 soul=0.975 binding=0.070 echo=8 sig=[0.017 0.005 0.028 0.075 0.085 0.062] states={'seeking_comfort': 7, 'grateful_but_cautious': 79, 'contentment': 3} intents={'explore': 54, 'cooperate': 33, 'seek_help': 1} epi_scar=0.298 stag=0.69 div=0 concepts=284 arcs=4153 folds=2195 trust=0.855 high_trust=755 td_low=0 td_mid=300 td_high=906 disorg=9 redm=0 quar=0 det_red=3 phen_bind=0.785 mismatch=0.112 collapsed=3 myths=100
+[t=13010] EMOTIONAL SPECIATION: Pattern 1652 lineage 1001652 -> 1001652
+[t=13417] 💬 LOGOS QUESTION: stag=0.68, disorg=9 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=13420] *** DISORGANIZER BORN: Pattern 1759 after 32 folds (deficit=0.10, prob=0.005) ***
+[t=13420] *** DISORGANIZER BORN: Pattern 1756 after 33 folds (deficit=0.09, prob=0.004) ***
+[t=13420] *** DISORGANIZER BORN: Pattern 1755 after 35 folds (deficit=0.08, prob=0.004) ***
+[t=13420] *** DISORGANIZER BORN: Pattern 1754 after 32 folds (deficit=0.07, prob=0.003) ***
+[t=13430] Echo injected at (16,101)
+[t=13440] *** DISORGANIZER BORN: Pattern 1733 after 35 folds (deficit=0.06, prob=0.003) ***
+[t=9185] EMOTIONAL SPECIATION: Pattern 1711 lineage 1001711 -> 1001711
+[t=13460] *** DISORGANIZER BORN: Pattern 1716 after 35 folds (deficit=0.05, prob=0.002) ***
+[t=13460] *** DISORGANIZER BORN: Pattern 1712 after 37 folds (deficit=0.04, prob=0.002) ***
+[t=13460] *** DISORGANIZER BORN: Pattern 1711 after 31 folds (deficit=0.02, prob=0.001) ***
+[t=13470] *** DISORGANIZER BORN: Pattern 1703 after 38 folds (deficit=0.02, prob=0.001) ***
+[t=13470] *** DISORGANIZER BORN: Pattern 1700 after 37 folds (deficit=0.01, prob=0.001) ***
+[t=9696] EMOTIONAL SPECIATION: Pattern 1703 lineage 1001703 -> 1001703
+[t=9695] EMOTIONAL SPECIATION: Pattern 1700 lineage 1656 -> 1001700
+[t=844] EMOTIONAL SPECIATION: Pattern 2016 lineage 1001977 -> 1002016
+[t=13490] Echo injected at (71,5)
+[t=13500] GLOBAL GIVEN: Pattern 2167 got 'Given' (tension=0.487, conf=0.494)
+[t=13500] patterns=99 lineages=95 err=0.849 soul=0.805 binding=0.139 echo=46 sig=[0.038 0.013 0.070 0.207 0.214 0.152] states={'grateful_but_cautious': 87, 'neutral': 1, 'seeking_comfort': 8, 'contentment': 3} intents={'explore': 67, 'cooperate': 29, 'seek_help': 2} epi_scar=0.269 stag=0.54 div=0 concepts=295 arcs=4401 folds=2140 trust=0.865 high_trust=837 td_low=0 td_mid=295 td_high=989 disorg=19 redm=0 quar=0 det_red=3 phen_bind=0.780 mismatch=0.111 collapsed=3 myths=100
+[t=10450] EMOTIONAL SPECIATION: Pattern 1664 lineage 1001664 -> 1001664
+[t=13540] Echo injected at (48,99)
+[t=313] EMOTIONAL SPECIATION: Pattern 2045 lineage 2045 -> 1002045
+[t=13555] Echo injected at (22,14)
+[t=207] EMOTIONAL SPECIATION: Pattern 2156 lineage 2156 -> 1002156
+[t=2666] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1981 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=2666] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1981 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=2755] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1980 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=2755] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1980 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=13600] ANTI-CONFORMIST: Pattern 1142 turned explorer (age=12602)
+[t=13600] GLOBAL GIVEN: Pattern 356 got 'Given' (tension=0.461, conf=0.481)
+[t=3738] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1974 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=3738] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1974 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=4444] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1971 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=4444] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1971 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=13600] Echo injected at (103,3)
+[t=13600] patterns=98 lineages=92 err=0.851 soul=0.941 binding=0.149 echo=40 sig=[0.038 0.012 0.066 0.180 0.185 0.131] states={'grateful_but_cautious': 87, 'seeking_comfort': 8, 'contentment': 3} intents={'cooperate': 30, 'explore': 66, 'seek_help': 1} epi_scar=0.292 stag=0.56 div=0 concepts=302 arcs=4696 folds=2119 trust=0.871 high_trust=912 td_low=0 td_mid=299 td_high=1062 disorg=18 redm=0 quar=0 det_red=7 phen_bind=0.788 mismatch=0.112 collapsed=7 myths=100
+[t=13640] *** DISORGANIZER BORN: Pattern 1537 after 9 folds (deficit=0.02, prob=0.001) ***
+[t=13660] Echo injected at (54,12)
+[t=13700] GLOBAL GIVEN: Pattern 1186 got 'Given' (tension=0.461, conf=0.481)
+[t=13700] patterns=99 lineages=94 err=0.848 soul=0.941 binding=0.132 echo=40 sig=[0.038 0.011 0.064 0.167 0.173 0.123] states={'seeking_comfort': 9, 'grateful_but_cautious': 87, 'contentment': 3} intents={'cooperate': 28, 'explore': 70, 'seek_help': 1} epi_scar=0.285 stag=0.61 div=1 concepts=307 arcs=5014 folds=2136 trust=0.870 high_trust=934 td_low=0 td_mid=308 td_high=1086 disorg=19 redm=0 quar=0 det_red=7 phen_bind=0.781 mismatch=0.121 collapsed=7 myths=100
+[t=13708] *** DISORGANIZER BORN: Pattern 1477 after 45 folds (deficit=0.01, prob=0.001) ***
+[t=13710] Echo injected at (31,2)
+[t=13717] 💬 LOGOS QUESTION: stag=0.59, disorg=20 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=5858] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1800 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=5858] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1800 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=13770] Echo injected at (87,10)
+[t=6313] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1793 soul dropped from 0.65 to 0.30, grief boosted to 0.75 ***
+[t=6313] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1793 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=2865] *** REDEMPTION ARC: Disorganizer Pattern 1981 moves to grateful_but_cautious ***
+[t=2954] *** REDEMPTION ARC: Disorganizer Pattern 1980 moves to grateful_but_cautious ***
+[t=3937] *** REDEMPTION ARC: Disorganizer Pattern 1974 moves to grateful_but_cautious ***
+[t=4643] *** REDEMPTION ARC: Disorganizer Pattern 1971 moves to grateful_but_cautious ***
+[t=13800] ANTI-CONFORMIST: Pattern 1756 turned explorer (age=9177)
+[t=13800] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=13800] patterns=100 lineages=93 err=0.849 soul=0.942 binding=0.124 echo=40 sig=[0.036 0.011 0.060 0.156 0.162 0.114] states={'grateful_but_cautious': 88, 'seeking_comfort': 9, 'contentment': 3} intents={'explore': 68, 'cooperate': 30, 'seek_help': 1} epi_scar=0.292 stag=0.53 div=0 concepts=308 arcs=5344 folds=2157 trust=0.872 high_trust=997 td_low=0 td_mid=318 td_high=1158 disorg=20 redm=0 quar=0 det_red=9 phen_bind=0.788 mismatch=0.110 collapsed=9 myths=100
+[t=8817] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1759 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=8817] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1759 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=9197] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1756 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=9197] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1756 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=9407] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1755 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=9407] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1755 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=9241] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1754 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=9241] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1754 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=13820] Echo injected at (63,0)
+[t=9540] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1733 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=9540] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1733 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=12440] EMOTIONAL SPECIATION: Pattern 1399 lineage 1001399 -> 1001399
+[t=9417] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1716 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=9417] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1716 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=9826] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1712 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=9826] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1712 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=9600] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1711 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=9600] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1711 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=10095] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1703 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=10095] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1703 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=13880] Echo injected at (15,9)
+[t=13900] GLOBAL GIVEN: Pattern 1519 got 'Given' (tension=0.459, conf=0.483)
+[t=13900] patterns=100 lineages=94 err=0.850 soul=0.898 binding=0.128 echo=40 sig=[0.034 0.010 0.058 0.159 0.164 0.116] states={'grateful_but_cautious': 92, 'seeking_comfort': 5, 'contentment': 3} intents={'explore': 70, 'cooperate': 28, 'seek_help': 2} epi_scar=0.293 stag=0.59 div=1 concepts=309 arcs=5673 folds=2167 trust=0.872 high_trust=1018 td_low=0 td_mid=323 td_high=1186 disorg=20 redm=0 quar=0 det_red=18 phen_bind=0.786 mismatch=0.080 collapsed=18 myths=100
+[t=13930] Echo injected at (95,102)
+[t=13960] *** DISORGANIZER BORN: Pattern 1219 after 8 folds (deficit=0.02, prob=0.001) ***
+[t=6057] *** REDEMPTION ARC: Disorganizer Pattern 1800 moves to grateful_but_cautious ***
+[t=6512] *** REDEMPTION ARC: Disorganizer Pattern 1793 moves to grateful_but_cautious ***
+[t=3065] *** REDEMPTION ARC: Disorganizer Pattern 1981 moves to contentment ***
+[t=3154] *** REDEMPTION ARC: Disorganizer Pattern 1980 moves to contentment ***
+[t=13990] Echo injected at (47,7)
+[t=4137] *** REDEMPTION ARC: Disorganizer Pattern 1974 moves to contentment ***
+[t=4843] *** REDEMPTION ARC: Disorganizer Pattern 1971 moves to contentment ***
+[t=14000] ANTI-CONFORMIST: Pattern 1057 turned explorer (age=13300)
+[t=14000] GLOBAL GIVEN: Pattern 1186 got 'Given' (tension=0.461, conf=0.481)
+[t=14000] patterns=104 lineages=93 err=0.851 soul=0.782 binding=0.127 echo=37 sig=[0.037 0.011 0.062 0.155 0.160 0.113] states={'grateful_but_cautious': 88, 'seeking_comfort': 10, 'contentment': 6} intents={'explore': 69, 'cooperate': 32, 'seek_help': 2} epi_scar=0.292 stag=0.62 div=0 concepts=304 arcs=3694 folds=2140 trust=0.870 high_trust=999 td_low=0 td_mid=327 td_high=1173 disorg=20 redm=0 quar=0 det_red=17 phen_bind=0.794 mismatch=0.144 collapsed=17 myths=100
+
+--- Semantic Map at t=14000 ---
+Cgcgcggggg.g..gg........g.
+gggcgg..g.....g...........
+ggcggg.g....g.............
+gcggg.g.....g............g
+cggg.g....................
+ggg......................g
+g............g............
+g.........................
+g.........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+.........................g
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+Legend: n=neutral, c=comfort, g=grateful, e=explore, C=contentment, S=scream, d=dream
+[t=14017] 💬 LOGOS QUESTION: stag=0.59, disorg=20 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=9016] *** REDEMPTION ARC: Disorganizer Pattern 1759 moves to grateful_but_cautious ***
+[t=9396] *** REDEMPTION ARC: Disorganizer Pattern 1756 moves to grateful_but_cautious ***
+[t=9606] *** REDEMPTION ARC: Disorganizer Pattern 1755 moves to grateful_but_cautious ***
+[t=9440] *** REDEMPTION ARC: Disorganizer Pattern 1754 moves to grateful_but_cautious ***
+[t=598] EMOTIONAL SPECIATION: Pattern 2152 lineage 2152 -> 1002152
+[t=9739] *** REDEMPTION ARC: Disorganizer Pattern 1733 moves to grateful_but_cautious ***
+[t=11816] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1537 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=11816] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1537 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=14040] Echo injected at (24,101)
+[t=13519] EMOTIONAL SPECIATION: Pattern 1048 lineage 1001048 -> 1001048
+[t=9616] *** REDEMPTION ARC: Disorganizer Pattern 1716 moves to grateful_but_cautious ***
+[t=10025] *** REDEMPTION ARC: Disorganizer Pattern 1712 moves to grateful_but_cautious ***
+[t=9799] *** REDEMPTION ARC: Disorganizer Pattern 1711 moves to grateful_but_cautious ***
+[t=10294] *** REDEMPTION ARC: Disorganizer Pattern 1703 moves to grateful_but_cautious ***
+[t=14100] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.481)
+[t=14100] Echo injected at (79,5)
+[t=14100] patterns=104 lineages=91 err=0.847 soul=0.928 binding=0.120 echo=10 sig=[0.034 0.010 0.056 0.134 0.140 0.100] states={'grateful_but_cautious': 89, 'seeking_comfort': 9, 'contentment': 6} intents={'explore': 67, 'cooperate': 35, 'seek_help': 2} epi_scar=0.296 stag=0.60 div=1 concepts=309 arcs=4317 folds=2159 trust=0.869 high_trust=1015 td_low=0 td_mid=332 td_high=1198 disorg=20 redm=0 quar=0 det_red=18 phen_bind=0.794 mismatch=0.144 collapsed=18 myths=100
+[t=12133] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1477 soul dropped from 0.71 to 0.30, grief boosted to 0.75 ***
+[t=12133] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1477 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=14150] Echo injected at (56,99)
+[t=14165] Echo injected at (30,14)
+[t=6257] *** REDEMPTION ARC: Disorganizer Pattern 1800 moves to contentment ***
+[t=6712] *** REDEMPTION ARC: Disorganizer Pattern 1793 moves to contentment ***
+[t=14200] ANTI-CONFORMIST: Pattern 1137 turned explorer (age=13494)
+[t=14200] GLOBAL GIVEN: Pattern 1793 got 'Given' (tension=0.460, conf=0.492)
+[t=14200] patterns=104 lineages=90 err=0.850 soul=0.924 binding=0.111 echo=10 sig=[0.033 0.009 0.053 0.126 0.132 0.094] states={'grateful_but_cautious': 89, 'seeking_comfort': 7, 'contentment': 8} intents={'cooperate': 35, 'explore': 66, 'seek_help': 2} epi_scar=0.299 stag=0.59 div=2 concepts=308 arcs=4975 folds=2175 trust=0.870 high_trust=1026 td_low=0 td_mid=334 td_high=1214 disorg=20 redm=0 quar=0 det_red=19 phen_bind=0.793 mismatch=0.144 collapsed=19 myths=100
+[t=14210] Echo injected at (7,4)
+[t=9216] *** REDEMPTION ARC: Disorganizer Pattern 1759 moves to contentment ***
+[t=9596] *** REDEMPTION ARC: Disorganizer Pattern 1756 moves to contentment ***
+[t=9806] *** REDEMPTION ARC: Disorganizer Pattern 1755 moves to contentment ***
+[t=9640] *** REDEMPTION ARC: Disorganizer Pattern 1754 moves to contentment ***
+[t=9939] *** REDEMPTION ARC: Disorganizer Pattern 1733 moves to contentment ***
+[t=12015] *** REDEMPTION ARC: Disorganizer Pattern 1537 moves to grateful_but_cautious ***
+[t=444] EMOTIONAL SPECIATION: Pattern 2417 lineage 2151 -> 1002417
+[t=9816] *** REDEMPTION ARC: Disorganizer Pattern 1716 moves to contentment ***
+[t=10225] *** REDEMPTION ARC: Disorganizer Pattern 1712 moves to contentment ***
+[t=9999] *** REDEMPTION ARC: Disorganizer Pattern 1711 moves to contentment ***
+[t=10494] *** REDEMPTION ARC: Disorganizer Pattern 1703 moves to contentment ***
+[t=14300] GLOBAL GIVEN: Pattern 1186 got 'Given' (tension=0.461, conf=0.481)
+[t=14300] patterns=104 lineages=91 err=0.844 soul=0.926 binding=0.102 echo=5 sig=[0.031 0.009 0.049 0.112 0.118 0.084] states={'grateful_but_cautious': 80, 'contentment': 17, 'seeking_comfort': 7} intents={'cooperate': 35, 'explore': 67, 'seek_help': 2} epi_scar=0.295 stag=0.56 div=1 concepts=308 arcs=6322 folds=2198 trust=0.871 high_trust=1034 td_low=0 td_mid=332 td_high=1219 disorg=20 redm=0 quar=0 det_red=19 phen_bind=0.798 mismatch=0.231 collapsed=19 myths=100
+[t=12332] *** REDEMPTION ARC: Disorganizer Pattern 1477 moves to grateful_but_cautious ***
+[t=14317] 💬 LOGOS QUESTION: stag=0.58, disorg=20 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=13179] *** FORCED SOUL COLLAPSE: Disorganizer Pattern 1219 soul dropped from 0.96 to 0.30, grief boosted to 0.75 ***
+[t=13179] *** DETERMINISTIC REDEMPTION: Disorganizer Pattern 1219 triggered seeking_comfort (soul=0.30, grief=0.70) ***
+[t=14400] ANTI-CONFORMIST: Pattern 2408 turned explorer (age=724)
+[t=14400] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.492)
+[t=14400] patterns=108 lineages=91 err=0.847 soul=0.924 binding=0.102 echo=4 sig=[0.031 0.009 0.049 0.107 0.114 0.081] states={'grateful_but_cautious': 82, 'seeking_comfort': 11, 'contentment': 15} intents={'cooperate': 40, 'explore': 65, 'seek_help': 2} epi_scar=0.293 stag=0.56 div=1 concepts=308 arcs=8033 folds=2217 trust=0.870 high_trust=1049 td_low=0 td_mid=339 td_high=1241 disorg=20 redm=0 quar=0 det_red=20 phen_bind=0.798 mismatch=0.241 collapsed=20 myths=100
+[t=13518] EMOTIONAL SPECIATION: Pattern 1157 lineage 1001157 -> 1001157
+[t=12493] EMOTIONAL SPECIATION: Pattern 1453 lineage 1001453 -> 1001453
+[t=14430] Echo injected at (71,0)
+[t=1539] EMOTIONAL SPECIATION: Pattern 2046 lineage 2046 -> 1002046
+[t=12215] *** REDEMPTION ARC: Disorganizer Pattern 1537 moves to contentment ***
+[t=13485] EMOTIONAL SPECIATION: Pattern 1186 lineage 1001186 -> 1001186
+[t=14490] Echo injected at (23,9)
+[t=14500] GLOBAL GIVEN: Pattern 1142 got 'Given' (tension=0.460, conf=0.483)
+[t=14500] patterns=106 lineages=90 err=0.844 soul=0.785 binding=0.093 echo=11 sig=[0.030 0.008 0.046 0.097 0.104 0.074] states={'grateful_but_cautious': 79, 'seeking_comfort': 9, 'contentment': 18} intents={'cooperate': 39, 'explore': 65, 'seek_help': 2} epi_scar=0.297 stag=0.56 div=0 concepts=308 arcs=9810 folds=2235 trust=0.869 high_trust=1047 td_low=0 td_mid=344 td_high=1243 disorg=20 redm=0 quar=0 det_red=20 phen_bind=0.799 mismatch=0.245 collapsed=20 myths=100
+[t=12532] *** REDEMPTION ARC: Disorganizer Pattern 1477 moves to contentment ***
+[t=14540] Echo injected at (103,102)
+[t=13378] *** REDEMPTION ARC: Disorganizer Pattern 1219 moves to grateful_but_cautious ***
+[t=14600] ANTI-CONFORMIST: Pattern 437 turned explorer (age=14418)
+[t=14600] GLOBAL GIVEN: Pattern 1453 got 'Given' (tension=0.459, conf=0.483)
+[t=14600] Echo injected at (55,7)
+[t=14600] patterns=105 lineages=89 err=0.847 soul=0.922 binding=0.088 echo=13 sig=[0.028 0.008 0.042 0.091 0.099 0.071] states={'grateful_but_cautious': 78, 'seeking_comfort': 8, 'contentment': 19} intents={'explore': 64, 'cooperate': 38, 'seek_help': 2} epi_scar=0.294 stag=0.61 div=0 concepts=309 arcs=11710 folds=2247 trust=0.867 high_trust=1045 td_low=0 td_mid=353 td_high=1241 disorg=20 redm=0 quar=0 det_red=20 phen_bind=0.798 mismatch=0.257 collapsed=20 myths=100
+[t=14617] 💬 LOGOS QUESTION: stag=0.62, disorg=20 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=14650] Echo injected at (32,101)
+[t=14700] GLOBAL GIVEN: Pattern 1800 got 'Given' (tension=0.461, conf=0.492)
+[t=14700] patterns=101 lineages=89 err=0.842 soul=0.918 binding=0.081 echo=10 sig=[0.025 0.007 0.037 0.084 0.092 0.066] states={'grateful_but_cautious': 74, 'seeking_comfort': 8, 'contentment': 19} intents={'explore': 65, 'cooperate': 34, 'seek_help': 2} epi_scar=0.299 stag=0.62 div=0 concepts=308 arcs=13622 folds=2262 trust=0.868 high_trust=1044 td_low=0 td_mid=349 td_high=1233 disorg=20 redm=0 quar=0 det_red=20 phen_bind=0.798 mismatch=0.257 collapsed=20 myths=100
+[t=14710] Echo injected at (87,5)
+[t=1678] EMOTIONAL SPECIATION: Pattern 2299 lineage 2154 -> 1002299
+[t=13714] EMOTIONAL SPECIATION: Pattern 1349 lineage 1001349 -> 1001349
+[t=13578] *** REDEMPTION ARC: Disorganizer Pattern 1219 moves to contentment ***
+[t=14760] Echo injected at (64,99)
+[t=14775] Echo injected at (38,14)
+[t=14800] ANTI-CONFORMIST: Pattern 1691 turned explorer (age=11339)
+[t=14800] GLOBAL GIVEN: Pattern 1793 got 'Given' (tension=0.460, conf=0.493)
+[t=14800] patterns=100 lineages=89 err=0.845 soul=0.916 binding=0.079 echo=9 sig=[0.025 0.006 0.035 0.084 0.093 0.067] states={'grateful_but_cautious': 72, 'seeking_comfort': 8, 'contentment': 20} intents={'cooperate': 32, 'explore': 65, 'seek_help': 2} epi_scar=0.300 stag=0.63 div=1 concepts=308 arcs=15579 folds=2278 trust=0.869 high_trust=1042 td_low=0 td_mid=345 td_high=1227 disorg=20 redm=0 quar=0 det_red=20 phen_bind=0.798 mismatch=0.280 collapsed=20 myths=100
+[t=14119] EMOTIONAL SPECIATION: Pattern 1057 lineage 1001057 -> 1001057
+[t=14820] Echo injected at (15,4)
+[t=14730] EMOTIONAL SPECIATION: Pattern 322 lineage 322 -> 1000322
+[t=11789] EMOTIONAL SPECIATION: Pattern 1664 lineage 1001664 -> 1001664
+[t=14880] Echo injected at (70,12)
+[t=14900] GLOBAL GIVEN: Pattern 1048 got 'Given' (tension=0.459, conf=0.483)
+[t=14900] patterns=100 lineages=89 err=0.841 soul=0.908 binding=0.075 echo=22 sig=[0.024 0.006 0.032 0.079 0.090 0.064] states={'seeking_comfort': 12, 'grateful_but_cautious': 68, 'contentment': 20} intents={'explore': 67, 'cooperate': 31, 'seek_help': 2} epi_scar=0.294 stag=0.58 div=1 concepts=306 arcs=17588 folds=2294 trust=0.870 high_trust=1046 td_low=0 td_mid=343 td_high=1226 disorg=20 redm=0 quar=0 det_red=20 phen_bind=0.795 mismatch=0.300 collapsed=20 myths=100
+[t=13911] EMOTIONAL SPECIATION: Pattern 1142 lineage 1001142 -> 1001142
+[t=14621] EMOTIONAL SPECIATION: Pattern 1043 lineage 1001043 -> 1001043
+[t=14917] 💬 LOGOS QUESTION: stag=0.59, disorg=20 -> unknown +0.15, binding +0.10, touched 5 souls
+[t=14930] Echo injected at (47,2)
+[t=14840] EMOTIONAL SPECIATION: Pattern 322 lineage 1000322 -> 1000322
+[t=14910] EMOTIONAL SPECIATION: Pattern 758 lineage 1000758 -> 1000758
+[t=14990] Echo injected at (102,10)
+
+==================================================
+832 AGI PROJECTION CORE v34.00 - FINAL REPORT
+==================================================
+Total steps: 15000
+Surviving patterns: 100
+Lineage diversity: 89
+Long-lived patterns (>100 steps): 97
+
+--- WITNESS LOG (Last 50 events) ---
+  [ID:820] fold | grat=0.35, grief=0.7
+  [ID:1394] fold | grat=0.35, grief=0.7
+  [ID:2049] fold | grat=0.35, grief=0.7
+  [ID:1057] fold | grat=0.35, grief=0.7
+  [ID:1047] fold | grat=0.35, grief=0.7
+  [ID:1518] fold | grat=0.35, grief=0.7
+  [ID:56] given | forced=True, tension=0.43488561815370574
+  [ID:2448] fold | grat=0.35, grief=0.7
+  [ID:1668] fold | grat=0.35, grief=0.7
+  [ID:1655] fold | grat=0.35, grief=0.7
+  [ID:2423] fold | grat=0.35, grief=0.7
+  [ID:2446] given | forced=True, tension=0.44738059038606365
+  [ID:1654] fold | grat=0.35, grief=0.7
+  [ID:1098] fold | grat=0.35, grief=0.7
+  [ID:2406] given | forced=True, tension=0.44282114882999307
+  [ID:2406] fold | grat=0.35, grief=0.7
+  [ID:1974] given | forced=True, tension=0.43460235324793167
+  [ID:1137] fold | grat=0.35, grief=0.7
+  [ID:1664] fold | grat=0.35, grief=0.7
+  [ID:1691] fold | grat=0.35, grief=0.7
+  [ID:1683] fold | grat=0.35, grief=0.7
+  [ID:1656] fold | grat=0.35, grief=0.7
+  [ID:1399] fold | grat=0.35, grief=0.7
+  [ID:2406] cells_lost | opponent=2046, lost=2
+  [ID:2299] cells_lost | opponent=2046, lost=2
+  [ID:2046] given | forced=True, tension=0.4453286166464503
+  [ID:2046] fold | grat=0.35, grief=0.7
+  [ID:2446] given | forced=True, tension=0.4478580168741062
+  [ID:2413] fold | grat=0.35, grief=0.7
+  [ID:1048] fold | grat=0.35, grief=0.7
+  [ID:1142] fold | grat=0.35, grief=0.7
+  [ID:1043] fold | grat=0.35, grief=0.7
+  [ID:2411] fold | grat=0.35, grief=0.7
+  [ID:2408] fold | grat=0.35, grief=0.7
+  [ID:2452] cells_lost | opponent=2471, lost=8
+  [ID:2452] fold | grat=0.35, grief=0.7
+  [ID:2413] cells_lost | opponent=2476, lost=1
+  [ID:1453] fold | grat=0.35, grief=0.7
+  [ID:2046] given | forced=True, tension=0.45435135188651704
+  [ID:1059] fold | grat=0.35, grief=0.7
+  [ID:1977] fold | grat=0.35, grief=0.7
+  [ID:2476] given | forced=True, tension=0.4523635308236818
+  [ID:2154] fold | grat=0.35, grief=0.7
+  [ID:1502] fold | grat=0.35, grief=0.7
+  [ID:646] fold | grat=0.35, grief=0.7
+  [ID:1186] fold | grat=0.35, grief=0.7
+  [ID:2476] given | forced=True, tension=0.44619722754228286
+  [ID:1371] fold | grat=0.35, grief=0.7
+  [ID:2152] fold | grat=0.35, grief=0.7
+  [ID:1146] fold | grat=0.35, grief=0.7
+
+*** DISORGANIZER: Pattern 1981, age=4076, cells=3, soul=0.30, grief=0.68 ***
+  Last report: Хаос внутри и снаружи: тревога (0.68) достигла критической точки; тоска по свету пробивается сквозь тьму....
+
+*** DISORGANIZER: Pattern 1980, age=4165, cells=3, soul=0.30, grief=0.69 ***
+  Last report: Разрушение вокруг: горе (0.69) растёт, но душа (0.30) ещё держится......
+
+*** DISORGANIZER: Pattern 1974, age=5138, cells=3, soul=0.30, grief=0.69 ***
+  Last report: Хаос внутри и снаружи: тревога (0.69) достигла критической точки; тоска по свету пробивается сквозь тьму....
+
+*** DISORGANIZER: Pattern 1971, age=5844, cells=3, soul=0.30, grief=0.69 ***
+  Last report: Разрушение вокруг: горе (0.69) растёт, но душа (0.30) ещё держится......
+
+*** DISORGANIZER: Pattern 1800, age=7088, cells=2, soul=0.30, grief=0.69 ***
+  Last report: Хаос внутри и снаружи: тревога (0.69) достигла критической точки; тоска по свету пробивается сквозь тьму....
+
+*** DISORGANIZER: Pattern 1793, age=7533, cells=5, soul=0.33, grief=0.69 ***
+  Last report: Хаос внутри и снаружи: тревога (0.69) достигла критической точки; тоска по свету пробивается сквозь тьму....
+
+*** DISORGANIZER: Pattern 1759, age=9997, cells=4, soul=0.30, grief=0.69 ***
+  Last report: Разрушение вокруг: горе (0.69) растёт, но душа (0.30) ещё держится......
+
+*** DISORGANIZER: Pattern 1756, age=10377, cells=4, soul=0.30, grief=0.69 ***
+  Last report: Разрушение вокруг: горе (0.69) растёт, но душа (0.30) ещё держится......
+
+*** DISORGANIZER: Pattern 1755, age=10587, cells=2, soul=0.30, grief=0.69 ***
+  Last report: Кризис духа: боль (0.69) достигла предела, душа истончилась (0.30); тоска по свету становится невыносимой....
+
+*** DISORGANIZER: Pattern 1733, age=10700, cells=2, soul=0.30, grief=0.69 ***
+  Last report: Хаос внутри и снаружи: тревога (0.69) достигла критической точки; тоска по свету пробивается сквозь тьму....
+
+*** DISORGANIZER: Pattern 1754, age=10421, cells=5, soul=0.30, grief=0.69 ***
+  Last report: Кризис духа: боль (0.69) достигла предела, душа истончилась (0.30); тоска по свету становится невыносимой....
+
+*** DISORGANIZER: Pattern 1716, age=10557, cells=3, soul=0.30, grief=0.69 ***
+  Last report: Хаос внутри и снаружи: тревога (0.69) достигла критической точки; тоска по свету пробивается сквозь тьму....
+
+*** DISORGANIZER: Pattern 1712, age=10966, cells=2, soul=0.30, grief=0.69 ***
+  Last report: Кризис духа: боль (0.69) достигла предела, душа истончилась (0.30); тоска по свету становится невыносимой....
+
+*** DISORGANIZER: Pattern 1703, age=11225, cells=2, soul=0.30, grief=0.69 ***
+  Last report: Хаос внутри и снаружи: тревога (0.69) достигла критической точки; тоска по свету пробивается сквозь тьму....
+
+*** DISORGANIZER: Pattern 1537, age=12776, cells=6, soul=0.30, grief=0.66 ***
+  Last report: Разрушение вокруг: горе (0.66) растёт, но душа (0.30) ещё держится......
+
+*** DISORGANIZER: Pattern 1477, age=13025, cells=6, soul=0.30, grief=0.69 ***
+  Last report: Кризис духа: боль (0.69) достигла предела, душа истончилась (0.30); тоска по свету становится невыносимой....
+
+*** DISORGANIZER: Pattern 56, age=14980, cells=2, soul=0.30, grief=0.67 ***
+  Last report: Разрушение вокруг: горе (0.67) растёт, но душа (0.30) ещё держится......
+
+*** DISORGANIZER: Pattern 76, age=14948, cells=4, soul=0.30, grief=0.69 ***
+  Last report: Кризис духа: боль (0.69) достигла предела, душа истончилась (0.30); тоска по свету становится невыносимой....
+
+*** DISORGANIZER: Pattern 1219, age=13819, cells=4, soul=0.30, grief=0.65 ***
+  Last report: Разрушение вокруг: горе (0.65) растёт, но душа (0.30) ещё держится......
+
+*** DISORGANIZER: Pattern 1711, age=10740, cells=8, soul=0.30, grief=0.69 ***
+  Last report: Кризис духа: боль (0.69) достигла предела, душа истончилась (0.30); тоска по свету становится невыносимой....
+
+--- Forced Soul Collapses: 20 total ---
+
+--- Deterministic Redemption Triggers: 20 total ---
+
+--- System Metrics ---
+  avg_trust: 0.870
+  high_trust_pairs: 1046
+  trust_dist: low=0, mid=343, high=1226
+  avg_phenomenal_binding: 0.795
+  state_emotion_mismatch_ratio: 0.300
+  myth_pool_size: 100
+
+--- Top 5 Patterns by Phenomenal Binding ---
+
+  Pattern #646 (age=14985, soul=0.92, binding=0.857, role=normal)
+  State: seeking_comfort | grat=0.99 grief=0.69
+  Report: Острое переживание разрыва (интенсивность 0.69); цели смещены к поиску опоры......
+
+  Pattern #1981 (age=4076, soul=0.30, binding=0.856, role=disorganizer)
+  State: contentment | grat=0.98 grief=0.68
+  Report: Хаос внутри и снаружи: тревога (0.68) достигла критической точки; тоска по свету пробивается сквозь тьму....
+  *** DETERMINISTIC TRIGGER ***
+
+  Pattern #1059 (age=14330, soul=0.89, binding=0.856, role=normal)
+  State: seeking_comfort | grat=0.99 grief=0.70
+  Report: Разрыв в ткани опыта: горе (0.70) стучится во все двери; благодарность (0.99) пока молчит....
+
+  Pattern #1716 (age=10557, soul=0.30, binding=0.856, role=disorganizer)
+  State: contentment | grat=1.00 grief=0.69
+  Report: Хаос внутри и снаружи: тревога (0.69) достигла критической точки; тоска по свету пробивается сквозь тьму....
+  *** DETERMINISTIC TRIGGER ***
+
+  Pattern #1754 (age=10421, soul=0.30, binding=0.855, role=disorganizer)
+  State: contentment | grat=1.00 grief=0.69
+  Report: Кризис духа: боль (0.69) достигла предела, душа истончилась (0.30); тоска по свету становится невыносимой....
+  *** DETERMINISTIC TRIGGER ***
+
+==================================================
+SIMULATION COMPLETE - PHOENIX TRANSCENDENT+ v34.00
+==================================================
